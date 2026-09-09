@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Training output (Adapters, merged Modelle, Checkpoints)
+outputs/
+
+# Daten: nur der Beispieldatensatz und dieser Ordner gehoeren ins Repo
+data/*
+!data/README.md
+!data/example_train.jsonl
+
+# Colab / Jupyter
+.ipynb_checkpoints/
+
+# Externe Tools, die die Notebooks klonen
+llama.cpp/
+liquid-audio/
+
+# Lokale Umgebungen
+.DS_Store
+.env

@@ -1,0 +1,53 @@
+# QLoRA SFT for the MoE checkpoint LFM2.5-8B-A1B (8.3B total / 1.5B active).
+#
+# Memory note: all 8.3B weights must be resident even though only 1.5B are active
+# per token. In 4-bit that is roughly 5.5 GB, leaving little headroom on a 15 GB
+# T4 -- hence batch size 1 and a short context. If you have a Colab Pro A100/L4
+# (40 GB) raise per_device_train_batch_size to 4 and max_length to 2048.
+model:
+  id: LiquidAI/LFM2.5-8B-A1B
+  track: moe
+  attn_implementation: sdpa
+
+quant:
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  bnb_4bit_use_double_quant: true
+  bnb_4bit_compute_dtype: auto
+
+lora:
+  # The same names match the expert MLPs inside the MoE blocks by suffix.
+  r: 16
+  alpha: 32
+  dropout: 0.05
+  bias: none
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+
+data:
+  train_file: data/train.jsonl
+  eval_file: null
+  max_length: 512
+  packing: false
+  completion_only_loss: true
+
+training:
+  output_dir: outputs/lfm25-8b-a1b
+  num_train_epochs: 1
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 16
+  learning_rate: 1.0e-4
+  lr_scheduler_type: cosine
+  warmup_ratio: 0.05
+  logging_steps: 10
+  save_strategy: steps
+  save_steps: 100
+  save_total_limit: 2
+  gradient_checkpointing: true
+  optim: auto
+  seed: 42
+  bf16: auto
+
+export:
+  merge_adapter: false
+  push_to_hub: false
+  save_gguf: false

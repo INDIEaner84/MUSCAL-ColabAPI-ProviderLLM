@@ -1,0 +1,26 @@
+# Audio track -- LFM2.5-Audio-1.5B via the official `liquid-audio` package.
+#
+# This track does NOT go through TRL: liquid_audio.trainer.Trainer drives it and
+# performs a full fine-tune (no LoRA switch). Budget accordingly -- plan for a
+# Colab Pro A100/L4 rather than the free T4.
+model:
+  id: LiquidAI/LFM2.5-Audio-1.5B
+  track: audio
+
+audio:
+  # Fixed system prompts the model was trained with. Pick the one matching your task:
+  #   ASR            -> "Perform ASR."
+  #   TTS voices     -> "Perform TTS. Use the US female voice." (US/UK x male/female)
+  #   voice chat     -> "Respond with interleaved text and audio."
+  system_prompt: Perform ASR.
+  preprocessed_dir: data/audio/train
+  context_length: 256
+  batch_size: 8
+  max_steps: 1000
+  warmup_steps: 50
+  lr: 1.0e-4
+  num_workers: 2
+  output_dir: outputs/lfm25-audio
+
+training:
+  output_dir: outputs/lfm25-audio

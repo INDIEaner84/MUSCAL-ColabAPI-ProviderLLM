@@ -1,0 +1,53 @@
+# QLoRA SFT for a vision-language checkpoint (LFM2.5-VL).
+#
+# Dataset: flat rows with `image`, `question`, `answer` (see docs/datasets.md).
+# Image tokens are dynamically sized; max_image_tokens=256 is the value Liquid
+# recommends for on-device trade-offs. Lower it to 64 if you run out of VRAM.
+model:
+  id: LiquidAI/LFM2.5-VL-1.6B
+  track: vl
+  attn_implementation: sdpa
+
+quant:
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  bnb_4bit_use_double_quant: true
+  bnb_4bit_compute_dtype: auto
+
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  bias: none
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  extra_target_modules: [fc1, fc2, linear]
+
+data:
+  train_file: data/vl_train.jsonl
+  image_root: data/images
+  max_image_tokens: 256
+  max_length: 512
+  packing: false
+  completion_only_loss: false
+
+training:
+  output_dir: outputs/lfm25-vl-1.6b
+  num_train_epochs: 1
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 16
+  learning_rate: 2.0e-4
+  lr_scheduler_type: cosine
+  warmup_ratio: 0.05
+  logging_steps: 10
+  save_strategy: epoch
+  save_total_limit: 2
+  gradient_checkpointing: true
+  optim: auto
+  seed: 42
+  bf16: auto
+
+export:
+  merge_adapter: true
+  merged_dir: outputs/lfm25-vl-1.6b/merged
+  push_to_hub: false
+  save_gguf: false

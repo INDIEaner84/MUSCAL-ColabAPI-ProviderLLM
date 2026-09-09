@@ -1,0 +1,15 @@
+# Installed in the Colab notebooks (Colab already ships torch).
+# LFM2.5 checkpoints need a recent transformers; pin nothing unless it breaks.
+transformers>=4.57
+trl>=0.20
+peft>=0.14
+accelerate>=1.0
+bitsandbytes>=0.45
+datasets>=3.0
+pyyaml
+Pillow
+
+# Vision track uses the processor's image handling; nothing extra required.
+
+# Audio track only -- installs the official Liquid audio stack:
+# liquid-audio>=1.2.0
