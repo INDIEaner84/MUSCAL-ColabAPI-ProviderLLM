@@ -13,6 +13,11 @@ merged, and CPU avoids the VRAM spike that would kill a 15 GB T4.
 from __future__ import annotations
 
 import argparse
+import sys
+from pathlib import Path
+
+# So the script works from anywhere: put the repo root on sys.path.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from muscal_lfm.export import merge_adapter
 

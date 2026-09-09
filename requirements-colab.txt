@@ -13,3 +13,10 @@ Pillow
 
 # Audio track only -- installs the official Liquid audio stack:
 # liquid-audio>=1.2.0
+# soundfile
+
+# muscal_agent runtime (local, after training) -- all optional per backend:
+# playwright            -> browser_* tools (then: playwright install chromium)
+# trafilatura           -> much better web_read extraction (optional)
+# mss pyautogui         -> desktop_* tools (Wayland: use ydotool/wtype instead)
+# sounddevice soundfile -> --mic push-to-talk

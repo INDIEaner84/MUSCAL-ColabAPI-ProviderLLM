@@ -2,6 +2,8 @@
 
 LoRA / QLoRA-Finetuning der **Liquid AI LFM2.5**-Modelle auf Colab-GPUs —
 Text, MoE (`LFM2.5-8B-A1B`), Vision (`LFM2.5-VL`) und Audio (`LFM2.5-Audio`).
+Dazu ein **Audio-Agent**, der gesprochene Befehle direkt in Tool-Calls
+übersetzt: Web-Recherche, Browser-Steuerung, Desktop-Aktionen.
 
 > **Kein Tunnel, kein VPN, keine Erreichbarkeit.** Das Notebook läuft *in* Colab:
 > Daten rein über Google Drive, Adapter raus über Google Drive. Der lokale Rechner
@@ -53,6 +55,7 @@ Alle Config-Werte sind per `--set section.key=value` überschreibbar,
 | MoE | `LFM2.5-8B-A1B` (8.3B / 1.5B aktiv) | **A100/L4 empfohlen** | 4-bit ≈ 5.5 GB Gewichte; auf der T4 nur mit bs=1 + 512 Tokens |
 | Vision | `LFM2.5-VL-450M`, `-1.6B`, `-3B` | T4 (450M/1.6B) / L4 (3B) | Bild-Token runterdrehen bei OOM |
 | Audio | `LFM2.5-Audio-1.5B` | **A100/L4** | `liquid-audio` macht *volles* Finetuning, kein LoRA |
+| Audio-Agent | `LFM2.5-Audio-1.5B` + Tool-Calls | **A100** | Sprache → `web_search\|query=…` → Executor |
 
 Details, VRAM-Abschätzungen und Settings pro GPU: [docs/model-matrix.md](docs/model-matrix.md).
 LFM2-Audio-1.5B (die alte Generation) ist laut Liquid **nicht** trainierbar —
@@ -81,14 +84,40 @@ Vision braucht flache Zeilen (`image`, `question`, `answer`), Audio läuft über
 * Lieber 500–5.000 saubere Beispiele, die die echte Eingabeverteilung treffen,
   als 100k Rauschen.
 
+## Audio-Agent: Sprache → Tool-Call
+
+`notebooks/05_audio_agent_toolcall.ipynb` feintunt `LFM2.5-Audio-1.5B` darauf,
+gesprochene Befehle **direkt** in Funktionsaufrufe zu übersetzen, und verdrahtet
+sie mit echten Werkzeugen (`muscal_agent/`):
+
+```
+Mikrofon → LFM2.5-Audio → "web_search|query=lfm2.5" → Executor → JSON → gesprochene Antwort
+```
+
+Werkzeuge: `web_search`, `web_read`, `browser_open/click/type/snapshot`,
+`desktop_launch/type/hotkey/click/screenshot`.
+
+```bash
+# Trockenübung: nichts wird ausgeführt, nur angezeigt
+python -m muscal_agent --call "web_search|query=liquid ai lfm"
+
+# Echt: Audio rein, Aktion raus, Antwort als WAV
+MUSCAL_AGENT_DRY_RUN=0 MUSCAL_AGENT_WRITE=1 python -m muscal_agent --wav command.wav --speak
+```
+
+Desktop-Steuerung hat drei Bremsen (Risikoklassen, Dry-Run-Default, Allow-List +
+Klick-Region) — Details und die zwei Fallen, an denen dieses Setup sonst
+scheitert, in [docs/audio-agent.md](docs/audio-agent.md).
+
 ## Repo-Struktur
 
 ```
-configs/          vier Beispiel-Runs (text / moe / vl / audio)
-muscal_lfm/       Python-Paket: config, data, model, train, export, cli
-scripts/          lokale Helfer (Datenaufbereitung, Merge)
+configs/          Beispiel-Runs (text / moe / vl / audio / audio-agent)
+muscal_lfm/       Training: config, data, model, train, export, cli
+muscal_agent/     Audio-Agent-Runtime: toolcall, catalog, executor, agent, backends
+scripts/          Helfer: Datenaufbereitung, Merge, Tool-Call-Datensatz, Eval
 notebooks/        Colab-Notebooks, eines pro Track
-docs/             Modellmatrix, Datenformate, GGUF-Export
+docs/             Modellmatrix, Datenformate, GGUF-Export, Audio-Agent
 ```
 
 ## Nach dem Training
@@ -105,6 +134,9 @@ Siehe [docs/gguf-export.md](docs/gguf-export.md).
 * **Audio = volles Finetune**, kein LoRA-Schalter in `liquid-audio` → deutlich mehr VRAM.
 * **LFM2 ist hybrid** (gated Convs + GQA). `flash_attention_2` ist nicht überall
   supportet; Default ist `sdpa`, das läuft überall.
+* **Beim Audio-Agent ist der System-Prompt „Perform ASR."** — kein Tippfehler.
+  Der GGUF-Server erzwingt ihn zur Inferenz; mit einem eigenen Prompt trainiert,
+  wird das Fine-Tune überschrieben und das Modell transkribiert nur noch.
 * Adapter-Ziele (`target_modules`) matchen die MoE-Experten per Suffix, deshalb
   funktioniert dieselbe Liste für dichte und MoE-Checkpoints.
 

@@ -1,0 +1,45 @@
+# Audio agent: speech -> function call (web / browser / desktop).
+#
+# The runtime half of this config lives in muscal_agent/ (tool catalog, policy,
+# executor). This file drives the fine-tune.
+model:
+  id: LiquidAI/LFM2.5-Audio-1.5B
+  track: audio
+
+audio:
+  # Pinned: llama-liquid-audio-server accepts only a closed allow-list of system
+  # prompts and forces this one at inference. Train on anything else and the
+  # fine-tune gets overridden. Details in docs/audio-agent.md.
+  system_prompt: Perform ASR.
+
+  dataset: data/agent_audio              # output of scripts/build_toolcall_dataset.py
+  preprocessed_dir: data/agent_audio/train
+  context_length: 512                    # reference recipe: 512
+  batch_size: 32                         # reference recipe: 32 on A100-80GB
+  max_steps: 2000                        # 1000 already works; more for 10+ tools
+  warmup_steps: 250
+  lr: 5.0e-5                             # reference recipe: 5e-5 (full FT, not LoRA)
+  num_workers: 2
+  output_dir: outputs/audio-agent
+
+# Tool-call wire format. Pick one BEFORE generating data and never change it:
+#   pipe      -> web_search|query=lfm|max_results=5     (compact, recommended)
+#   pythonic  -> <|tool_call_start|>[web_search(query="lfm")]<|tool_call_end|>
+toolcall_format: pipe
+
+# Runtime policy for muscal_agent. Everything here is a brake, not a feature.
+agent:
+  # null = every tool in the catalog; keep it narrow in production.
+  allowed_tools: null
+  allow_write: false          # browser_*/desktop_* that change state
+  allow_destructive: false    # desktop_click (blind coordinates)
+  dry_run: true               # prints what would happen instead of doing it
+  max_output_chars: 2000
+  answer_model: LiquidAI/LFM2.5-1.2B-Instruct
+
+eval:
+  # Held-out split, never seen in training.
+  gold: data/agent_eval.jsonl
+  # Reference numbers from Liquid's own voice-assistant run (41 functions,
+  # 55k samples): 0 / 0 / 0 before fine-tuning.
+  baseline: {format_compliance: 0.0, function_name_accuracy: 0.0, argument_accuracy: 0.0}

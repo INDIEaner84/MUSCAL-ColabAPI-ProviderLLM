@@ -576,6 +576,227 @@ drei zusätzliche Dateien aus dem `-GGUF`-Repo: `mmproj-`, `vocoder-` und
     ]
 
 
+def agent_notebook() -> list[tuple[str, str]]:
+    return [
+        ("md", """# 05 — Audio-Agent: Sprache → Tool-Call (Web, Browser, Desktop)
+
+Feintunt `LFM2.5-Audio-1.5B` darauf, gesprochene Befehle **direkt** in
+Funktionsaufrufe zu übersetzen — und verdrahtet das mit echter Web-Recherche,
+Browser-Steuerung und Desktop-Aktionen.
+
+```
+ Mikrofon → LFM2.5-Audio (feingetunt) → "web_search|query=lfm2.5"
+                                              ↓
+                                        muscal_agent.executor
+                                              ↓
+                       JSON → LFM2.5-1.2B-Instruct (ein Satz) → TTS → Lautsprecher
+```
+
+**Drei Dinge, die hier anders sind als bei den anderen Notebooks:**
+
+1. Der System-Prompt ist zwingend `"Perform ASR."` — der GGUF-Server erzwingt ihn
+   zur Inferenz, ein anderer Prompt wird vom Fine-Tune überschrieben.
+2. Es ist ein **volles Finetune**, kein LoRA → **A100 (Colab Pro) nötig**.
+3. Das Tool-Call-Format wird vor der Datenerzeugung festgelegt und danach nie
+   geändert.
+
+Alles nachlesbar in [docs/audio-agent.md](../docs/audio-agent.md)."""),
+        ("code", '''!pip install -q -U liquid-audio datasets soundfile
+!nvidia-smi --query-gpu=name,memory.total --format=csv
+
+import torch
+print("torch", torch.__version__, "| cuda", torch.cuda.is_available())
+if torch.cuda.is_available():
+    vram = torch.cuda.get_device_properties(0).total_memory / 1024**3
+    print("gpu:", torch.cuda.get_device_name(0), "| vram:", round(vram, 1), "GB")
+    if vram < 40:
+        print("[warn] unter 40 GB -- das volle Audio-Finetune wird eng. A100 waehlen.")'''),
+        drive_cell("audio-agent"),
+        code_cell(),
+        ("md", """## Werkzeuge und Format
+
+Der Katalog liegt in `muscal_agent/catalog.py`. Klein halten: 3–4 Funktionen mit
+je ~500 Beispielen schlagen 12 Funktionen mit je 80."""),
+        ("code", '''import sys
+sys.path.insert(0, "/content/MUSCAL-ColabAPI-ProviderLLM")
+
+from muscal_agent.catalog import TOOLS, TOOLS_BY_NAME
+from muscal_agent.toolcall import ToolCall, parse_tool_call
+
+FORMAT = "pipe"   # "pipe" | "pythonic" -- vor der Datenerzeugung festlegen!
+
+for tool in TOOLS:
+    args = ", ".join(p.name for p in tool.params)
+    print(f"  {tool.name}({args})  [{tool.risk}]")
+
+call = ToolCall("web_search", {"query": "liquid ai lfm", "max_results": 5})
+print("\\nserialised:", call.serialise(FORMAT))
+print("round-trip :", parse_tool_call(call.serialise(FORMAT), fmt=FORMAT))'''),
+        ("md", """## Trockenübung für den Executor
+
+Bevor ein Modell im Spiel ist: prüfen, dass die Policy greift. `dry_run` ist der
+Default — es wird nichts ausgeführt, nur ausgegeben, was passieren würde."""),
+        ("code", '''from muscal_agent.agent import AudioAgent
+from muscal_agent.executor import Policy
+from muscal_agent.toolcall import parse_tool_call
+
+policy = Policy(allowed_tools={"web_search", "web_read"}, dry_run=True)
+agent = AudioAgent(fmt=FORMAT, policy=policy, answer_model_id=None)
+
+for text in [
+    "web_search|query=liquid ai lfm",
+    "desktop_launch|app=firefox",          # nicht auf der Allow-List
+    "desktop_click|x=100|y=200",           # destructive + nicht erlaubt
+    "web_read|url=https://docs.liquid.ai",
+]:
+    call = parse_tool_call(text, fmt=FORMAT)
+    result = agent.run_tools([call])[0]
+    status = "ok" if result.ok else ("skipped" if result.skipped else "error")
+    print(f"{text:45s} -> {status:8s} {result.output or result.error}")'''),
+        ("md", """## 1. Daten erzeugen
+
+`data/agent_utterances.jsonl` im Repo ist ein Startgerüst (19 Paare). Ersetze es
+durch deine eigenen Sätze — und nimm **deutlich mehr**: ~500 pro Funktion ist ein
+vernünftiges Ziel, Liquid's Referenz lief mit ~1.350 pro Funktion.
+
+Audio kommt entweder aus eigenen Aufnahmen (`--audio-map`, empfohlen) oder aus
+dem TTS des Modells selbst (`--tts`, bequem, aber eine einzige Stimme)."""),
+        ("code", '''from pathlib import Path
+
+UTTERANCES = DRIVE_DIR / "data" / "agent_utterances.jsonl"
+UTTERANCES.parent.mkdir(parents=True, exist_ok=True)
+
+if not UTTERANCES.exists():
+    import shutil
+    shutil.copy("data/agent_utterances.jsonl", UTTERANCES)
+    print("Starter-Datei kopiert:", UTTERANCES)
+
+DATASET_DIR = DRIVE_DIR / "data" / "agent_audio"
+EVAL_FILE = DRIVE_DIR / "data" / "agent_eval.jsonl"
+
+!python scripts/build_toolcall_dataset.py \\
+    --utterances "$UTTERANCES" \\
+    --tts \\
+    --augment \\
+    --val-ratio 0.05 \\
+    --eval-out "$EVAL_FILE" \\
+    --out "$DATASET_DIR"'''),
+        ("md", """## 2. Preprocessen
+
+Wandelt Audio + Zieltext in das Tensor-Format, das `liquid_audio`'s Trainer
+erwartet. Der System-Prompt ist im Skript auf `"Perform ASR."` gepinnt — mit
+Kommentar, warum."""),
+        ("code", '''PREPROC = DRIVE_DIR / "data" / "agent_audio" / "train"
+
+!python scripts/preprocess_audio_toolcalls.py \\
+    --dataset "$DATASET_DIR" \\
+    --output-path "$PREPROC" \\
+    --max-context-length 512 \\
+    --device cuda'''),
+        ("md", """## 3. Boden messen (Baseline)
+
+**Diesen Schritt nicht überspringen.** Das untrainierte Modell transkribiert —
+Erwartung sind 0 % über alle drei Metriken. Das ist der Beweis, dass Fine-Tuning
+Voraussetzung ist und nicht Optimierung."""),
+        ("code", '''import io, json
+from pathlib import Path
+
+import soundfile as sf
+import torch
+from datasets import load_from_disk
+
+from muscal_agent.agent import AudioAgent
+
+VAL_DIR = DRIVE_DIR / "data" / "agent_audio_val"
+val = load_from_disk(str(VAL_DIR))
+print("val samples:", len(val))
+
+def predict(model_id: str, rows, out_file: str, limit: int = 200):
+    agent = AudioAgent(model_id=model_id, fmt=FORMAT, answer_model_id=None)
+    preds = []
+    for row in rows.select(range(min(limit, len(rows)))):
+        audio = row["audio_chat"][1]["content"][0]["audio"]
+        if isinstance(audio, dict):           # datasets kann Audio als dict geben
+            audio = audio["bytes"]
+        wav, sr = sf.read(io.BytesIO(audio), dtype="float32")
+        preds.append(agent.speech_to_text(torch.from_numpy(wav).unsqueeze(0), sr))
+    Path(out_file).write_text("\\n".join(p.replace("\\n", " ") for p in preds), encoding="utf-8")
+    return preds
+
+baseline = predict("LiquidAI/LFM2.5-Audio-1.5B", val, "baseline_preds.txt")
+for row in baseline[:5]:
+    print("  ", row)'''),
+        ("code", '''!python scripts/eval_toolcalls.py \\
+    --gold "$EVAL_FILE" \\
+    --pred baseline_preds.txt --pred-raw \\
+    --fmt "$FORMAT"'''),
+        ("md", """## 4. Trainieren
+
+**Volles Finetune auf einer A100.** Hyperparameter aus Liquid's Referenzlauf
+(55k Paare, 41 Funktionen): context 512, batch 32, warmup 250, lr 5e-5.
+Bei einem kleineren Katalog tun es 1.000–2.000 Steps."""),
+        ("code", '''from pathlib import Path
+
+from liquid_audio.data.dataloader import LFM2DataLoader
+from liquid_audio.trainer import Trainer
+
+OUT_DIR = DRIVE_DIR / "outputs" / "audio-agent"
+
+train_data = LFM2DataLoader(dataset_path=str(PREPROC), context_length=512)
+
+trainer = Trainer(
+    model_id="LiquidAI/LFM2.5-Audio-1.5B",
+    train_data=train_data,
+    lr=5e-5,
+    batch_size=32,
+    max_steps=2000,
+    warmup_steps=250,
+    dataloader_num_workers=2,
+    logging_interval=10,
+    save_interval=500,
+    val_interval=200,
+    output_dir=str(OUT_DIR),
+)
+trainer.train()'''),
+        ("md", """## 5. Danach messen
+
+Gleicher Lauf wie in Schritt 3, nur mit dem trainierten Checkpoint. Trage die
+Zahlen in `configs/audio_agent_ft.yaml` unter `eval:` ein, damit der Fortschritt
+festgehalten ist."""),
+        ("code", '''# Pfad zum Checkpoint aus Schritt 4 (Trainer schreibt outputs/checkpoint/...)
+CKPT = OUT_DIR / "checkpoint"
+print("checkpoint:", CKPT, "| exists:", CKPT.exists())
+
+# Entweder die Gewichte zurueckladen oder -- falls schon als GGUF exportiert --
+# den llama-liquid-audio-server dagegen laufen lassen. Fuer den PyTorch-Pfad:
+trained = predict(str(CKPT), val, "trained_preds.txt") if CKPT.exists() else []
+for row in trained[:5]:
+    print("  ", row)'''),
+        ("code", '''!python scripts/eval_toolcalls.py \\
+    --gold "$EVAL_FILE" \\
+    --pred trained_preds.txt --pred-raw \\
+    --fmt "$FORMAT"'''),
+        ("md", """## 6. In Betrieb
+
+Der trainierte Checkpoint muss in den GGUF-Vierersatz (Modell, `mmproj`,
+`vocoder`, `tokenizer`) und läuft dann im `llama-liquid-audio-server`. Vorgehen
+wie in Schritt 3 von Liquid's
+[Voice-Assistant-Beispiel](https://github.com/Liquid4All/cookbook/tree/main/examples/voice-assistant).
+
+**Sicherheit** — Desktop-Steuerung ist hier die einzige Komponente mit
+Schadenspotenzial. Drei Bremsen, Default ist „ändert nichts":
+
+| Ebene | Schalter |
+|---|---|
+| Risikoklasse | `MUSCAL_AGENT_WRITE=1`, `MUSCAL_AGENT_DESTRUCTIVE=1` |
+| Dry-Run | `MUSCAL_AGENT_DRY_RUN=0` (sonst wird nur ausgegeben) |
+| Allow-List / Region | `MUSCAL_AGENT_TOOLS=web_search,web_read`, `MUSCAL_SCREEN=x,y,w,h` |
+
+Erste Läufe in einer VM. Ein 1.5B-Modell verhört sich — „strg c" statt „strg v"
+ist ein reales Szenario."""),
+    ]
+
+
 def main() -> None:
     out_dir = ROOT / "notebooks"
     out_dir.mkdir(exist_ok=True)
@@ -584,6 +805,7 @@ def main() -> None:
         "02_lfm_vl_qlora.ipynb": vl_notebook(),
         "03_lfm_moe_qlora.ipynb": moe_notebook(),
         "04_lfm_audio_ft.ipynb": audio_notebook(),
+        "05_audio_agent_toolcall.ipynb": agent_notebook(),
     }
     for name, cells in notebooks.items():
         nbf.write(nb(cells), str(out_dir / name))

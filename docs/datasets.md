@@ -69,6 +69,21 @@ Siehe [`notebooks/04_lfm_audio_ft.ipynb`](../notebooks/04_lfm_audio_ft.ipynb) un
 [`examples/preprocess_jenny_tts.py`](https://github.com/Liquid4All/liquid-audio/blob/main/examples/preprocess_jenny_tts.py)
 für ein vollständiges TTS-Beispiel.
 
+## Audio-Agent — Sprache → Tool-Call
+
+Nicht Konversationen, sondern (Audio, Funktionsaufruf)-Paare. Eingabe für
+`scripts/build_toolcall_dataset.py` ist eine einfache JSONL:
+
+```json
+{"utterance": "such im netz nach liquid ai lfm", "call": "web_search|query=liquid ai lfm"}
+```
+
+Das Skript erzeugt daraus die `audio_chat`-Struktur, die `liquid-audio` erwartet
+(system → user/Audio → assistant/Text), mit hart gepinntem System-Prompt
+`"Perform ASR."`. Startgerüst: [`data/agent_utterances.jsonl`](../data/agent_utterances.jsonl).
+
+Details, Kontingente und die Eval-Metriken: [docs/audio-agent.md](audio-agent.md).
+
 ## Mengen & Qualität
 
 Liquid empfiehlt **500–5.000 Beispiele**. Wichtiger als Volumen:
