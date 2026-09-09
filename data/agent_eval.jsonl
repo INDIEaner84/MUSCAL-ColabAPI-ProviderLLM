@@ -1,0 +1,12 @@
+{"call": "web_search|query=lfm2 audio fine tuning"}
+{"call": "web_search|query=playwright accessibility tree"}
+{"call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"call": "browser_open|url=https://arxiv.org"}
+{"call": "browser_click|selector=#search"}
+{"call": "browser_type|selector=input[name=q]|text=liquid ai|submit=true"}
+{"call": "browser_snapshot"}
+{"call": "desktop_launch|app=calculator"}
+{"call": "desktop_type|text=musal agent"}
+{"call": "desktop_hotkey|keys=ctrl+v"}
+{"call": "desktop_screenshot"}
+{"call": "web_search|query=searxng self hosted"}

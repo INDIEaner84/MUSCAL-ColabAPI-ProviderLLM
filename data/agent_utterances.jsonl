@@ -1,0 +1,19 @@
+{"utterance": "such im netz nach liquid ai lfm", "call": "web_search|query=liquid ai lfm"}
+{"utterance": "recherchiere quantization aware training", "call": "web_search|query=quantization aware training"}
+{"utterance": "finde informationen zu llama cpp audio support", "call": "web_search|query=llama.cpp audio support"}
+{"utterance": "such nach colab a100 verfuegbarkeit", "call": "web_search|query=colab a100 verfuegbarkeit"}
+{"utterance": "lies die seite https://docs.liquid.ai", "call": "web_read|url=https://docs.liquid.ai"}
+{"utterance": "was steht auf https://example.com", "call": "web_read|url=https://example.com"}
+{"utterance": "fass den inhalt von https://huggingface.co/LiquidAI zusammen", "call": "web_read|url=https://huggingface.co/LiquidAI"}
+{"utterance": "oeffne https://news.ycombinator.com im browser", "call": "browser_open|url=https://news.ycombinator.com"}
+{"utterance": "geh zu https://github.com", "call": "browser_open|url=https://github.com"}
+{"utterance": "klick auf button.submit", "call": "browser_click|selector=button.submit"}
+{"utterance": "drueck den login button", "call": "browser_click|selector=#login"}
+{"utterance": "gib liquid ai in das suchfeld ein", "call": "browser_type|selector=input[name=q]|text=liquid ai|submit=true"}
+{"utterance": "was steht gerade auf der seite", "call": "browser_snapshot"}
+{"utterance": "starte firefox", "call": "desktop_launch|app=firefox"}
+{"utterance": "oeffne den terminal", "call": "desktop_launch|app=terminal"}
+{"utterance": "schreib hallo welt", "call": "desktop_type|text=hallo welt"}
+{"utterance": "drueck strg c", "call": "desktop_hotkey|keys=ctrl+c"}
+{"utterance": "mach alt tab", "call": "desktop_hotkey|keys=alt+tab"}
+{"utterance": "mach einen screenshot", "call": "desktop_screenshot"}

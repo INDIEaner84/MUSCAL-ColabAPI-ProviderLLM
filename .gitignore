@@ -7,10 +7,12 @@ __pycache__/
 # Training output (Adapters, merged Modelle, Checkpoints)
 outputs/
 
-# Daten: nur der Beispieldatensatz und dieser Ordner gehoeren ins Repo
+# Daten: nur die Beispieldatensaetze und dieser Ordner gehoeren ins Repo
 data/*
 !data/README.md
 !data/example_train.jsonl
+!data/agent_utterances.jsonl
+!data/agent_eval.jsonl
 
 # Colab / Jupyter
 .ipynb_checkpoints/
