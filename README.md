@@ -109,6 +109,12 @@ Desktop-Steuerung hat drei Bremsen (Risikoklassen, Dry-Run-Default, Allow-List +
 Klick-Region) — Details und die zwei Fallen, an denen dieses Setup sonst
 scheitert, in [docs/audio-agent.md](docs/audio-agent.md).
 
+## Erst RAG oder Adapter?
+
+Bevor ein Adapter trainiert wird: [docs/rag-vs-adapter.md](docs/rag-vs-adapter.md)
+— Nano-Check, LFM-RAG-Stack, Entscheidungsmatrix pro Modell und warum der
+MoE-Adapter (`LFM2.5-8B-A1B`) ein Sonderfall ist (Router-Risiken, Serving).
+
 ## Repo-Struktur
 
 ```
@@ -117,7 +123,8 @@ muscal_lfm/       Training: config, data, model, train, export, cli
 muscal_agent/     Audio-Agent-Runtime: toolcall, catalog, executor, agent, backends
 scripts/          Helfer: Datenaufbereitung, Merge, Tool-Call-Datensatz, Eval
 notebooks/        Colab-Notebooks, eines pro Track
-docs/             Modellmatrix, Datenformate, GGUF-Export, Audio-Agent
+docs/             Modellmatrix, Datenformate, GGUF-Export, Audio-Agent,
+                  RAG-vs-Adapter-Entscheidungshilfe
 ```
 
 ## Nach dem Training
