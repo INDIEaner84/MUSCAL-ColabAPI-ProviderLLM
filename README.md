@@ -124,7 +124,7 @@ muscal_agent/     Audio-Agent-Runtime: toolcall, catalog, executor, agent, backe
 scripts/          Helfer: Datenaufbereitung, Merge, Tool-Call-Datensatz, Eval
 notebooks/        Colab-Notebooks, eines pro Track
 docs/             Modellmatrix, Datenformate, GGUF-Export, Audio-Agent,
-                  RAG-vs-Adapter-Entscheidungshilfe
+                  RAG-vs-Adapter, RAG-Eval
 ```
 
 ## Nach dem Training

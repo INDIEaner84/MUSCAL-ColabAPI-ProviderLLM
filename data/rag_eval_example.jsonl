@@ -1,0 +1,16 @@
+{"question": "Wie viele Dimensionen hat der Vektor von LFM2.5-Embedding-350M?", "relevant": ["lfm25-embedding"]}
+{"question": "Welchen Prompt muss ich fuer Anfragen und welchen fuer Dokumente verwenden?", "relevant": ["lfm25-embedding"]}
+{"question": "Wie lang darf ein Dokument fuer das Embedding-Modell maximal sein?", "relevant": ["lfm25-embedding"]}
+{"question": "Welche Sprachen unterstuetzt das Embedding-Modell?", "relevant": ["lfm25-embedding"]}
+{"question": "Was ist MaxSim und bei welchem Modell kommt es zum Einsatz?", "relevant": ["lfm25-colbert"]}
+{"question": "Womit baue ich einen ColBERT-Index auf?", "relevant": ["lfm25-colbert"]}
+{"question": "Wann nehme ich ColBERT statt des dichten Embedding-Modells?", "relevant": ["lfm25-colbert", "lfm25-embedding"]}
+{"question": "Warum darf ich bf16 auf einer Colab-T4 nicht hart setzen?", "relevant": ["qlora-colab"]}
+{"question": "Wie viel Speicher brauchen die Gewichte eines 8B-Modells in 4-Bit?", "relevant": ["qlora-colab", "moe-8b-a1b"]}
+{"question": "Was ist Router Collapse beim MoE-Finetuning?", "relevant": ["moe-8b-a1b"]}
+{"question": "Welche MoE-Familien sind fuer Multi-LoRA in vLLM bestaetigt?", "relevant": ["moe-8b-a1b"]}
+{"question": "Welcher System-Prompt ist beim Audio-Finetuning zwingend und warum?", "relevant": ["audio-toolcall"]}
+{"question": "Hat der liquid-audio Trainer einen LoRA-Schalter?", "relevant": ["audio-toolcall"]}
+{"question": "Welche LoRA-Zielmodule sind fuer LFM2.5 empfohlen?", "relevant": ["lora-targets"]}
+{"question": "Warum funktioniert dieselbe target_modules-Liste auch bei MoE?", "relevant": ["lora-targets"]}
+{"question": "Wie verhaelt sich die Lernrate bei DPO im Vergleich zu SFT?", "relevant": ["lora-targets", "qlora-colab"]}

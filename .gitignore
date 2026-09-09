@@ -21,6 +21,8 @@ data/*
 !data/agent_slots_de.json
 !data/agent_slots_en.json
 !data/agent_eval.jsonl
+!data/rag_docs/
+!data/rag_eval_example.jsonl
 
 # Colab / Jupyter
 .ipynb_checkpoints/
