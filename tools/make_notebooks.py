@@ -639,7 +639,23 @@ for tool in TOOLS:
 call = ToolCall("web_search", {"query": "liquid ai lfm", "max_results": 5})
 print("\\nserialised:", call.serialise(FORMAT))
 print("round-trip :", parse_tool_call(call.serialise(FORMAT), fmt=FORMAT))'''),
+        ("md", """## Profil wählen — nicht alle Werkzeuge auf einmal
+
+Ein Profil bündelt zwei Dinge, die zusammengehören: welche Werkzeuge es für das
+Modell gibt **und** welche Risikoklassen der Executor akzeptiert. Elf Werkzeuge
+auf einmal freischalten macht das Modell nicht fähiger, sondern fehleranfälliger
+— jedes zusätzliche ist eine neue Möglichkeit, sich zu verhören.
+
+Reihenfolge: **`web` → Zahlen messen → `browser` → `desktop`** (in der VM)."""),
+        ("code", '''from muscal_agent.profiles import describe, get as get_profile
+
+PROFILE = "web"     # web | browser | desktop | all
+
+print(describe())
+profile = get_profile(PROFILE)
+print("aktiv:", profile.name, "->", profile.tools)'''),
         ("md", """## Trockenübung für den Executor
+
 
 Bevor ein Modell im Spiel ist: prüfen, dass die Policy greift. `dry_run` ist der
 Default — es wird nichts ausgeführt, nur ausgegeben, was passieren würde."""),
@@ -647,7 +663,7 @@ Default — es wird nichts ausgeführt, nur ausgegeben, was passieren würde."""
 from muscal_agent.executor import Policy
 from muscal_agent.toolcall import parse_tool_call
 
-policy = Policy(allowed_tools={"web_search", "web_read"}, dry_run=True)
+policy = Policy.from_profile(PROFILE, dry_run=True)
 agent = AudioAgent(fmt=FORMAT, policy=policy, answer_model_id=None)
 
 for text in [
@@ -660,7 +676,7 @@ for text in [
     result = agent.run_tools([call])[0]
     status = "ok" if result.ok else ("skipped" if result.skipped else "error")
     print(f"{text:45s} -> {status:8s} {result.output or result.error}")'''),
-        ("md", """## 1. Daten erzeugen — alle 11 Werkzeuge
+        ("md", """## 1. Daten erzeugen — Umfang folgt dem Profil
 
 Der Generator kombiniert **Satzschablonen x Slot-Werte** pro Werkzeug.
 `--slots` + `--per-tool` erzeugt fuer *alle* Werkzeuge im Katalog Daten, eigene
@@ -670,7 +686,16 @@ Saetze kommen per `--utterances` dazu.
 |---|---|
 | `data/agent_slots_de.json` / `_en.json` | Werte pro Argument (URLs, Selektoren, Apps, Hotkeys …) |
 | `data/agent_templates_de.json` / `_en.json` | Satzschablonen pro Werkzeug |
-| `data/agent_utterances_full_de.jsonl` / `_en.json` | daraus erzeugt: ~600 Paare, alle 11 Werkzeuge |
+| `data/agent_utterances_web_de.jsonl` / `_en.json` | **web-Profil**: 400 Paare (200 je Werkzeug) |
+| `data/agent_utterances_full_de.jsonl` / `_en.json` | **alle 11 Werkzeuge**: ~600 Paare (60 je Werkzeug) |
+
+Weniger Werkzeuge bei mehr Beispielen schlaegt mehr Werkzeuge bei duenner
+Deckung. Eigene Slot-Werte (deine URLs, Apps, Hotkeys) sind der groesste Hebel
+nach dem Audio — Vorlage holen und anpassen:
+
+```bash
+python scripts/build_toolcall_dataset.py --profile web --language en --dump-slots > my_slots.json
+```
 
 **Sprache:** `LFM2.5-Audio-1.5B` ist auf Englisch trainiert. Deutsch
 funktioniert eher als Absichtserkennung, Englisch ist treffsicherer. Unten
@@ -681,7 +706,7 @@ jede Probe dieselbe Stimme, und das Modell lernt eine Sprecherin statt dich.""")
         ("code", '''from pathlib import Path
 
 LANG     = "en"     # "de" | "en" -- entscheidet Schablonen und Slot-Werte
-PER_TOOL = 60       # Paare pro Werkzeug
+PER_TOOL = 200      # Paare pro Werkzeug (web-Profil hat nur 2 -> 400 Paare)
 
 UTTERANCES  = DRIVE_DIR / "data" / "agent_utterances_full.jsonl"
 DATASET_DIR = DRIVE_DIR / "data" / "agent_audio"
@@ -690,6 +715,7 @@ UTTERANCES.parent.mkdir(parents=True, exist_ok=True)
 
 # Paare erzeugen -- kein Audio noetig, --write-pairs stoppt danach
 !python scripts/build_toolcall_dataset.py \
+    --profile "$PROFILE" \
     --language "$LANG" \
     --slots "data/agent_slots_$LANG.json" \
     --per-tool "$PER_TOOL" \

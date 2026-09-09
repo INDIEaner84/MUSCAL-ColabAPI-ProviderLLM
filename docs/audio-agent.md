@@ -120,13 +120,21 @@ Mitgelieferte Bausteine und das Ergebnis:
 |---|---|
 | `data/agent_slots_de.json` / `_en.json` | Werte pro Argument (URLs, Selektoren, Apps, Hotkeys …) |
 | `data/agent_templates_de.json` / `_en.json` | Satzschablonen pro Werkzeug |
-| `data/agent_utterances_full_de.jsonl` | **601 Paare**, alle 11 Werkzeuge |
+**Empfohlen für den Start** — das web-Profil, dafür doppelt so viele Beispiele:
+
+| `data/agent_utterances_web_de.jsonl` / `_en.jsonl` | **400 Paare** (200 je Werkzeug, nur `web_search` + `web_read`) |
+|---|---|
+| `data/agent_utterances_full_de.jsonl` | **604 Paare**, alle 11 Werkzeuge (≈60 je Werkzeug) |
 | `data/agent_utterances_full_en.jsonl` | **591 Paare**, alle 11 Werkzeuge |
 
-Verteilung im deutschen Korpus (pro Werkzeug): `web_search` 61, `web_read` 62,
-`browser_open` 61, `browser_click` 61, `browser_type` 61, `browser_snapshot` 27,
-`desktop_launch` 61, `desktop_type` 60, `desktop_hotkey` 62, `desktop_click` 60,
-`desktop_screenshot` 25.
+Eigene Slot-Werte sind der größte Hebel nach dem Audio:
+
+```bash
+python scripts/build_toolcall_dataset.py --profile web --language en --dump-slots > my_slots.json
+# my_slots.json editieren (deine URLs, Apps, Hotkeys) und zurueckfuttern:
+python scripts/build_toolcall_dataset.py --slots my_slots.json --language en \
+    --per-tool 200 --write-pairs data/my_utterances.jsonl
+```
 
 Die zwei argumentlosen Werkzeuge (`browser_snapshot`, `desktop_screenshot`)
 kommen nur auf ~25, weil ihre Variation allein aus Formulierungen stammt — bei
@@ -168,6 +176,33 @@ Drei Metriken, jeweils eine Teilmenge der vorherigen:
 Liquid's Baseline-Wert für das untrainierte Modell: **0 / 0 / 0** — es
 transkribiert brav. Genau das ist der Sinn der Messung: sie beweist, dass
 Fine-Tuning nicht Optimierung, sondern Voraussetzung ist.
+
+## Profile — wie viel Agent ist angeschaltet?
+
+Ein Profil bündelt zwei Dinge, die zusammengehören: welche Werkzeuge es für das
+Modell gibt **und** welche Risikoklassen der Executor akzeptiert.
+
+| Profil | Werkzeuge | write | destructive | Wofür |
+|---|---|---|---|---|
+| `web` (Default) | 2 | – | – | Recherche und Seiten lesen. Kann nichts verändern. |
+| `browser` | 6 | ✓ | – | Browser-Steuerung: Klicks und Eingaben. |
+| `desktop` / `all` | 11 | ✓ | ✓ | Alles inklusive Desktop. Erste Läufe in eine VM. |
+
+```bash
+python -m muscal_agent --list-profiles
+python -m muscal_agent --profile web --call "web_search|query=liquid ai lfm"   # dry-run
+python -m muscal_agent --profile web --live --call "web_search|query=lfm"      # echter Aufruf
+MUSCAL_AGENT_PROFILE=browser python -m muscal_agent --mic
+```
+
+**Empfohlene Reihenfolge:** mit `web` anfangen, die drei Metriken messen, erst
+dann `browser`, zuletzt `desktop`. Elf Werkzeuge auf einmal freizugeben macht
+das Modell nicht fähiger, sondern fehleranfälliger — jedes zusätzliche ist eine
+weitere Möglichkeit, sich zu verhören.
+
+Der Werkzeugumfang bestimmt auch die Daten: `--profile web` erzeugt nur Paare
+für die freigegebenen Funktionen (und filtert handgeschriebene entsprechend).
+Weniger Werkzeuge bei mehr Beispielen schlägt mehr Werkzeuge bei dünner Deckung.
 
 ## Sicherheit — der Teil, den man nicht überspringt
 

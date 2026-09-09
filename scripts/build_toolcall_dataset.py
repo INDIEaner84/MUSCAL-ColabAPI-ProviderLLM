@@ -111,6 +111,7 @@ def synthesise_pairs(
     per_tool: int,
     fmt: str = "pipe",
     seed: int = 42,
+    tools: set[str] | None = None,
 ) -> list[tuple[str, str]]:
     """Generate utterance/call pairs for EVERY tool in the catalog.
 
@@ -131,6 +132,8 @@ def synthesise_pairs(
     pairs: list[tuple[str, str]] = []
 
     for name in sorted(TOOLS_BY_NAME):
+        if tools is not None and name not in tools:
+            continue
         tool = TOOLS_BY_NAME[name]
         tmpl_list = templates.get(name) or []
         if not tmpl_list:
@@ -276,9 +279,28 @@ def main() -> None:
     parser.add_argument("--eval-out", default="data/agent_eval.jsonl",
                         help="where the gold calls of the val split are written")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--profile", default=None, choices=["web", "browser", "desktop", "all"],
+                        help="restrict generation to the tools of this profile")
+    parser.add_argument("--dump-slots", action="store_true",
+                        help="print a slot file for the profile and exit (edit it, feed it back via --slots)")
     parser.add_argument("--write-pairs", help="dump the generated utterance/call pairs here and stop")
     parser.add_argument("--push-to", help="push the dataset to this HF repo id")
     args = parser.parse_args()
+
+    from muscal_agent.profiles import get as get_profile
+
+    if args.dump_slots:
+        slots_path = Path(args.slots or f"data/agent_slots_{args.language}.json")
+        current = json.loads(slots_path.read_text(encoding="utf-8")) if slots_path.exists() else {}
+        allowed = set(get_profile(args.profile or "web").tools) if args.profile else None
+        if allowed:
+            current = {tool: values for tool, values in current.items() if tool in allowed}
+        print(json.dumps(current, indent=2, ensure_ascii=False))
+        return
+
+    profile = get_profile(args.profile) if args.profile else None
+    if profile:
+        print(f"[profile] {profile.name}: {len(profile.tools)} tools -- {profile.description}")
 
     items: list[tuple[str, str]] = []
 
@@ -291,13 +313,18 @@ def main() -> None:
 
     if args.slots:
         slots = json.loads(Path(args.slots).read_text(encoding="utf-8"))
-        synth = synthesise_pairs(slots, templates, args.per_tool, fmt=args.fmt)
+        synth = synthesise_pairs(slots, templates, args.per_tool, fmt=args.fmt,
+                                 tools=set(profile.tools) if profile else None)
         print(f"[synth] {len(synth)} pairs across all tools ({args.language}, {args.per_tool}/tool)")
         items.extend(synth)
 
     if args.utterances:
         hand = [(r["utterance"], r["call"]) for r in load_jsonl(Path(args.utterances))]
-        print(f"[input] {len(hand)} hand-written pairs")
+        if profile:
+            allowed = set(profile.tools)
+            hand = [pair for pair in hand if pair[1].split("|", 1)[0] in allowed]
+        print(f"[input] {len(hand)} hand-written pairs"
+              + (f" (profile {profile.name})" if profile else ""))
         items.extend(hand)
 
     if not items:

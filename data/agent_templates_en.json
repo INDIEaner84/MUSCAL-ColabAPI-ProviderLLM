@@ -6,7 +6,12 @@
     "google {query}",
     "find information about {query}",
     "research {query}",
-    "what can you find on {query}"
+    "what can you find on {query}",
+    "find {query}",
+    "i need info on {query}",
+    "show me results for {query}",
+    "what do you know about {query}",
+    "get me hits for {query}"
   ],
   "web_read": [
     "read the page {url}",
@@ -14,7 +19,12 @@
     "open and read {url}",
     "summarise {url}",
     "get the text from {url}",
-    "tell me what is on {url}"
+    "tell me what is on {url}",
+    "open {url} and read it",
+    "read {url} to me",
+    "the content of {url} please",
+    "what exactly is on {url}",
+    "check {url} for me"
   ],
   "browser_open": [
     "open {url} in the browser",

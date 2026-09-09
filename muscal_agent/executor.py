@@ -61,11 +61,31 @@ class Policy:
     confirm: Callable[[ToolCall, Tool], bool] | None = None
 
     @classmethod
-    def from_env(cls) -> "Policy":
+    def from_profile(cls, name: str, *, dry_run: bool = True) -> "Policy":
+        """A profile sets the tool list AND the risk classes it needs."""
+        from .profiles import get
+
+        # An explicit MUSCAL_AGENT_TOOLS always wins over the profile.
         return cls(
-            allowed_tools=_env_list("MUSCAL_AGENT_TOOLS"),
-            allow_write=_env_flag("MUSCAL_AGENT_WRITE"),
-            allow_destructive=_env_flag("MUSCAL_AGENT_DESTRUCTIVE"),
+            allowed_tools=_env_list("MUSCAL_AGENT_TOOLS") or set(get(name).tools),
+            allow_write=get(name).allow_write,
+            allow_destructive=get(name).allow_destructive,
+            dry_run=dry_run,
+        )
+
+    @classmethod
+    def from_env(cls) -> "Policy":
+        from .profiles import DEFAULT_PROFILE, get
+
+        name = os.environ.get("MUSCAL_AGENT_PROFILE", DEFAULT_PROFILE)
+        try:
+            profile = get(name)
+        except ValueError:
+            profile = get(DEFAULT_PROFILE)
+        return cls(
+            allowed_tools=_env_list("MUSCAL_AGENT_TOOLS") or set(profile.tools),
+            allow_write=_env_flag("MUSCAL_AGENT_WRITE", default=profile.allow_write),
+            allow_destructive=_env_flag("MUSCAL_AGENT_DESTRUCTIVE", default=profile.allow_destructive),
             dry_run=_env_flag("MUSCAL_AGENT_DRY_RUN", default=True),
             max_output_chars=int(os.environ.get("MUSCAL_AGENT_MAX_CHARS", "2000")),
         )

@@ -14,6 +14,8 @@ data/*
 !data/agent_utterances.jsonl
 !data/agent_utterances_full_de.jsonl
 !data/agent_utterances_full_en.jsonl
+!data/agent_utterances_web_de.jsonl
+!data/agent_utterances_web_en.jsonl
 !data/agent_templates_de.json
 !data/agent_templates_en.json
 !data/agent_slots_de.json

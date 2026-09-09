@@ -6,7 +6,12 @@
     "google {query}",
     "finde informationen zu {query}",
     "was findest du zu {query}",
-    "schau mal was es zu {query} gibt"
+    "schau mal was es zu {query} gibt",
+    "such mal {query} raus",
+    "ich brauche infos zu {query}",
+    "zeig mir ergebnisse zu {query}",
+    "was weisst du ueber {query}",
+    "gib mir treffer zu {query}"
   ],
   "web_read": [
     "lies die seite {url}",
@@ -14,7 +19,12 @@
     "oeffne und lies {url}",
     "fass {url} zusammen",
     "hol den text von {url}",
-    "sag mir was auf {url} steht"
+    "sag mir was auf {url} steht",
+    "oeffne {url} und lies vor",
+    "lies mir {url} vor",
+    "inhalt von {url} bitte",
+    "was steht genau auf {url}",
+    "check mal {url}"
   ],
   "browser_open": [
     "oeffne {url} im browser",

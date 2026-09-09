@@ -40,10 +40,20 @@ def main() -> None:
     parser.add_argument("--no-answer-model", action="store_true", help="use the template fallback")
     parser.add_argument("--list-tools", action="store_true")
     parser.add_argument("--doctor", action="store_true", help="probe what this machine can run")
+    parser.add_argument("--profile", help="web | browser | desktop | all (default: env or web)")
+    parser.add_argument("--list-profiles", action="store_true")
+    parser.add_argument("--live", action="store_true", help="actually execute (turns dry-run off)")
     args = parser.parse_args()
 
     if args.list_tools:
         _print_catalog()
+        return
+
+    if args.list_profiles:
+        from .profiles import describe
+
+        print("profiles:")
+        print(describe())
         return
 
     if args.doctor:
@@ -53,9 +63,15 @@ def main() -> None:
         print_report()
         return
 
-    policy = Policy.from_env()
-    print(f"[policy] dry_run={policy.dry_run} write={policy.allow_write} "
-          f"destructive={policy.allow_destructive} tools={policy.allowed_tools or 'all'}")
+    if args.profile or args.live:
+        policy = Policy.from_profile(args.profile or "web", dry_run=not args.live)
+    else:
+        policy = Policy.from_env()
+    # Diagnostics to stderr so stdout stays machine-readable when piping JSON.
+    print(f"[policy] profile={args.profile or 'env'} dry_run={policy.dry_run} "
+          f"write={policy.allow_write} destructive={policy.allow_destructive}", file=sys.stderr)
+    print(f"[policy] tools={sorted(policy.allowed_tools) if policy.allowed_tools else 'all'}",
+          file=sys.stderr)
 
     if args.call:
         call = parse_tool_call(args.call, fmt=args.fmt)

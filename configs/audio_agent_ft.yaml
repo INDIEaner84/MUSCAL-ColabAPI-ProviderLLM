@@ -29,13 +29,19 @@ toolcall_format: pipe
 
 # Runtime policy for muscal_agent. Everything here is a brake, not a feature.
 agent:
-  # null = every tool in the catalog; keep it narrow in production.
+  # web | browser | desktop | all -- sets BOTH the tool list and the risk
+  # classes the executor accepts. Start with web, extend after the numbers hold.
+  profile: web
+  # Narrower than the profile, if needed. null = take the profile's tools.
   allowed_tools: null
-  allow_write: false          # browser_*/desktop_* that change state
-  allow_destructive: false    # desktop_click (blind coordinates)
   dry_run: true               # prints what would happen instead of doing it
   max_output_chars: 2000
   answer_model: LiquidAI/LFM2.5-1.2B-Instruct
+
+  # Rollout order, and the reason for it:
+  #   web     (2 tools)  research only, cannot change anything
+  #   browser (6 tools)  adds clicks and typing in the browser
+  #   desktop (11 tools) adds keyboard, app launch, coordinate clicks -> VM only
 
 eval:
   # Held-out split, never seen in training.
