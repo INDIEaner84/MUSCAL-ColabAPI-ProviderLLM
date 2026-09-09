@@ -91,20 +91,51 @@ verlässlicher.
 
 ## Trainingdaten
 
-```bash
-# 1. Paare schreiben: gesprochener Satz -> Funktionsaufruf
-#    data/agent_utterances.jsonl (Beispiel liegt im Repo)
+Der Generator kombiniert **Satzschablonen × Slot-Werte** — damit kommt man ohne
+Handarbeit auf ein vollständiges Korpus für alle Werkzeuge:
 
-# 2. Audio dazu. Empfohlen: eigene Aufnahmen. Schnell: TTS mit dem Modell selbst.
+```bash
+# 1. Paare erzeugen (kein Audio nötig, --write-pairs stoppt danach)
 python scripts/build_toolcall_dataset.py \
-    --utterances data/agent_utterances.jsonl \
+    --language en \
+    --slots data/agent_slots_en.json \
+    --per-tool 60 \
+    --write-pairs data/agent_utterances_full_en.jsonl
+
+# 2. Audio dazu + Dataset bauen. Empfohlen: eigene Aufnahmen (--audio-map).
+python scripts/build_toolcall_dataset.py \
+    --utterances data/agent_utterances_full_en.jsonl \
     --audio-map data/audio_map.jsonl \
-    --augment --out data/agent_audio
+    --val-ratio 0.05 --eval-out data/agent_eval.jsonl \
+    --out data/agent_audio
 
 # 3. In das Tensor-Format des Trainers
 python scripts/preprocess_audio_toolcalls.py \
     --dataset data/agent_audio --output-path data/agent_audio/train
 ```
+
+Mitgelieferte Bausteine und das Ergebnis:
+
+| Datei | Inhalt |
+|---|---|
+| `data/agent_slots_de.json` / `_en.json` | Werte pro Argument (URLs, Selektoren, Apps, Hotkeys …) |
+| `data/agent_templates_de.json` / `_en.json` | Satzschablonen pro Werkzeug |
+| `data/agent_utterances_full_de.jsonl` | **601 Paare**, alle 11 Werkzeuge |
+| `data/agent_utterances_full_en.jsonl` | **591 Paare**, alle 11 Werkzeuge |
+
+Verteilung im deutschen Korpus (pro Werkzeug): `web_search` 61, `web_read` 62,
+`browser_open` 61, `browser_click` 61, `browser_type` 61, `browser_snapshot` 27,
+`desktop_launch` 61, `desktop_type` 60, `desktop_hotkey` 62, `desktop_click` 60,
+`desktop_screenshot` 25.
+
+Die zwei argumentlosen Werkzeuge (`browser_snapshot`, `desktop_screenshot`)
+kommen nur auf ~25, weil ihre Variation allein aus Formulierungen stammt — bei
+Bedarf Schablonen ergänzen.
+
+**Eine Formatregel, die beim Erzeugen auffällt:** im `pipe`-Format darf ein Wert
+kein `|` enthalten (das trennt Argumente). `=` ist erlaubt — es wird nur am
+*ersten* `=` getrennt, deshalb überleben URLs mit Query-String
+(`...?q=lfm`) und CSS-Attributselektoren (`input[name=q]`) den Round-Trip.
 
 **Qualität vor Volumen — aber nicht zu wenig.** Liquid's Referenz: 55.302 Paare
 auf 41 Funktionen (~1.350 pro Funktion). Für den Start reicht ein kleinerer,
@@ -149,6 +180,15 @@ kann. Drei unabhängige Bremsen, alle in `muscal_agent/executor.py`:
    sondern ausgegeben, was passieren *würde*.
 3. **Allow-List + Region.** `MUSCAL_AGENT_TOOLS=web_search,web_read` begrenzt den
    Katalog, `MUSCAL_SCREEN=x,y,w,h` begrenzt Klick-Koordinaten.
+
+Vorher prüfen, was die Maschine überhaupt kann:
+
+```bash
+python -m muscal_agent --doctor
+```
+
+Meldet Plattform, Sitzungstyp (x11/wayland) und welche Backends installiert sind
+— inklusive Hinweis, dass `desktop_*` unter Wayland mit pyautogui nicht geht.
 
 ```bash
 # Nur suchen und lesen, nichts ausfuehren:

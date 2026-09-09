@@ -105,6 +105,72 @@ def load_jsonl(path: Path) -> list[dict]:
     return rows
 
 
+def synthesise_pairs(
+    slots: dict[str, dict[str, list]],
+    templates: dict[str, list[str]],
+    per_tool: int,
+    fmt: str = "pipe",
+    seed: int = 42,
+) -> list[tuple[str, str]]:
+    """Generate utterance/call pairs for EVERY tool in the catalog.
+
+    Builds the full (templates x slot-value-combinations) product per tool,
+    shuffles it deterministically and takes the first `per_tool` unique pairs.
+
+    Enumerating the product matters: cycling the lists in lockstep collapses to
+    lcm(len(values), len(templates)) combinations, which silently starves
+    single-argument tools (12 urls x 6 templates yielded only 12 pairs).
+    """
+    import itertools
+    import random
+
+    from muscal_agent.catalog import TOOLS_BY_NAME
+    from muscal_agent.toolcall import ToolCall, ToolCallError
+
+    rng = random.Random(seed)
+    pairs: list[tuple[str, str]] = []
+
+    for name in sorted(TOOLS_BY_NAME):
+        tool = TOOLS_BY_NAME[name]
+        tmpl_list = templates.get(name) or []
+        if not tmpl_list:
+            continue
+
+        arg_names = [p.name for p in tool.params if slots.get(name, {}).get(p.name)]
+        if arg_names:
+            combos = [
+                dict(zip(arg_names, values))
+                for values in itertools.product(*(slots[name][a] for a in arg_names))
+            ]
+        else:
+            combos = [{}]
+
+        candidates = list(itertools.product(tmpl_list, combos))
+        rng.shuffle(candidates)
+
+        seen: set[tuple[str, str]] = set()
+        for template, values in candidates:
+            if len(seen) >= per_tool:
+                break
+            values = dict(values)
+            # A template promising "and press enter" must not emit submit=false.
+            lowered = template.lower()
+            if "submit" in values:
+                if "press enter" in lowered or "sende ab" in lowered:
+                    values["submit"] = "true"
+                else:
+                    values["submit"] = "false"
+            try:
+                text = template.format(**values)
+                call = ToolCall(name, values).serialise(fmt)
+            except (KeyError, ToolCallError):
+                continue
+            if (text, call) not in seen:
+                seen.add((text, call))
+                pairs.append((text, call))
+    return pairs
+
+
 def augment(items: list[tuple[str, str]], templates: dict[str, list[str]]) -> list[tuple[str, str]]:
     """Generate paraphrases from the tool arguments of each call."""
     from muscal_agent.toolcall import ToolCallError, parse_pipe
@@ -188,7 +254,7 @@ def build_rows(pairs: list[tuple[str, str]], audios: list[bytes], system_prompt:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--utterances", required=True, help="jsonl: {utterance, call}")
+    parser.add_argument("--utterances", help="jsonl: {utterance, call}")
     parser.add_argument("--out", default="data/agent_audio")
     parser.add_argument("--audio-map", help="jsonl: {utterance, audio} -> use these WAVs")
     parser.add_argument("--tts", action="store_true", help="synthesise audio with LFM2.5-Audio")
@@ -198,24 +264,73 @@ def main() -> None:
                         help="must match the runtime; see docs/audio-agent.md")
     parser.add_argument("--augment", action="store_true", help="add paraphrases from the template bank")
     parser.add_argument("--templates", help="json file: {tool_name: [templates]} to extend/override")
+    parser.add_argument("--slots", help="json: {tool: {arg: [values]}} to synthesise pairs")
+    parser.add_argument("--per-tool", type=int, default=60,
+                        help="how many pairs to synthesise per tool (default: 60)")
+    parser.add_argument("--language", choices=["de", "en"], default="de",
+                        help="bundled template + slot files from data/ (default: de)")
+    parser.add_argument("--fmt", default="pipe", choices=["pipe", "pythonic"],
+                        help="tool-call wire format (must match the runtime)")
     parser.add_argument("--val-ratio", type=float, default=0.05,
                         help="held-out share, stratified by function name (0 disables)")
     parser.add_argument("--eval-out", default="data/agent_eval.jsonl",
                         help="where the gold calls of the val split are written")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--write-pairs", help="dump the generated utterance/call pairs here and stop")
     parser.add_argument("--push-to", help="push the dataset to this HF repo id")
     args = parser.parse_args()
 
-    items = [(r["utterance"], r["call"]) for r in load_jsonl(Path(args.utterances))]
-    print(f"[input] {len(items)} utterance/call pairs")
+    items: list[tuple[str, str]] = []
 
     templates = dict(DEFAULT_TEMPLATES)
+    bundled_templates = Path(f"data/agent_templates_{args.language}.json")
+    if bundled_templates.exists():
+        templates.update(json.loads(bundled_templates.read_text(encoding="utf-8")))
     if args.templates:
         templates.update(json.loads(Path(args.templates).read_text(encoding="utf-8")))
+
+    if args.slots:
+        slots = json.loads(Path(args.slots).read_text(encoding="utf-8"))
+        synth = synthesise_pairs(slots, templates, args.per_tool, fmt=args.fmt)
+        print(f"[synth] {len(synth)} pairs across all tools ({args.language}, {args.per_tool}/tool)")
+        items.extend(synth)
+
+    if args.utterances:
+        hand = [(r["utterance"], r["call"]) for r in load_jsonl(Path(args.utterances))]
+        print(f"[input] {len(hand)} hand-written pairs")
+        items.extend(hand)
+
+    if not items:
+        raise SystemExit("no data: pass --utterances and/or --slots")
+
+    # Deduplicate on the exact (utterance, call) pair, order preserved.
+    seen: set[tuple[str, str]] = set()
+    unique = []
+    for pair in items:
+        if pair not in seen:
+            seen.add(pair)
+            unique.append(pair)
+    items = unique
+    print(f"[total] {len(items)} unique pairs")
     if args.augment:
         before = len(items)
         items = augment(items, templates)
         print(f"[augment] {before} -> {len(items)} pairs")
+
+    if args.write_pairs:
+        from collections import Counter
+        counts = Counter(c.split("|", 1)[0] for _, c in items)
+        print("[coverage] " + ", ".join(f"{k}={v}" for k, v in sorted(counts.items())))
+
+        out_pairs = Path(args.write_pairs)
+        out_pairs.parent.mkdir(parents=True, exist_ok=True)
+        out_pairs.write_text(
+            "\n".join(json.dumps({"utterance": u, "call": c}, ensure_ascii=False) for u, c in items) + "\n",
+            encoding="utf-8",
+        )
+        print(f"[write] {len(items)} pairs -> {out_pairs}")
+        if not (args.audio_map or args.tts):
+            return
 
     if args.audio_map:
         mapping = {r["utterance"]: r["audio"] for r in load_jsonl(Path(args.audio_map))}

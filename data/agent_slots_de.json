@@ -1,0 +1,182 @@
+{
+  "web_search": {
+    "query": [
+      "liquid ai lfm",
+      "quantization aware training",
+      "colab a100 verfuegbarkeit",
+      "playwright accessibility tree",
+      "llama cpp audio support",
+      "searxng selbst hosten",
+      "qlora vs lora unterschied",
+      "moe modelle vram bedarf",
+      "liquid foundation models",
+      "wetter koeln",
+      "siglip2 vision encoder",
+      "gguf quantisierung q4 k m"
+    ]
+  },
+  "web_read": {
+    "url": [
+      "https://docs.liquid.ai",
+      "https://example.com",
+      "https://huggingface.co/LiquidAI",
+      "https://github.com/ggml-org/llama.cpp",
+      "https://arxiv.org/list/cs.LG/recent",
+      "https://news.ycombinator.com",
+      "https://docs.liquid.ai/lfm/fine-tuning/trl",
+      "https://en.wikipedia.org/wiki/Cologne",
+      "https://www.heise.de",
+      "https://pypi.org/project/liquid-audio",
+      "https://stackoverflow.com/questions/tagged/python",
+      "https://www.tagesschau.de"
+    ]
+  },
+  "browser_open": {
+    "url": [
+      "https://github.com",
+      "https://news.ycombinator.com",
+      "https://arxiv.org",
+      "https://huggingface.co",
+      "https://docs.liquid.ai",
+      "https://playwright.dev",
+      "https://www.python.org",
+      "https://pytorch.org",
+      "https://openai.com",
+      "https://www.spiegel.de",
+      "https://modal.com",
+      "https://colab.research.google.com"
+    ]
+  },
+  "browser_click": {
+    "selector": [
+      "#login",
+      "button.submit",
+      "a.next",
+      "#cookie-accept",
+      "button.primary",
+      "#search-button",
+      "#submit",
+      "a.load-more",
+      "button.close",
+      "#menu-toggle",
+      "input[type=checkbox]",
+      ".pagination-next"
+    ]
+  },
+  "browser_type": {
+    "selector": [
+      "input[name=q]",
+      "#search",
+      "input#username",
+      "textarea#comment",
+      "input[type=search]",
+      "input#email",
+      "textarea#body",
+      "input#password",
+      "input#title",
+      "input[name=search]",
+      "input#url",
+      "input#tag"
+    ],
+    "text": [
+      "liquid ai lfm",
+      "muscal agent",
+      "qlora finetuning",
+      "hallo welt",
+      "lfm2 audio",
+      "liquid foundation models",
+      "muscal colab provider",
+      "qlora adapter",
+      "lfm2 audio agent",
+      "guten tag",
+      "testnachricht",
+      "bitte zusammenfassen"
+    ],
+    "submit": [
+      "true",
+      "false"
+    ]
+  },
+  "browser_snapshot": {},
+  "desktop_launch": {
+    "app": [
+      "firefox",
+      "terminal",
+      "rechner",
+      "editor",
+      "dateimanager",
+      "chromium",
+      "thunderbird",
+      "vscode",
+      "texteditor",
+      "systemeinstellungen",
+      "musikplayer",
+      "kalender"
+    ]
+  },
+  "desktop_type": {
+    "text": [
+      "hallo welt",
+      "muscal agent starten",
+      "sudo systemctl status",
+      "guten morgen",
+      "notiz an mich selbst",
+      "lfm2 testen",
+      "bis spaeter",
+      "protokoll schreiben",
+      "danke schoen",
+      "bitte weiter",
+      "projekt muscal",
+      "zurueck zum hauptmenue",
+      "zeilenende",
+      "speichern unter"
+    ]
+  },
+  "desktop_hotkey": {
+    "keys": [
+      "ctrl+c",
+      "ctrl+v",
+      "alt+tab",
+      "ctrl+z",
+      "ctrl+shift+t",
+      "super+l",
+      "ctrl+s",
+      "ctrl+a",
+      "ctrl+f",
+      "ctrl+n",
+      "ctrl+w",
+      "cmd+space"
+    ]
+  },
+  "desktop_click": {
+    "x": [
+      "120",
+      "340",
+      "640",
+      "880",
+      "1024",
+      "1280",
+      "160",
+      "480",
+      "760",
+      "960",
+      "1120",
+      "1360"
+    ],
+    "y": [
+      "90",
+      "220",
+      "410",
+      "560",
+      "720",
+      "860",
+      "140",
+      "320",
+      "520",
+      "640",
+      "800",
+      "900"
+    ]
+  },
+  "desktop_screenshot": {}
+}

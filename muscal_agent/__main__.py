@@ -39,10 +39,18 @@ def main() -> None:
     parser.add_argument("--answer-model", default="LiquidAI/LFM2.5-1.2B-Instruct")
     parser.add_argument("--no-answer-model", action="store_true", help="use the template fallback")
     parser.add_argument("--list-tools", action="store_true")
+    parser.add_argument("--doctor", action="store_true", help="probe what this machine can run")
     args = parser.parse_args()
 
     if args.list_tools:
         _print_catalog()
+        return
+
+    if args.doctor:
+        from .backends.capabilities import print_report
+
+        print("muscal_agent --doctor")
+        print_report()
         return
 
     policy = Policy.from_env()

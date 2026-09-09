@@ -1,0 +1,591 @@
+{"utterance": "hit the button a.next", "call": "browser_click|selector=a.next"}
+{"utterance": "click on .pagination-next", "call": "browser_click|selector=.pagination-next"}
+{"utterance": "click the element #submit", "call": "browser_click|selector=#submit"}
+{"utterance": "click .pagination-next", "call": "browser_click|selector=.pagination-next"}
+{"utterance": "click on button.primary", "call": "browser_click|selector=button.primary"}
+{"utterance": "click on button.close", "call": "browser_click|selector=button.close"}
+{"utterance": "click the element a.load-more", "call": "browser_click|selector=a.load-more"}
+{"utterance": "click the element input[type=checkbox]", "call": "browser_click|selector=input[type=checkbox]"}
+{"utterance": "press #menu-toggle", "call": "browser_click|selector=#menu-toggle"}
+{"utterance": "click on a.load-more", "call": "browser_click|selector=a.load-more"}
+{"utterance": "click #menu-toggle", "call": "browser_click|selector=#menu-toggle"}
+{"utterance": "hit the button #login", "call": "browser_click|selector=#login"}
+{"utterance": "press a.load-more", "call": "browser_click|selector=a.load-more"}
+{"utterance": "hit the button #menu-toggle", "call": "browser_click|selector=#menu-toggle"}
+{"utterance": "press #submit", "call": "browser_click|selector=#submit"}
+{"utterance": "click the element button.submit", "call": "browser_click|selector=button.submit"}
+{"utterance": "click #cookie-accept", "call": "browser_click|selector=#cookie-accept"}
+{"utterance": "click on #menu-toggle", "call": "browser_click|selector=#menu-toggle"}
+{"utterance": "click the element a.next", "call": "browser_click|selector=a.next"}
+{"utterance": "click button.primary", "call": "browser_click|selector=button.primary"}
+{"utterance": "press #search-button", "call": "browser_click|selector=#search-button"}
+{"utterance": "click input[type=checkbox]", "call": "browser_click|selector=input[type=checkbox]"}
+{"utterance": "click the element .pagination-next", "call": "browser_click|selector=.pagination-next"}
+{"utterance": "click on input[type=checkbox]", "call": "browser_click|selector=input[type=checkbox]"}
+{"utterance": "hit the button #search-button", "call": "browser_click|selector=#search-button"}
+{"utterance": "press #login", "call": "browser_click|selector=#login"}
+{"utterance": "click #login", "call": "browser_click|selector=#login"}
+{"utterance": "hit the button button.close", "call": "browser_click|selector=button.close"}
+{"utterance": "press button.submit", "call": "browser_click|selector=button.submit"}
+{"utterance": "click the element button.primary", "call": "browser_click|selector=button.primary"}
+{"utterance": "click on #submit", "call": "browser_click|selector=#submit"}
+{"utterance": "press button.primary", "call": "browser_click|selector=button.primary"}
+{"utterance": "hit the button #cookie-accept", "call": "browser_click|selector=#cookie-accept"}
+{"utterance": "press a.next", "call": "browser_click|selector=a.next"}
+{"utterance": "click the element #login", "call": "browser_click|selector=#login"}
+{"utterance": "click on #login", "call": "browser_click|selector=#login"}
+{"utterance": "press .pagination-next", "call": "browser_click|selector=.pagination-next"}
+{"utterance": "hit the button #submit", "call": "browser_click|selector=#submit"}
+{"utterance": "press button.close", "call": "browser_click|selector=button.close"}
+{"utterance": "click the element #search-button", "call": "browser_click|selector=#search-button"}
+{"utterance": "click on button.submit", "call": "browser_click|selector=button.submit"}
+{"utterance": "hit the button input[type=checkbox]", "call": "browser_click|selector=input[type=checkbox]"}
+{"utterance": "click the element #menu-toggle", "call": "browser_click|selector=#menu-toggle"}
+{"utterance": "click a.next", "call": "browser_click|selector=a.next"}
+{"utterance": "press #cookie-accept", "call": "browser_click|selector=#cookie-accept"}
+{"utterance": "hit the button button.submit", "call": "browser_click|selector=button.submit"}
+{"utterance": "click #search-button", "call": "browser_click|selector=#search-button"}
+{"utterance": "press input[type=checkbox]", "call": "browser_click|selector=input[type=checkbox]"}
+{"utterance": "click the element #cookie-accept", "call": "browser_click|selector=#cookie-accept"}
+{"utterance": "hit the button a.load-more", "call": "browser_click|selector=a.load-more"}
+{"utterance": "click #submit", "call": "browser_click|selector=#submit"}
+{"utterance": "click the element button.close", "call": "browser_click|selector=button.close"}
+{"utterance": "click button.close", "call": "browser_click|selector=button.close"}
+{"utterance": "click on a.next", "call": "browser_click|selector=a.next"}
+{"utterance": "click on #cookie-accept", "call": "browser_click|selector=#cookie-accept"}
+{"utterance": "click on #search-button", "call": "browser_click|selector=#search-button"}
+{"utterance": "hit the button .pagination-next", "call": "browser_click|selector=.pagination-next"}
+{"utterance": "click button.submit", "call": "browser_click|selector=button.submit"}
+{"utterance": "click a.load-more", "call": "browser_click|selector=a.load-more"}
+{"utterance": "hit the button button.primary", "call": "browser_click|selector=button.primary"}
+{"utterance": "go to https://theverge.com", "call": "browser_open|url=https://theverge.com"}
+{"utterance": "open https://docs.liquid.ai", "call": "browser_open|url=https://docs.liquid.ai"}
+{"utterance": "open https://github.com in the browser", "call": "browser_open|url=https://github.com"}
+{"utterance": "start the browser at https://news.ycombinator.com", "call": "browser_open|url=https://news.ycombinator.com"}
+{"utterance": "go to https://pytorch.org", "call": "browser_open|url=https://pytorch.org"}
+{"utterance": "open https://news.ycombinator.com", "call": "browser_open|url=https://news.ycombinator.com"}
+{"utterance": "open https://news.ycombinator.com in the browser", "call": "browser_open|url=https://news.ycombinator.com"}
+{"utterance": "browse to https://openai.com", "call": "browser_open|url=https://openai.com"}
+{"utterance": "load https://huggingface.co in the browser", "call": "browser_open|url=https://huggingface.co"}
+{"utterance": "start the browser at https://pytorch.org", "call": "browser_open|url=https://pytorch.org"}
+{"utterance": "open https://theverge.com in the browser", "call": "browser_open|url=https://theverge.com"}
+{"utterance": "go to https://docs.liquid.ai", "call": "browser_open|url=https://docs.liquid.ai"}
+{"utterance": "start the browser at https://modal.com", "call": "browser_open|url=https://modal.com"}
+{"utterance": "browse to https://colab.research.google.com", "call": "browser_open|url=https://colab.research.google.com"}
+{"utterance": "open https://colab.research.google.com in the browser", "call": "browser_open|url=https://colab.research.google.com"}
+{"utterance": "open https://pytorch.org in the browser", "call": "browser_open|url=https://pytorch.org"}
+{"utterance": "open https://arxiv.org", "call": "browser_open|url=https://arxiv.org"}
+{"utterance": "load https://theverge.com in the browser", "call": "browser_open|url=https://theverge.com"}
+{"utterance": "load https://colab.research.google.com in the browser", "call": "browser_open|url=https://colab.research.google.com"}
+{"utterance": "open https://theverge.com", "call": "browser_open|url=https://theverge.com"}
+{"utterance": "open https://www.python.org", "call": "browser_open|url=https://www.python.org"}
+{"utterance": "start the browser at https://docs.liquid.ai", "call": "browser_open|url=https://docs.liquid.ai"}
+{"utterance": "open https://pytorch.org", "call": "browser_open|url=https://pytorch.org"}
+{"utterance": "open https://huggingface.co", "call": "browser_open|url=https://huggingface.co"}
+{"utterance": "start the browser at https://github.com", "call": "browser_open|url=https://github.com"}
+{"utterance": "start the browser at https://www.python.org", "call": "browser_open|url=https://www.python.org"}
+{"utterance": "go to https://www.python.org", "call": "browser_open|url=https://www.python.org"}
+{"utterance": "open https://www.python.org in the browser", "call": "browser_open|url=https://www.python.org"}
+{"utterance": "open https://openai.com", "call": "browser_open|url=https://openai.com"}
+{"utterance": "browse to https://theverge.com", "call": "browser_open|url=https://theverge.com"}
+{"utterance": "browse to https://huggingface.co", "call": "browser_open|url=https://huggingface.co"}
+{"utterance": "browse to https://www.python.org", "call": "browser_open|url=https://www.python.org"}
+{"utterance": "open https://arxiv.org in the browser", "call": "browser_open|url=https://arxiv.org"}
+{"utterance": "load https://github.com in the browser", "call": "browser_open|url=https://github.com"}
+{"utterance": "open https://huggingface.co in the browser", "call": "browser_open|url=https://huggingface.co"}
+{"utterance": "go to https://openai.com", "call": "browser_open|url=https://openai.com"}
+{"utterance": "go to https://arxiv.org", "call": "browser_open|url=https://arxiv.org"}
+{"utterance": "open https://colab.research.google.com", "call": "browser_open|url=https://colab.research.google.com"}
+{"utterance": "start the browser at https://huggingface.co", "call": "browser_open|url=https://huggingface.co"}
+{"utterance": "browse to https://arxiv.org", "call": "browser_open|url=https://arxiv.org"}
+{"utterance": "browse to https://github.com", "call": "browser_open|url=https://github.com"}
+{"utterance": "start the browser at https://arxiv.org", "call": "browser_open|url=https://arxiv.org"}
+{"utterance": "go to https://huggingface.co", "call": "browser_open|url=https://huggingface.co"}
+{"utterance": "open https://modal.com", "call": "browser_open|url=https://modal.com"}
+{"utterance": "start the browser at https://openai.com", "call": "browser_open|url=https://openai.com"}
+{"utterance": "start the browser at https://colab.research.google.com", "call": "browser_open|url=https://colab.research.google.com"}
+{"utterance": "load https://arxiv.org in the browser", "call": "browser_open|url=https://arxiv.org"}
+{"utterance": "open https://docs.liquid.ai in the browser", "call": "browser_open|url=https://docs.liquid.ai"}
+{"utterance": "load https://playwright.dev in the browser", "call": "browser_open|url=https://playwright.dev"}
+{"utterance": "load https://pytorch.org in the browser", "call": "browser_open|url=https://pytorch.org"}
+{"utterance": "load https://openai.com in the browser", "call": "browser_open|url=https://openai.com"}
+{"utterance": "browse to https://news.ycombinator.com", "call": "browser_open|url=https://news.ycombinator.com"}
+{"utterance": "load https://www.python.org in the browser", "call": "browser_open|url=https://www.python.org"}
+{"utterance": "go to https://news.ycombinator.com", "call": "browser_open|url=https://news.ycombinator.com"}
+{"utterance": "go to https://modal.com", "call": "browser_open|url=https://modal.com"}
+{"utterance": "start the browser at https://theverge.com", "call": "browser_open|url=https://theverge.com"}
+{"utterance": "browse to https://playwright.dev", "call": "browser_open|url=https://playwright.dev"}
+{"utterance": "go to https://colab.research.google.com", "call": "browser_open|url=https://colab.research.google.com"}
+{"utterance": "start the browser at https://playwright.dev", "call": "browser_open|url=https://playwright.dev"}
+{"utterance": "load https://docs.liquid.ai in the browser", "call": "browser_open|url=https://docs.liquid.ai"}
+{"utterance": "what can you read on the page", "call": "browser_snapshot"}
+{"utterance": "give me the page content", "call": "browser_snapshot"}
+{"utterance": "i want to know what the page says", "call": "browser_snapshot"}
+{"utterance": "summarise what you see", "call": "browser_snapshot"}
+{"utterance": "show me what the page says", "call": "browser_snapshot"}
+{"utterance": "i need the page text", "call": "browser_snapshot"}
+{"utterance": "read out what is there", "call": "browser_snapshot"}
+{"utterance": "page content please", "call": "browser_snapshot"}
+{"utterance": "read out the page content", "call": "browser_snapshot"}
+{"utterance": "read the page to me", "call": "browser_snapshot"}
+{"utterance": "page text please", "call": "browser_snapshot"}
+{"utterance": "what is on the page", "call": "browser_snapshot"}
+{"utterance": "what do you see on the page", "call": "browser_snapshot"}
+{"utterance": "get me the text of the page", "call": "browser_snapshot"}
+{"utterance": "what does the page show", "call": "browser_snapshot"}
+{"utterance": "tell me the page content", "call": "browser_snapshot"}
+{"utterance": "give me the text of the current page", "call": "browser_snapshot"}
+{"utterance": "what is the page content", "call": "browser_snapshot"}
+{"utterance": "what does it say", "call": "browser_snapshot"}
+{"utterance": "what is the content of the page", "call": "browser_snapshot"}
+{"utterance": "quick what does the page say", "call": "browser_snapshot"}
+{"utterance": "what is on the page now", "call": "browser_snapshot"}
+{"utterance": "what is currently on screen", "call": "browser_snapshot"}
+{"utterance": "describe the current page", "call": "browser_snapshot"}
+{"utterance": "summarise the current page", "call": "browser_snapshot"}
+{"utterance": "show me the page text", "call": "browser_snapshot"}
+{"utterance": "type muscal colab provider into input[name=q] and press enter", "call": "browser_type|selector=input[name=q]|text=muscal colab provider|submit=true"}
+{"utterance": "type qlora adapter into input[type=search] and press enter", "call": "browser_type|selector=input[type=search]|text=qlora adapter|submit=true"}
+{"utterance": "enter hello world in input#password", "call": "browser_type|selector=input#password|text=hello world|submit=false"}
+{"utterance": "put liquid foundation models in input[name=q]", "call": "browser_type|selector=input[name=q]|text=liquid foundation models|submit=false"}
+{"utterance": "type qlora fine tuning into input#title", "call": "browser_type|selector=input#title|text=qlora fine tuning|submit=false"}
+{"utterance": "write good morning into input[name=q]", "call": "browser_type|selector=input[name=q]|text=good morning|submit=false"}
+{"utterance": "type please summarise into textarea#body and press enter", "call": "browser_type|selector=textarea#body|text=please summarise|submit=true"}
+{"utterance": "type test message into input#username", "call": "browser_type|selector=input#username|text=test message|submit=false"}
+{"utterance": "enter liquid ai lfm in textarea#body and submit", "call": "browser_type|selector=textarea#body|text=liquid ai lfm|submit=false"}
+{"utterance": "write lfm2 audio into input#url", "call": "browser_type|selector=input#url|text=lfm2 audio|submit=false"}
+{"utterance": "enter test message in input[name=q] and submit", "call": "browser_type|selector=input[name=q]|text=test message|submit=false"}
+{"utterance": "write liquid ai lfm into input#email", "call": "browser_type|selector=input#email|text=liquid ai lfm|submit=false"}
+{"utterance": "type good morning into input[name=q] and press enter", "call": "browser_type|selector=input[name=q]|text=good morning|submit=true"}
+{"utterance": "write liquid foundation models into input#email", "call": "browser_type|selector=input#email|text=liquid foundation models|submit=false"}
+{"utterance": "type lfm2 audio agent into textarea#comment", "call": "browser_type|selector=textarea#comment|text=lfm2 audio agent|submit=false"}
+{"utterance": "write liquid ai lfm into input#tag", "call": "browser_type|selector=input#tag|text=liquid ai lfm|submit=false"}
+{"utterance": "type test message into input[name=q] and press enter", "call": "browser_type|selector=input[name=q]|text=test message|submit=true"}
+{"utterance": "enter lfm2 audio in input#username", "call": "browser_type|selector=input#username|text=lfm2 audio|submit=false"}
+{"utterance": "type muscal agent into input#email", "call": "browser_type|selector=input#email|text=muscal agent|submit=false"}
+{"utterance": "type qlora fine tuning into input[name=q]", "call": "browser_type|selector=input[name=q]|text=qlora fine tuning|submit=false"}
+{"utterance": "type lfm2 audio into textarea#body and press enter", "call": "browser_type|selector=textarea#body|text=lfm2 audio|submit=true"}
+{"utterance": "put qlora fine tuning in input[name=q]", "call": "browser_type|selector=input[name=q]|text=qlora fine tuning|submit=false"}
+{"utterance": "write liquid foundation models into textarea#body", "call": "browser_type|selector=textarea#body|text=liquid foundation models|submit=false"}
+{"utterance": "put please summarise in input#tag", "call": "browser_type|selector=input#tag|text=please summarise|submit=false"}
+{"utterance": "type muscal agent into input#tag and press enter", "call": "browser_type|selector=input#tag|text=muscal agent|submit=true"}
+{"utterance": "type muscal colab provider into input#url and press enter", "call": "browser_type|selector=input#url|text=muscal colab provider|submit=true"}
+{"utterance": "enter lfm2 audio in textarea#comment", "call": "browser_type|selector=textarea#comment|text=lfm2 audio|submit=false"}
+{"utterance": "put please summarise in input[name=q]", "call": "browser_type|selector=input[name=q]|text=please summarise|submit=false"}
+{"utterance": "type muscal colab provider into input#email", "call": "browser_type|selector=input#email|text=muscal colab provider|submit=false"}
+{"utterance": "type qlora fine tuning into textarea#comment and press enter", "call": "browser_type|selector=textarea#comment|text=qlora fine tuning|submit=true"}
+{"utterance": "put muscal colab provider in #search", "call": "browser_type|selector=#search|text=muscal colab provider|submit=false"}
+{"utterance": "type liquid foundation models into input#password", "call": "browser_type|selector=input#password|text=liquid foundation models|submit=false"}
+{"utterance": "enter muscal agent in input[type=search]", "call": "browser_type|selector=input[type=search]|text=muscal agent|submit=false"}
+{"utterance": "write liquid foundation models into textarea#comment", "call": "browser_type|selector=textarea#comment|text=liquid foundation models|submit=false"}
+{"utterance": "write lfm2 audio agent into input[name=q]", "call": "browser_type|selector=input[name=q]|text=lfm2 audio agent|submit=false"}
+{"utterance": "type good morning into input#password", "call": "browser_type|selector=input#password|text=good morning|submit=false"}
+{"utterance": "enter please summarise in input[name=q]", "call": "browser_type|selector=input[name=q]|text=please summarise|submit=false"}
+{"utterance": "write liquid foundation models into input[name=q]", "call": "browser_type|selector=input[name=q]|text=liquid foundation models|submit=false"}
+{"utterance": "put qlora fine tuning in input#url", "call": "browser_type|selector=input#url|text=qlora fine tuning|submit=false"}
+{"utterance": "put lfm2 audio agent in input#url", "call": "browser_type|selector=input#url|text=lfm2 audio agent|submit=false"}
+{"utterance": "enter good morning in input[type=search] and submit", "call": "browser_type|selector=input[type=search]|text=good morning|submit=false"}
+{"utterance": "enter lfm2 audio agent in input[type=search] and submit", "call": "browser_type|selector=input[type=search]|text=lfm2 audio agent|submit=false"}
+{"utterance": "enter test message in input#username", "call": "browser_type|selector=input#username|text=test message|submit=false"}
+{"utterance": "enter lfm2 audio in input#title and submit", "call": "browser_type|selector=input#title|text=lfm2 audio|submit=false"}
+{"utterance": "enter lfm2 audio in #search", "call": "browser_type|selector=#search|text=lfm2 audio|submit=false"}
+{"utterance": "write please summarise into input#tag", "call": "browser_type|selector=input#tag|text=please summarise|submit=false"}
+{"utterance": "enter muscal colab provider in #search and submit", "call": "browser_type|selector=#search|text=muscal colab provider|submit=false"}
+{"utterance": "write test message into input#url", "call": "browser_type|selector=input#url|text=test message|submit=false"}
+{"utterance": "type please summarise into #search and press enter", "call": "browser_type|selector=#search|text=please summarise|submit=true"}
+{"utterance": "write please summarise into input[type=search]", "call": "browser_type|selector=input[type=search]|text=please summarise|submit=false"}
+{"utterance": "type muscal colab provider into textarea#body", "call": "browser_type|selector=textarea#body|text=muscal colab provider|submit=false"}
+{"utterance": "type good morning into textarea#comment", "call": "browser_type|selector=textarea#comment|text=good morning|submit=false"}
+{"utterance": "type liquid ai lfm into input[type=search]", "call": "browser_type|selector=input[type=search]|text=liquid ai lfm|submit=false"}
+{"utterance": "enter lfm2 audio in input[name=q]", "call": "browser_type|selector=input[name=q]|text=lfm2 audio|submit=false"}
+{"utterance": "put lfm2 audio in input[name=q]", "call": "browser_type|selector=input[name=q]|text=lfm2 audio|submit=false"}
+{"utterance": "enter muscal agent in input#password", "call": "browser_type|selector=input#password|text=muscal agent|submit=false"}
+{"utterance": "type muscal colab provider into input[name=search]", "call": "browser_type|selector=input[name=search]|text=muscal colab provider|submit=false"}
+{"utterance": "put qlora adapter in #search", "call": "browser_type|selector=#search|text=qlora adapter|submit=false"}
+{"utterance": "put muscal colab provider in input#title", "call": "browser_type|selector=input#title|text=muscal colab provider|submit=false"}
+{"utterance": "enter muscal agent in input#url and submit", "call": "browser_type|selector=input#url|text=muscal agent|submit=false"}
+{"utterance": "click position 960 640", "call": "desktop_click|x=960|y=640"}
+{"utterance": "click on 1024 640", "call": "desktop_click|x=1024|y=640"}
+{"utterance": "click the point 1280 320", "call": "desktop_click|x=1280|y=320"}
+{"utterance": "click at 120 90", "call": "desktop_click|x=120|y=90"}
+{"utterance": "click position 760 800", "call": "desktop_click|x=760|y=800"}
+{"utterance": "click on 1024 220", "call": "desktop_click|x=1024|y=220"}
+{"utterance": "click the point 640 860", "call": "desktop_click|x=640|y=860"}
+{"utterance": "click on 1280 640", "call": "desktop_click|x=1280|y=640"}
+{"utterance": "click on 1280 720", "call": "desktop_click|x=1280|y=720"}
+{"utterance": "click the point 760 90", "call": "desktop_click|x=760|y=90"}
+{"utterance": "click the point 120 140", "call": "desktop_click|x=120|y=140"}
+{"utterance": "click at 760 640", "call": "desktop_click|x=760|y=640"}
+{"utterance": "click the point 960 860", "call": "desktop_click|x=960|y=860"}
+{"utterance": "click position 880 640", "call": "desktop_click|x=880|y=640"}
+{"utterance": "click on 480 320", "call": "desktop_click|x=480|y=320"}
+{"utterance": "click at 160 320", "call": "desktop_click|x=160|y=320"}
+{"utterance": "click at 760 560", "call": "desktop_click|x=760|y=560"}
+{"utterance": "click the point 1024 800", "call": "desktop_click|x=1024|y=800"}
+{"utterance": "click the point 880 800", "call": "desktop_click|x=880|y=800"}
+{"utterance": "click position 880 800", "call": "desktop_click|x=880|y=800"}
+{"utterance": "click the point 1120 860", "call": "desktop_click|x=1120|y=860"}
+{"utterance": "click the point 340 860", "call": "desktop_click|x=340|y=860"}
+{"utterance": "click the point 120 220", "call": "desktop_click|x=120|y=220"}
+{"utterance": "click the point 640 520", "call": "desktop_click|x=640|y=520"}
+{"utterance": "click at 1024 640", "call": "desktop_click|x=1024|y=640"}
+{"utterance": "click position 120 140", "call": "desktop_click|x=120|y=140"}
+{"utterance": "click the point 120 90", "call": "desktop_click|x=120|y=90"}
+{"utterance": "click on 480 860", "call": "desktop_click|x=480|y=860"}
+{"utterance": "click on 760 800", "call": "desktop_click|x=760|y=800"}
+{"utterance": "click the point 1360 320", "call": "desktop_click|x=1360|y=320"}
+{"utterance": "click on 1024 560", "call": "desktop_click|x=1024|y=560"}
+{"utterance": "click position 880 410", "call": "desktop_click|x=880|y=410"}
+{"utterance": "click position 640 520", "call": "desktop_click|x=640|y=520"}
+{"utterance": "click position 340 860", "call": "desktop_click|x=340|y=860"}
+{"utterance": "click on 960 140", "call": "desktop_click|x=960|y=140"}
+{"utterance": "click at 1360 640", "call": "desktop_click|x=1360|y=640"}
+{"utterance": "click position 340 720", "call": "desktop_click|x=340|y=720"}
+{"utterance": "click on 1120 720", "call": "desktop_click|x=1120|y=720"}
+{"utterance": "click the point 1024 220", "call": "desktop_click|x=1024|y=220"}
+{"utterance": "click at 1360 90", "call": "desktop_click|x=1360|y=90"}
+{"utterance": "click at 1024 900", "call": "desktop_click|x=1024|y=900"}
+{"utterance": "click at 640 900", "call": "desktop_click|x=640|y=900"}
+{"utterance": "click position 1360 720", "call": "desktop_click|x=1360|y=720"}
+{"utterance": "click position 760 640", "call": "desktop_click|x=760|y=640"}
+{"utterance": "click position 160 90", "call": "desktop_click|x=160|y=90"}
+{"utterance": "click at 880 640", "call": "desktop_click|x=880|y=640"}
+{"utterance": "click on 160 560", "call": "desktop_click|x=160|y=560"}
+{"utterance": "click the point 340 800", "call": "desktop_click|x=340|y=800"}
+{"utterance": "click on 1120 520", "call": "desktop_click|x=1120|y=520"}
+{"utterance": "click at 1120 800", "call": "desktop_click|x=1120|y=800"}
+{"utterance": "click the point 760 800", "call": "desktop_click|x=760|y=800"}
+{"utterance": "click at 1360 140", "call": "desktop_click|x=1360|y=140"}
+{"utterance": "click the point 1024 560", "call": "desktop_click|x=1024|y=560"}
+{"utterance": "click at 1024 520", "call": "desktop_click|x=1024|y=520"}
+{"utterance": "click position 1120 520", "call": "desktop_click|x=1120|y=520"}
+{"utterance": "click the point 340 90", "call": "desktop_click|x=340|y=90"}
+{"utterance": "click at 760 520", "call": "desktop_click|x=760|y=520"}
+{"utterance": "click at 120 640", "call": "desktop_click|x=120|y=640"}
+{"utterance": "click at 640 410", "call": "desktop_click|x=640|y=410"}
+{"utterance": "click at 1120 410", "call": "desktop_click|x=1120|y=410"}
+{"utterance": "use the shortcut ctrl+v", "call": "desktop_hotkey|keys=ctrl+v"}
+{"utterance": "press alt+tab", "call": "desktop_hotkey|keys=alt+tab"}
+{"utterance": "press the keys ctrl+w", "call": "desktop_hotkey|keys=ctrl+w"}
+{"utterance": "press ctrl+a", "call": "desktop_hotkey|keys=ctrl+a"}
+{"utterance": "hit ctrl+a", "call": "desktop_hotkey|keys=ctrl+a"}
+{"utterance": "press cmd+space", "call": "desktop_hotkey|keys=cmd+space"}
+{"utterance": "use the shortcut super+l", "call": "desktop_hotkey|keys=super+l"}
+{"utterance": "use the shortcut ctrl+z", "call": "desktop_hotkey|keys=ctrl+z"}
+{"utterance": "do ctrl+w", "call": "desktop_hotkey|keys=ctrl+w"}
+{"utterance": "do ctrl+c", "call": "desktop_hotkey|keys=ctrl+c"}
+{"utterance": "press the keys ctrl+f", "call": "desktop_hotkey|keys=ctrl+f"}
+{"utterance": "press the keys ctrl+z", "call": "desktop_hotkey|keys=ctrl+z"}
+{"utterance": "use the shortcut ctrl+f", "call": "desktop_hotkey|keys=ctrl+f"}
+{"utterance": "press the keys ctrl+shift+t", "call": "desktop_hotkey|keys=ctrl+shift+t"}
+{"utterance": "do ctrl+a", "call": "desktop_hotkey|keys=ctrl+a"}
+{"utterance": "press ctrl+v", "call": "desktop_hotkey|keys=ctrl+v"}
+{"utterance": "hit ctrl+s", "call": "desktop_hotkey|keys=ctrl+s"}
+{"utterance": "press ctrl+w", "call": "desktop_hotkey|keys=ctrl+w"}
+{"utterance": "press ctrl+n", "call": "desktop_hotkey|keys=ctrl+n"}
+{"utterance": "use the shortcut ctrl+a", "call": "desktop_hotkey|keys=ctrl+a"}
+{"utterance": "hit cmd+space", "call": "desktop_hotkey|keys=cmd+space"}
+{"utterance": "press the keys cmd+space", "call": "desktop_hotkey|keys=cmd+space"}
+{"utterance": "press the keys ctrl+n", "call": "desktop_hotkey|keys=ctrl+n"}
+{"utterance": "hit ctrl+f", "call": "desktop_hotkey|keys=ctrl+f"}
+{"utterance": "press the keys super+l", "call": "desktop_hotkey|keys=super+l"}
+{"utterance": "press super+l", "call": "desktop_hotkey|keys=super+l"}
+{"utterance": "press the keys ctrl+a", "call": "desktop_hotkey|keys=ctrl+a"}
+{"utterance": "press ctrl+c", "call": "desktop_hotkey|keys=ctrl+c"}
+{"utterance": "press ctrl+shift+t", "call": "desktop_hotkey|keys=ctrl+shift+t"}
+{"utterance": "use the shortcut ctrl+c", "call": "desktop_hotkey|keys=ctrl+c"}
+{"utterance": "press the keys ctrl+c", "call": "desktop_hotkey|keys=ctrl+c"}
+{"utterance": "press the keys ctrl+v", "call": "desktop_hotkey|keys=ctrl+v"}
+{"utterance": "press the keys ctrl+s", "call": "desktop_hotkey|keys=ctrl+s"}
+{"utterance": "hit ctrl+n", "call": "desktop_hotkey|keys=ctrl+n"}
+{"utterance": "use the shortcut alt+tab", "call": "desktop_hotkey|keys=alt+tab"}
+{"utterance": "do ctrl+n", "call": "desktop_hotkey|keys=ctrl+n"}
+{"utterance": "do ctrl+shift+t", "call": "desktop_hotkey|keys=ctrl+shift+t"}
+{"utterance": "do alt+tab", "call": "desktop_hotkey|keys=alt+tab"}
+{"utterance": "hit alt+tab", "call": "desktop_hotkey|keys=alt+tab"}
+{"utterance": "use the shortcut ctrl+n", "call": "desktop_hotkey|keys=ctrl+n"}
+{"utterance": "press ctrl+z", "call": "desktop_hotkey|keys=ctrl+z"}
+{"utterance": "do ctrl+s", "call": "desktop_hotkey|keys=ctrl+s"}
+{"utterance": "hit ctrl+z", "call": "desktop_hotkey|keys=ctrl+z"}
+{"utterance": "do ctrl+v", "call": "desktop_hotkey|keys=ctrl+v"}
+{"utterance": "do ctrl+z", "call": "desktop_hotkey|keys=ctrl+z"}
+{"utterance": "press ctrl+s", "call": "desktop_hotkey|keys=ctrl+s"}
+{"utterance": "press ctrl+f", "call": "desktop_hotkey|keys=ctrl+f"}
+{"utterance": "press the keys alt+tab", "call": "desktop_hotkey|keys=alt+tab"}
+{"utterance": "do ctrl+f", "call": "desktop_hotkey|keys=ctrl+f"}
+{"utterance": "use the shortcut cmd+space", "call": "desktop_hotkey|keys=cmd+space"}
+{"utterance": "hit super+l", "call": "desktop_hotkey|keys=super+l"}
+{"utterance": "use the shortcut ctrl+w", "call": "desktop_hotkey|keys=ctrl+w"}
+{"utterance": "hit ctrl+c", "call": "desktop_hotkey|keys=ctrl+c"}
+{"utterance": "hit ctrl+v", "call": "desktop_hotkey|keys=ctrl+v"}
+{"utterance": "use the shortcut ctrl+s", "call": "desktop_hotkey|keys=ctrl+s"}
+{"utterance": "do cmd+space", "call": "desktop_hotkey|keys=cmd+space"}
+{"utterance": "hit ctrl+shift+t", "call": "desktop_hotkey|keys=ctrl+shift+t"}
+{"utterance": "do super+l", "call": "desktop_hotkey|keys=super+l"}
+{"utterance": "use the shortcut ctrl+shift+t", "call": "desktop_hotkey|keys=ctrl+shift+t"}
+{"utterance": "hit ctrl+w", "call": "desktop_hotkey|keys=ctrl+w"}
+{"utterance": "start thunderbird", "call": "desktop_launch|app=thunderbird"}
+{"utterance": "fire up text editor", "call": "desktop_launch|app=text editor"}
+{"utterance": "launch vscode", "call": "desktop_launch|app=vscode"}
+{"utterance": "open thunderbird", "call": "desktop_launch|app=thunderbird"}
+{"utterance": "open up thunderbird for me", "call": "desktop_launch|app=thunderbird"}
+{"utterance": "fire up file manager", "call": "desktop_launch|app=file manager"}
+{"utterance": "open calculator", "call": "desktop_launch|app=calculator"}
+{"utterance": "open up firefox for me", "call": "desktop_launch|app=firefox"}
+{"utterance": "open up text editor for me", "call": "desktop_launch|app=text editor"}
+{"utterance": "start calculator", "call": "desktop_launch|app=calculator"}
+{"utterance": "fire up calendar", "call": "desktop_launch|app=calendar"}
+{"utterance": "open up music player for me", "call": "desktop_launch|app=music player"}
+{"utterance": "start file manager", "call": "desktop_launch|app=file manager"}
+{"utterance": "run chromium", "call": "desktop_launch|app=chromium"}
+{"utterance": "start calendar", "call": "desktop_launch|app=calendar"}
+{"utterance": "open up calendar for me", "call": "desktop_launch|app=calendar"}
+{"utterance": "open system settings", "call": "desktop_launch|app=system settings"}
+{"utterance": "run calendar", "call": "desktop_launch|app=calendar"}
+{"utterance": "launch music player", "call": "desktop_launch|app=music player"}
+{"utterance": "launch calculator", "call": "desktop_launch|app=calculator"}
+{"utterance": "start firefox", "call": "desktop_launch|app=firefox"}
+{"utterance": "open up vscode for me", "call": "desktop_launch|app=vscode"}
+{"utterance": "run system settings", "call": "desktop_launch|app=system settings"}
+{"utterance": "open up chromium for me", "call": "desktop_launch|app=chromium"}
+{"utterance": "run calculator", "call": "desktop_launch|app=calculator"}
+{"utterance": "run firefox", "call": "desktop_launch|app=firefox"}
+{"utterance": "launch editor", "call": "desktop_launch|app=editor"}
+{"utterance": "open up system settings for me", "call": "desktop_launch|app=system settings"}
+{"utterance": "open up terminal for me", "call": "desktop_launch|app=terminal"}
+{"utterance": "open editor", "call": "desktop_launch|app=editor"}
+{"utterance": "fire up system settings", "call": "desktop_launch|app=system settings"}
+{"utterance": "fire up editor", "call": "desktop_launch|app=editor"}
+{"utterance": "open chromium", "call": "desktop_launch|app=chromium"}
+{"utterance": "launch text editor", "call": "desktop_launch|app=text editor"}
+{"utterance": "run vscode", "call": "desktop_launch|app=vscode"}
+{"utterance": "start editor", "call": "desktop_launch|app=editor"}
+{"utterance": "start terminal", "call": "desktop_launch|app=terminal"}
+{"utterance": "fire up vscode", "call": "desktop_launch|app=vscode"}
+{"utterance": "run file manager", "call": "desktop_launch|app=file manager"}
+{"utterance": "open up file manager for me", "call": "desktop_launch|app=file manager"}
+{"utterance": "launch thunderbird", "call": "desktop_launch|app=thunderbird"}
+{"utterance": "run terminal", "call": "desktop_launch|app=terminal"}
+{"utterance": "open firefox", "call": "desktop_launch|app=firefox"}
+{"utterance": "open calendar", "call": "desktop_launch|app=calendar"}
+{"utterance": "launch file manager", "call": "desktop_launch|app=file manager"}
+{"utterance": "open up calculator for me", "call": "desktop_launch|app=calculator"}
+{"utterance": "open up editor for me", "call": "desktop_launch|app=editor"}
+{"utterance": "fire up music player", "call": "desktop_launch|app=music player"}
+{"utterance": "open music player", "call": "desktop_launch|app=music player"}
+{"utterance": "launch system settings", "call": "desktop_launch|app=system settings"}
+{"utterance": "open vscode", "call": "desktop_launch|app=vscode"}
+{"utterance": "run editor", "call": "desktop_launch|app=editor"}
+{"utterance": "launch firefox", "call": "desktop_launch|app=firefox"}
+{"utterance": "launch chromium", "call": "desktop_launch|app=chromium"}
+{"utterance": "start chromium", "call": "desktop_launch|app=chromium"}
+{"utterance": "start text editor", "call": "desktop_launch|app=text editor"}
+{"utterance": "run thunderbird", "call": "desktop_launch|app=thunderbird"}
+{"utterance": "open text editor", "call": "desktop_launch|app=text editor"}
+{"utterance": "run text editor", "call": "desktop_launch|app=text editor"}
+{"utterance": "start vscode", "call": "desktop_launch|app=vscode"}
+{"utterance": "screenshot now", "call": "desktop_screenshot"}
+{"utterance": "make a screen shot", "call": "desktop_screenshot"}
+{"utterance": "capture the screen", "call": "desktop_screenshot"}
+{"utterance": "take a screenshot", "call": "desktop_screenshot"}
+{"utterance": "take a picture of the display", "call": "desktop_screenshot"}
+{"utterance": "screenshot", "call": "desktop_screenshot"}
+{"utterance": "freeze the screen", "call": "desktop_screenshot"}
+{"utterance": "make a screenshot", "call": "desktop_screenshot"}
+{"utterance": "grab a screenshot", "call": "desktop_screenshot"}
+{"utterance": "snap a picture of the screen", "call": "desktop_screenshot"}
+{"utterance": "make a screen capture", "call": "desktop_screenshot"}
+{"utterance": "screen shot", "call": "desktop_screenshot"}
+{"utterance": "take a picture of the screen", "call": "desktop_screenshot"}
+{"utterance": "i need a screenshot", "call": "desktop_screenshot"}
+{"utterance": "create a screenshot", "call": "desktop_screenshot"}
+{"utterance": "a screenshot please", "call": "desktop_screenshot"}
+{"utterance": "capture the display", "call": "desktop_screenshot"}
+{"utterance": "record the screen", "call": "desktop_screenshot"}
+{"utterance": "grab the screen", "call": "desktop_screenshot"}
+{"utterance": "please capture the screen", "call": "desktop_screenshot"}
+{"utterance": "snap the screen", "call": "desktop_screenshot"}
+{"utterance": "take a picture of the monitor", "call": "desktop_screenshot"}
+{"utterance": "capture my display", "call": "desktop_screenshot"}
+{"utterance": "save the screen", "call": "desktop_screenshot"}
+{"utterance": "save a screen shot", "call": "desktop_screenshot"}
+{"utterance": "write write the protocol", "call": "desktop_type|text=write the protocol"}
+{"utterance": "type note to self", "call": "desktop_type|text=note to self"}
+{"utterance": "please type end of line", "call": "desktop_type|text=end of line"}
+{"utterance": "type out write the protocol", "call": "desktop_type|text=write the protocol"}
+{"utterance": "type out back to main menu", "call": "desktop_type|text=back to main menu"}
+{"utterance": "please type start the muscal agent", "call": "desktop_type|text=start the muscal agent"}
+{"utterance": "enter project muscal", "call": "desktop_type|text=project muscal"}
+{"utterance": "type out hello world", "call": "desktop_type|text=hello world"}
+{"utterance": "type out see you later", "call": "desktop_type|text=see you later"}
+{"utterance": "enter back to main menu", "call": "desktop_type|text=back to main menu"}
+{"utterance": "write project muscal", "call": "desktop_type|text=project muscal"}
+{"utterance": "please type good morning", "call": "desktop_type|text=good morning"}
+{"utterance": "please type project muscal", "call": "desktop_type|text=project muscal"}
+{"utterance": "type end of line", "call": "desktop_type|text=end of line"}
+{"utterance": "type out thank you", "call": "desktop_type|text=thank you"}
+{"utterance": "please type hello world", "call": "desktop_type|text=hello world"}
+{"utterance": "please type note to self", "call": "desktop_type|text=note to self"}
+{"utterance": "please type sudo systemctl status", "call": "desktop_type|text=sudo systemctl status"}
+{"utterance": "write start the muscal agent", "call": "desktop_type|text=start the muscal agent"}
+{"utterance": "enter sudo systemctl status", "call": "desktop_type|text=sudo systemctl status"}
+{"utterance": "enter save as", "call": "desktop_type|text=save as"}
+{"utterance": "write good morning", "call": "desktop_type|text=good morning"}
+{"utterance": "write save as", "call": "desktop_type|text=save as"}
+{"utterance": "write thank you", "call": "desktop_type|text=thank you"}
+{"utterance": "type back to main menu", "call": "desktop_type|text=back to main menu"}
+{"utterance": "type out project muscal", "call": "desktop_type|text=project muscal"}
+{"utterance": "please type test lfm2", "call": "desktop_type|text=test lfm2"}
+{"utterance": "type sudo systemctl status", "call": "desktop_type|text=sudo systemctl status"}
+{"utterance": "write note to self", "call": "desktop_type|text=note to self"}
+{"utterance": "type see you later", "call": "desktop_type|text=see you later"}
+{"utterance": "write please continue", "call": "desktop_type|text=please continue"}
+{"utterance": "type hello world", "call": "desktop_type|text=hello world"}
+{"utterance": "write sudo systemctl status", "call": "desktop_type|text=sudo systemctl status"}
+{"utterance": "please type write the protocol", "call": "desktop_type|text=write the protocol"}
+{"utterance": "type start the muscal agent", "call": "desktop_type|text=start the muscal agent"}
+{"utterance": "write test lfm2", "call": "desktop_type|text=test lfm2"}
+{"utterance": "enter end of line", "call": "desktop_type|text=end of line"}
+{"utterance": "enter write the protocol", "call": "desktop_type|text=write the protocol"}
+{"utterance": "type out please continue", "call": "desktop_type|text=please continue"}
+{"utterance": "please type see you later", "call": "desktop_type|text=see you later"}
+{"utterance": "type out sudo systemctl status", "call": "desktop_type|text=sudo systemctl status"}
+{"utterance": "write end of line", "call": "desktop_type|text=end of line"}
+{"utterance": "type out test lfm2", "call": "desktop_type|text=test lfm2"}
+{"utterance": "type thank you", "call": "desktop_type|text=thank you"}
+{"utterance": "enter start the muscal agent", "call": "desktop_type|text=start the muscal agent"}
+{"utterance": "type good morning", "call": "desktop_type|text=good morning"}
+{"utterance": "type out save as", "call": "desktop_type|text=save as"}
+{"utterance": "enter note to self", "call": "desktop_type|text=note to self"}
+{"utterance": "type test lfm2", "call": "desktop_type|text=test lfm2"}
+{"utterance": "enter good morning", "call": "desktop_type|text=good morning"}
+{"utterance": "enter please continue", "call": "desktop_type|text=please continue"}
+{"utterance": "type out good morning", "call": "desktop_type|text=good morning"}
+{"utterance": "type save as", "call": "desktop_type|text=save as"}
+{"utterance": "type out start the muscal agent", "call": "desktop_type|text=start the muscal agent"}
+{"utterance": "please type please continue", "call": "desktop_type|text=please continue"}
+{"utterance": "enter hello world", "call": "desktop_type|text=hello world"}
+{"utterance": "enter test lfm2", "call": "desktop_type|text=test lfm2"}
+{"utterance": "type out end of line", "call": "desktop_type|text=end of line"}
+{"utterance": "write see you later", "call": "desktop_type|text=see you later"}
+{"utterance": "type project muscal", "call": "desktop_type|text=project muscal"}
+{"utterance": "what does https://www.bbc.com/news say", "call": "web_read|url=https://www.bbc.com/news"}
+{"utterance": "open and read https://docs.liquid.ai/lfm/fine-tuning/trl", "call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"utterance": "summarise https://huggingface.co/LiquidAI", "call": "web_read|url=https://huggingface.co/LiquidAI"}
+{"utterance": "what does https://apnews.com say", "call": "web_read|url=https://apnews.com"}
+{"utterance": "read the page https://news.ycombinator.com", "call": "web_read|url=https://news.ycombinator.com"}
+{"utterance": "open and read https://www.bbc.com/news", "call": "web_read|url=https://www.bbc.com/news"}
+{"utterance": "tell me what is on https://arxiv.org/list/cs.LG/recent", "call": "web_read|url=https://arxiv.org/list/cs.LG/recent"}
+{"utterance": "read the page https://apnews.com", "call": "web_read|url=https://apnews.com"}
+{"utterance": "tell me what is on https://en.wikipedia.org/wiki/Cologne", "call": "web_read|url=https://en.wikipedia.org/wiki/Cologne"}
+{"utterance": "get the text from https://apnews.com", "call": "web_read|url=https://apnews.com"}
+{"utterance": "open and read https://pypi.org/project/liquid-audio", "call": "web_read|url=https://pypi.org/project/liquid-audio"}
+{"utterance": "read the page https://www.bbc.com/news", "call": "web_read|url=https://www.bbc.com/news"}
+{"utterance": "what does https://pypi.org/project/liquid-audio say", "call": "web_read|url=https://pypi.org/project/liquid-audio"}
+{"utterance": "open and read https://en.wikipedia.org/wiki/Cologne", "call": "web_read|url=https://en.wikipedia.org/wiki/Cologne"}
+{"utterance": "get the text from https://example.com", "call": "web_read|url=https://example.com"}
+{"utterance": "tell me what is on https://example.com", "call": "web_read|url=https://example.com"}
+{"utterance": "get the text from https://www.bbc.com/news", "call": "web_read|url=https://www.bbc.com/news"}
+{"utterance": "read the page https://stackoverflow.com/questions/tagged/python", "call": "web_read|url=https://stackoverflow.com/questions/tagged/python"}
+{"utterance": "what does https://docs.liquid.ai/lfm/fine-tuning/trl say", "call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"utterance": "get the text from https://en.wikipedia.org/wiki/Cologne", "call": "web_read|url=https://en.wikipedia.org/wiki/Cologne"}
+{"utterance": "get the text from https://docs.liquid.ai", "call": "web_read|url=https://docs.liquid.ai"}
+{"utterance": "tell me what is on https://docs.liquid.ai/lfm/fine-tuning/trl", "call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"utterance": "summarise https://example.com", "call": "web_read|url=https://example.com"}
+{"utterance": "summarise https://arxiv.org/list/cs.LG/recent", "call": "web_read|url=https://arxiv.org/list/cs.LG/recent"}
+{"utterance": "open and read https://example.com", "call": "web_read|url=https://example.com"}
+{"utterance": "get the text from https://docs.liquid.ai/lfm/fine-tuning/trl", "call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"utterance": "summarise https://docs.liquid.ai", "call": "web_read|url=https://docs.liquid.ai"}
+{"utterance": "summarise https://apnews.com", "call": "web_read|url=https://apnews.com"}
+{"utterance": "summarise https://pypi.org/project/liquid-audio", "call": "web_read|url=https://pypi.org/project/liquid-audio"}
+{"utterance": "get the text from https://news.ycombinator.com", "call": "web_read|url=https://news.ycombinator.com"}
+{"utterance": "get the text from https://stackoverflow.com/questions/tagged/python", "call": "web_read|url=https://stackoverflow.com/questions/tagged/python"}
+{"utterance": "open and read https://apnews.com", "call": "web_read|url=https://apnews.com"}
+{"utterance": "summarise https://news.ycombinator.com", "call": "web_read|url=https://news.ycombinator.com"}
+{"utterance": "read the page https://github.com/ggml-org/llama.cpp", "call": "web_read|url=https://github.com/ggml-org/llama.cpp"}
+{"utterance": "tell me what is on https://news.ycombinator.com", "call": "web_read|url=https://news.ycombinator.com"}
+{"utterance": "tell me what is on https://apnews.com", "call": "web_read|url=https://apnews.com"}
+{"utterance": "read the page https://docs.liquid.ai/lfm/fine-tuning/trl", "call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"utterance": "read the page https://arxiv.org/list/cs.LG/recent", "call": "web_read|url=https://arxiv.org/list/cs.LG/recent"}
+{"utterance": "what does https://example.com say", "call": "web_read|url=https://example.com"}
+{"utterance": "get the text from https://github.com/ggml-org/llama.cpp", "call": "web_read|url=https://github.com/ggml-org/llama.cpp"}
+{"utterance": "read the page https://example.com", "call": "web_read|url=https://example.com"}
+{"utterance": "summarise https://github.com/ggml-org/llama.cpp", "call": "web_read|url=https://github.com/ggml-org/llama.cpp"}
+{"utterance": "open and read https://huggingface.co/LiquidAI", "call": "web_read|url=https://huggingface.co/LiquidAI"}
+{"utterance": "summarise https://docs.liquid.ai/lfm/fine-tuning/trl", "call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"utterance": "tell me what is on https://github.com/ggml-org/llama.cpp", "call": "web_read|url=https://github.com/ggml-org/llama.cpp"}
+{"utterance": "read the page https://en.wikipedia.org/wiki/Cologne", "call": "web_read|url=https://en.wikipedia.org/wiki/Cologne"}
+{"utterance": "what does https://docs.liquid.ai say", "call": "web_read|url=https://docs.liquid.ai"}
+{"utterance": "what does https://news.ycombinator.com say", "call": "web_read|url=https://news.ycombinator.com"}
+{"utterance": "read the page https://pypi.org/project/liquid-audio", "call": "web_read|url=https://pypi.org/project/liquid-audio"}
+{"utterance": "tell me what is on https://pypi.org/project/liquid-audio", "call": "web_read|url=https://pypi.org/project/liquid-audio"}
+{"utterance": "tell me what is on https://docs.liquid.ai", "call": "web_read|url=https://docs.liquid.ai"}
+{"utterance": "tell me what is on https://stackoverflow.com/questions/tagged/python", "call": "web_read|url=https://stackoverflow.com/questions/tagged/python"}
+{"utterance": "what does https://huggingface.co/LiquidAI say", "call": "web_read|url=https://huggingface.co/LiquidAI"}
+{"utterance": "get the text from https://arxiv.org/list/cs.LG/recent", "call": "web_read|url=https://arxiv.org/list/cs.LG/recent"}
+{"utterance": "open and read https://docs.liquid.ai", "call": "web_read|url=https://docs.liquid.ai"}
+{"utterance": "get the text from https://pypi.org/project/liquid-audio", "call": "web_read|url=https://pypi.org/project/liquid-audio"}
+{"utterance": "open and read https://github.com/ggml-org/llama.cpp", "call": "web_read|url=https://github.com/ggml-org/llama.cpp"}
+{"utterance": "open and read https://stackoverflow.com/questions/tagged/python", "call": "web_read|url=https://stackoverflow.com/questions/tagged/python"}
+{"utterance": "summarise https://stackoverflow.com/questions/tagged/python", "call": "web_read|url=https://stackoverflow.com/questions/tagged/python"}
+{"utterance": "summarise https://en.wikipedia.org/wiki/Cologne", "call": "web_read|url=https://en.wikipedia.org/wiki/Cologne"}
+{"utterance": "search the web for colab a100 availability", "call": "web_search|query=colab a100 availability"}
+{"utterance": "search for quantization aware training", "call": "web_search|query=quantization aware training"}
+{"utterance": "google playwright accessibility tree", "call": "web_search|query=playwright accessibility tree"}
+{"utterance": "find information about quantization aware training", "call": "web_search|query=quantization aware training"}
+{"utterance": "find information about siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "google qlora versus lora", "call": "web_search|query=qlora versus lora"}
+{"utterance": "research self hosted searxng", "call": "web_search|query=self hosted searxng"}
+{"utterance": "search for gguf quantization q4 k m", "call": "web_search|query=gguf quantization q4 k m"}
+{"utterance": "search the web for siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "what can you find on self hosted searxng", "call": "web_search|query=self hosted searxng"}
+{"utterance": "google gguf quantization q4 k m", "call": "web_search|query=gguf quantization q4 k m"}
+{"utterance": "find information about qlora versus lora", "call": "web_search|query=qlora versus lora"}
+{"utterance": "find information about weather cologne", "call": "web_search|query=weather cologne"}
+{"utterance": "google moe model vram usage", "call": "web_search|query=moe model vram usage"}
+{"utterance": "search the web for liquid foundation models", "call": "web_search|query=liquid foundation models"}
+{"utterance": "search for weather cologne", "call": "web_search|query=weather cologne"}
+{"utterance": "search for siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "look up liquid foundation models", "call": "web_search|query=liquid foundation models"}
+{"utterance": "google quantization aware training", "call": "web_search|query=quantization aware training"}
+{"utterance": "research weather cologne", "call": "web_search|query=weather cologne"}
+{"utterance": "look up moe model vram usage", "call": "web_search|query=moe model vram usage"}
+{"utterance": "what can you find on siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "find information about moe model vram usage", "call": "web_search|query=moe model vram usage"}
+{"utterance": "look up quantization aware training", "call": "web_search|query=quantization aware training"}
+{"utterance": "what can you find on liquid foundation models", "call": "web_search|query=liquid foundation models"}
+{"utterance": "what can you find on liquid ai lfm", "call": "web_search|query=liquid ai lfm"}
+{"utterance": "look up playwright accessibility tree", "call": "web_search|query=playwright accessibility tree"}
+{"utterance": "what can you find on weather cologne", "call": "web_search|query=weather cologne"}
+{"utterance": "search for liquid ai lfm", "call": "web_search|query=liquid ai lfm"}
+{"utterance": "look up self hosted searxng", "call": "web_search|query=self hosted searxng"}
+{"utterance": "google siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "what can you find on colab a100 availability", "call": "web_search|query=colab a100 availability"}
+{"utterance": "what can you find on playwright accessibility tree", "call": "web_search|query=playwright accessibility tree"}
+{"utterance": "google liquid ai lfm", "call": "web_search|query=liquid ai lfm"}
+{"utterance": "research siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "what can you find on llama cpp audio support", "call": "web_search|query=llama cpp audio support"}
+{"utterance": "research llama cpp audio support", "call": "web_search|query=llama cpp audio support"}
+{"utterance": "google weather cologne", "call": "web_search|query=weather cologne"}
+{"utterance": "search for llama cpp audio support", "call": "web_search|query=llama cpp audio support"}
+{"utterance": "search for colab a100 availability", "call": "web_search|query=colab a100 availability"}
+{"utterance": "find information about playwright accessibility tree", "call": "web_search|query=playwright accessibility tree"}
+{"utterance": "research qlora versus lora", "call": "web_search|query=qlora versus lora"}
+{"utterance": "find information about liquid foundation models", "call": "web_search|query=liquid foundation models"}
+{"utterance": "search the web for self hosted searxng", "call": "web_search|query=self hosted searxng"}
+{"utterance": "search for playwright accessibility tree", "call": "web_search|query=playwright accessibility tree"}
+{"utterance": "search the web for liquid ai lfm", "call": "web_search|query=liquid ai lfm"}
+{"utterance": "look up siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "find information about colab a100 availability", "call": "web_search|query=colab a100 availability"}
+{"utterance": "what can you find on gguf quantization q4 k m", "call": "web_search|query=gguf quantization q4 k m"}
+{"utterance": "what can you find on qlora versus lora", "call": "web_search|query=qlora versus lora"}
+{"utterance": "search for self hosted searxng", "call": "web_search|query=self hosted searxng"}
+{"utterance": "google self hosted searxng", "call": "web_search|query=self hosted searxng"}
+{"utterance": "search the web for weather cologne", "call": "web_search|query=weather cologne"}
+{"utterance": "search the web for quantization aware training", "call": "web_search|query=quantization aware training"}
+{"utterance": "search the web for llama cpp audio support", "call": "web_search|query=llama cpp audio support"}
+{"utterance": "search the web for playwright accessibility tree", "call": "web_search|query=playwright accessibility tree"}
+{"utterance": "look up liquid ai lfm", "call": "web_search|query=liquid ai lfm"}
+{"utterance": "search for liquid foundation models", "call": "web_search|query=liquid foundation models"}
+{"utterance": "look up weather cologne", "call": "web_search|query=weather cologne"}
+{"utterance": "research colab a100 availability", "call": "web_search|query=colab a100 availability"}

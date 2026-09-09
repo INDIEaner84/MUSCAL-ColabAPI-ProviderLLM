@@ -611,9 +611,16 @@ if torch.cuda.is_available():
     print("gpu:", torch.cuda.get_device_name(0), "| vram:", round(vram, 1), "GB")
     if vram < 40:
         print("[warn] unter 40 GB -- das volle Audio-Finetune wird eng. A100 waehlen.")'''),
+        ("md", """## Was kann diese Maschine?
+
+`--doctor` prueft, welche Backends ueberhaupt verfuegbar sind -- bevor man dem
+Modell die Schuld gibt. Auf Wayland-Rechnern z. B. funktionieren die
+`desktop_*`-Werkzeuge mit pyautogui prinzipiell nicht."""),
+        ("code", '''!python -m muscal_agent --doctor'''),
         drive_cell("audio-agent"),
         code_cell(),
         ("md", """## Werkzeuge und Format
+
 
 Der Katalog liegt in `muscal_agent/catalog.py`. Klein halten: 3–4 Funktionen mit
 je ~500 Beispielen schlagen 12 Funktionen mit je 80."""),
@@ -653,33 +660,56 @@ for text in [
     result = agent.run_tools([call])[0]
     status = "ok" if result.ok else ("skipped" if result.skipped else "error")
     print(f"{text:45s} -> {status:8s} {result.output or result.error}")'''),
-        ("md", """## 1. Daten erzeugen
+        ("md", """## 1. Daten erzeugen — alle 11 Werkzeuge
 
-`data/agent_utterances.jsonl` im Repo ist ein Startgerüst (19 Paare). Ersetze es
-durch deine eigenen Sätze — und nimm **deutlich mehr**: ~500 pro Funktion ist ein
-vernünftiges Ziel, Liquid's Referenz lief mit ~1.350 pro Funktion.
+Der Generator kombiniert **Satzschablonen x Slot-Werte** pro Werkzeug.
+`--slots` + `--per-tool` erzeugt fuer *alle* Werkzeuge im Katalog Daten, eigene
+Saetze kommen per `--utterances` dazu.
 
-Audio kommt entweder aus eigenen Aufnahmen (`--audio-map`, empfohlen) oder aus
-dem TTS des Modells selbst (`--tts`, bequem, aber eine einzige Stimme)."""),
+| Datei | Inhalt |
+|---|---|
+| `data/agent_slots_de.json` / `_en.json` | Werte pro Argument (URLs, Selektoren, Apps, Hotkeys …) |
+| `data/agent_templates_de.json` / `_en.json` | Satzschablonen pro Werkzeug |
+| `data/agent_utterances_full_de.jsonl` / `_en.json` | daraus erzeugt: ~600 Paare, alle 11 Werkzeuge |
+
+**Sprache:** `LFM2.5-Audio-1.5B` ist auf Englisch trainiert. Deutsch
+funktioniert eher als Absichtserkennung, Englisch ist treffsicherer. Unten
+umschaltbar — die beiden Sprachen **nicht** in einem Datensatz mischen.
+
+Eigene Aufnahmen (`--audio-map`) schlagen TTS (`--tts`) immer: beim TTS hat
+jede Probe dieselbe Stimme, und das Modell lernt eine Sprecherin statt dich."""),
         ("code", '''from pathlib import Path
 
-UTTERANCES = DRIVE_DIR / "data" / "agent_utterances.jsonl"
+LANG     = "en"     # "de" | "en" -- entscheidet Schablonen und Slot-Werte
+PER_TOOL = 60       # Paare pro Werkzeug
+
+UTTERANCES  = DRIVE_DIR / "data" / "agent_utterances_full.jsonl"
+DATASET_DIR = DRIVE_DIR / "data" / "agent_audio"
+EVAL_FILE   = DRIVE_DIR / "data" / "agent_eval.jsonl"
 UTTERANCES.parent.mkdir(parents=True, exist_ok=True)
 
-if not UTTERANCES.exists():
-    import shutil
-    shutil.copy("data/agent_utterances.jsonl", UTTERANCES)
-    print("Starter-Datei kopiert:", UTTERANCES)
+# Paare erzeugen -- kein Audio noetig, --write-pairs stoppt danach
+!python scripts/build_toolcall_dataset.py \
+    --language "$LANG" \
+    --slots "data/agent_slots_$LANG.json" \
+    --per-tool "$PER_TOOL" \
+    --fmt "$FORMAT" \
+    --write-pairs "$UTTERANCES"
 
-DATASET_DIR = DRIVE_DIR / "data" / "agent_audio"
-EVAL_FILE = DRIVE_DIR / "data" / "agent_eval.jsonl"
+with open(UTTERANCES, encoding="utf-8") as fh:
+    lines = fh.read().splitlines()
+print("Zeilen:", len(lines))
+print("Beispiel:", lines[0])'''),
+        ("md", """Jetzt das Audio dazu.
 
-!python scripts/build_toolcall_dataset.py \\
-    --utterances "$UTTERANCES" \\
-    --tts \\
-    --augment \\
-    --val-ratio 0.05 \\
-    --eval-out "$EVAL_FILE" \\
+> **Sobald du eigene Aufnahmen hast: `--tts` durch `--audio-map map.jsonl`
+> ersetzen.** Das ist der groesste einzelne Qualitaetssprung."""),
+        ("code", '''!python scripts/build_toolcall_dataset.py \
+    --utterances "$UTTERANCES" \
+    --tts \
+    --fmt "$FORMAT" \
+    --val-ratio 0.05 \
+    --eval-out "$EVAL_FILE" \
     --out "$DATASET_DIR"'''),
         ("md", """## 2. Preprocessen
 

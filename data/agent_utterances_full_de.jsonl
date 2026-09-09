@@ -1,0 +1,601 @@
+{"utterance": "drueck den button a.next", "call": "browser_click|selector=a.next"}
+{"utterance": "klick .pagination-next", "call": "browser_click|selector=.pagination-next"}
+{"utterance": "klick das element #submit", "call": "browser_click|selector=#submit"}
+{"utterance": "klick auf .pagination-next", "call": "browser_click|selector=.pagination-next"}
+{"utterance": "klick button.primary", "call": "browser_click|selector=button.primary"}
+{"utterance": "klick button.close", "call": "browser_click|selector=button.close"}
+{"utterance": "klick das element a.load-more", "call": "browser_click|selector=a.load-more"}
+{"utterance": "klick das element input[type=checkbox]", "call": "browser_click|selector=input[type=checkbox]"}
+{"utterance": "drueck #menu-toggle", "call": "browser_click|selector=#menu-toggle"}
+{"utterance": "klick a.load-more", "call": "browser_click|selector=a.load-more"}
+{"utterance": "klick auf #menu-toggle", "call": "browser_click|selector=#menu-toggle"}
+{"utterance": "drueck den button #login", "call": "browser_click|selector=#login"}
+{"utterance": "drueck a.load-more", "call": "browser_click|selector=a.load-more"}
+{"utterance": "drueck den button #menu-toggle", "call": "browser_click|selector=#menu-toggle"}
+{"utterance": "drueck #submit", "call": "browser_click|selector=#submit"}
+{"utterance": "klick das element button.submit", "call": "browser_click|selector=button.submit"}
+{"utterance": "klick auf #cookie-accept", "call": "browser_click|selector=#cookie-accept"}
+{"utterance": "klick #menu-toggle", "call": "browser_click|selector=#menu-toggle"}
+{"utterance": "klick das element a.next", "call": "browser_click|selector=a.next"}
+{"utterance": "klick auf button.primary", "call": "browser_click|selector=button.primary"}
+{"utterance": "drueck #search-button", "call": "browser_click|selector=#search-button"}
+{"utterance": "klick auf input[type=checkbox]", "call": "browser_click|selector=input[type=checkbox]"}
+{"utterance": "klick das element .pagination-next", "call": "browser_click|selector=.pagination-next"}
+{"utterance": "klick input[type=checkbox]", "call": "browser_click|selector=input[type=checkbox]"}
+{"utterance": "drueck den button #search-button", "call": "browser_click|selector=#search-button"}
+{"utterance": "drueck #login", "call": "browser_click|selector=#login"}
+{"utterance": "klick auf #login", "call": "browser_click|selector=#login"}
+{"utterance": "drueck den button button.close", "call": "browser_click|selector=button.close"}
+{"utterance": "drueck button.submit", "call": "browser_click|selector=button.submit"}
+{"utterance": "klick das element button.primary", "call": "browser_click|selector=button.primary"}
+{"utterance": "klick #submit", "call": "browser_click|selector=#submit"}
+{"utterance": "drueck button.primary", "call": "browser_click|selector=button.primary"}
+{"utterance": "drueck den button #cookie-accept", "call": "browser_click|selector=#cookie-accept"}
+{"utterance": "drueck a.next", "call": "browser_click|selector=a.next"}
+{"utterance": "klick das element #login", "call": "browser_click|selector=#login"}
+{"utterance": "klick #login", "call": "browser_click|selector=#login"}
+{"utterance": "drueck .pagination-next", "call": "browser_click|selector=.pagination-next"}
+{"utterance": "drueck den button #submit", "call": "browser_click|selector=#submit"}
+{"utterance": "drueck button.close", "call": "browser_click|selector=button.close"}
+{"utterance": "klick das element #search-button", "call": "browser_click|selector=#search-button"}
+{"utterance": "klick button.submit", "call": "browser_click|selector=button.submit"}
+{"utterance": "drueck den button input[type=checkbox]", "call": "browser_click|selector=input[type=checkbox]"}
+{"utterance": "klick das element #menu-toggle", "call": "browser_click|selector=#menu-toggle"}
+{"utterance": "klick auf a.next", "call": "browser_click|selector=a.next"}
+{"utterance": "drueck #cookie-accept", "call": "browser_click|selector=#cookie-accept"}
+{"utterance": "drueck den button button.submit", "call": "browser_click|selector=button.submit"}
+{"utterance": "klick auf #search-button", "call": "browser_click|selector=#search-button"}
+{"utterance": "drueck input[type=checkbox]", "call": "browser_click|selector=input[type=checkbox]"}
+{"utterance": "klick das element #cookie-accept", "call": "browser_click|selector=#cookie-accept"}
+{"utterance": "drueck den button a.load-more", "call": "browser_click|selector=a.load-more"}
+{"utterance": "klick auf #submit", "call": "browser_click|selector=#submit"}
+{"utterance": "klick das element button.close", "call": "browser_click|selector=button.close"}
+{"utterance": "klick auf button.close", "call": "browser_click|selector=button.close"}
+{"utterance": "klick a.next", "call": "browser_click|selector=a.next"}
+{"utterance": "klick #cookie-accept", "call": "browser_click|selector=#cookie-accept"}
+{"utterance": "klick #search-button", "call": "browser_click|selector=#search-button"}
+{"utterance": "drueck den button .pagination-next", "call": "browser_click|selector=.pagination-next"}
+{"utterance": "klick auf button.submit", "call": "browser_click|selector=button.submit"}
+{"utterance": "klick auf a.load-more", "call": "browser_click|selector=a.load-more"}
+{"utterance": "drueck den button button.primary", "call": "browser_click|selector=button.primary"}
+{"utterance": "geh zu https://www.spiegel.de", "call": "browser_open|url=https://www.spiegel.de"}
+{"utterance": "oeffne https://docs.liquid.ai", "call": "browser_open|url=https://docs.liquid.ai"}
+{"utterance": "oeffne https://github.com im browser", "call": "browser_open|url=https://github.com"}
+{"utterance": "start den browser mit https://news.ycombinator.com", "call": "browser_open|url=https://news.ycombinator.com"}
+{"utterance": "geh zu https://pytorch.org", "call": "browser_open|url=https://pytorch.org"}
+{"utterance": "oeffne https://news.ycombinator.com", "call": "browser_open|url=https://news.ycombinator.com"}
+{"utterance": "oeffne https://news.ycombinator.com im browser", "call": "browser_open|url=https://news.ycombinator.com"}
+{"utterance": "brows zu https://openai.com", "call": "browser_open|url=https://openai.com"}
+{"utterance": "lade https://huggingface.co im browser", "call": "browser_open|url=https://huggingface.co"}
+{"utterance": "start den browser mit https://pytorch.org", "call": "browser_open|url=https://pytorch.org"}
+{"utterance": "oeffne https://www.spiegel.de im browser", "call": "browser_open|url=https://www.spiegel.de"}
+{"utterance": "geh zu https://docs.liquid.ai", "call": "browser_open|url=https://docs.liquid.ai"}
+{"utterance": "start den browser mit https://modal.com", "call": "browser_open|url=https://modal.com"}
+{"utterance": "brows zu https://colab.research.google.com", "call": "browser_open|url=https://colab.research.google.com"}
+{"utterance": "oeffne https://colab.research.google.com im browser", "call": "browser_open|url=https://colab.research.google.com"}
+{"utterance": "oeffne https://pytorch.org im browser", "call": "browser_open|url=https://pytorch.org"}
+{"utterance": "oeffne https://arxiv.org", "call": "browser_open|url=https://arxiv.org"}
+{"utterance": "lade https://www.spiegel.de im browser", "call": "browser_open|url=https://www.spiegel.de"}
+{"utterance": "lade https://colab.research.google.com im browser", "call": "browser_open|url=https://colab.research.google.com"}
+{"utterance": "oeffne https://www.spiegel.de", "call": "browser_open|url=https://www.spiegel.de"}
+{"utterance": "oeffne https://www.python.org", "call": "browser_open|url=https://www.python.org"}
+{"utterance": "start den browser mit https://docs.liquid.ai", "call": "browser_open|url=https://docs.liquid.ai"}
+{"utterance": "oeffne https://pytorch.org", "call": "browser_open|url=https://pytorch.org"}
+{"utterance": "oeffne https://huggingface.co", "call": "browser_open|url=https://huggingface.co"}
+{"utterance": "start den browser mit https://github.com", "call": "browser_open|url=https://github.com"}
+{"utterance": "start den browser mit https://www.python.org", "call": "browser_open|url=https://www.python.org"}
+{"utterance": "geh zu https://www.python.org", "call": "browser_open|url=https://www.python.org"}
+{"utterance": "oeffne https://www.python.org im browser", "call": "browser_open|url=https://www.python.org"}
+{"utterance": "oeffne https://openai.com", "call": "browser_open|url=https://openai.com"}
+{"utterance": "brows zu https://www.spiegel.de", "call": "browser_open|url=https://www.spiegel.de"}
+{"utterance": "brows zu https://huggingface.co", "call": "browser_open|url=https://huggingface.co"}
+{"utterance": "brows zu https://www.python.org", "call": "browser_open|url=https://www.python.org"}
+{"utterance": "oeffne https://arxiv.org im browser", "call": "browser_open|url=https://arxiv.org"}
+{"utterance": "lade https://github.com im browser", "call": "browser_open|url=https://github.com"}
+{"utterance": "oeffne https://huggingface.co im browser", "call": "browser_open|url=https://huggingface.co"}
+{"utterance": "geh zu https://openai.com", "call": "browser_open|url=https://openai.com"}
+{"utterance": "geh zu https://arxiv.org", "call": "browser_open|url=https://arxiv.org"}
+{"utterance": "oeffne https://colab.research.google.com", "call": "browser_open|url=https://colab.research.google.com"}
+{"utterance": "start den browser mit https://huggingface.co", "call": "browser_open|url=https://huggingface.co"}
+{"utterance": "brows zu https://arxiv.org", "call": "browser_open|url=https://arxiv.org"}
+{"utterance": "brows zu https://github.com", "call": "browser_open|url=https://github.com"}
+{"utterance": "start den browser mit https://arxiv.org", "call": "browser_open|url=https://arxiv.org"}
+{"utterance": "geh zu https://huggingface.co", "call": "browser_open|url=https://huggingface.co"}
+{"utterance": "oeffne https://modal.com", "call": "browser_open|url=https://modal.com"}
+{"utterance": "start den browser mit https://openai.com", "call": "browser_open|url=https://openai.com"}
+{"utterance": "start den browser mit https://colab.research.google.com", "call": "browser_open|url=https://colab.research.google.com"}
+{"utterance": "lade https://arxiv.org im browser", "call": "browser_open|url=https://arxiv.org"}
+{"utterance": "oeffne https://docs.liquid.ai im browser", "call": "browser_open|url=https://docs.liquid.ai"}
+{"utterance": "lade https://playwright.dev im browser", "call": "browser_open|url=https://playwright.dev"}
+{"utterance": "lade https://pytorch.org im browser", "call": "browser_open|url=https://pytorch.org"}
+{"utterance": "lade https://openai.com im browser", "call": "browser_open|url=https://openai.com"}
+{"utterance": "brows zu https://news.ycombinator.com", "call": "browser_open|url=https://news.ycombinator.com"}
+{"utterance": "lade https://www.python.org im browser", "call": "browser_open|url=https://www.python.org"}
+{"utterance": "geh zu https://news.ycombinator.com", "call": "browser_open|url=https://news.ycombinator.com"}
+{"utterance": "geh zu https://modal.com", "call": "browser_open|url=https://modal.com"}
+{"utterance": "start den browser mit https://www.spiegel.de", "call": "browser_open|url=https://www.spiegel.de"}
+{"utterance": "brows zu https://playwright.dev", "call": "browser_open|url=https://playwright.dev"}
+{"utterance": "geh zu https://colab.research.google.com", "call": "browser_open|url=https://colab.research.google.com"}
+{"utterance": "start den browser mit https://playwright.dev", "call": "browser_open|url=https://playwright.dev"}
+{"utterance": "lade https://docs.liquid.ai im browser", "call": "browser_open|url=https://docs.liquid.ai"}
+{"utterance": "was kannst du auf der seite lesen", "call": "browser_snapshot"}
+{"utterance": "gib mir den seiteninhalt", "call": "browser_snapshot"}
+{"utterance": "ich will wissen was auf der seite steht", "call": "browser_snapshot"}
+{"utterance": "fass zusammen was du siehst", "call": "browser_snapshot"}
+{"utterance": "zeig mir was auf der seite steht", "call": "browser_snapshot"}
+{"utterance": "ich brauche den text der seite", "call": "browser_snapshot"}
+{"utterance": "lies vor was da steht", "call": "browser_snapshot"}
+{"utterance": "seiteninhalt bitte", "call": "browser_snapshot"}
+{"utterance": "lies den seiteninhalt vor", "call": "browser_snapshot"}
+{"utterance": "lies mir die seite vor", "call": "browser_snapshot"}
+{"utterance": "text der seite bitte", "call": "browser_snapshot"}
+{"utterance": "was steht auf der seite", "call": "browser_snapshot"}
+{"utterance": "was siehst du auf der seite", "call": "browser_snapshot"}
+{"utterance": "hole mir den text der seite", "call": "browser_snapshot"}
+{"utterance": "was zeigt die seite", "call": "browser_snapshot"}
+{"utterance": "sag mir den inhalt der seite", "call": "browser_snapshot"}
+{"utterance": "gib den text der aktuellen seite aus", "call": "browser_snapshot"}
+{"utterance": "wie lautet der seiteninhalt", "call": "browser_snapshot"}
+{"utterance": "was sagt die seite", "call": "browser_snapshot"}
+{"utterance": "wie ist der inhalt der seite", "call": "browser_snapshot"}
+{"utterance": "kurz was steht auf der seite", "call": "browser_snapshot"}
+{"utterance": "was steht jetzt auf der seite", "call": "browser_snapshot"}
+{"utterance": "was ist gerade auf dem bildschirm", "call": "browser_snapshot"}
+{"utterance": "beschreib die aktuelle seite", "call": "browser_snapshot"}
+{"utterance": "fass die aktuelle seite zusammen", "call": "browser_snapshot"}
+{"utterance": "zeig mir den text der seite", "call": "browser_snapshot"}
+{"utterance": "tippe muscal colab provider in input[name=q] und druck enter", "call": "browser_type|selector=input[name=q]|text=muscal colab provider|submit=false"}
+{"utterance": "tippe qlora adapter in input[type=search] und druck enter", "call": "browser_type|selector=input[type=search]|text=qlora adapter|submit=false"}
+{"utterance": "gib hallo welt bei input#password ein", "call": "browser_type|selector=input#password|text=hallo welt|submit=false"}
+{"utterance": "setz liquid foundation models in input[name=q]", "call": "browser_type|selector=input[name=q]|text=liquid foundation models|submit=false"}
+{"utterance": "tippe qlora finetuning in input#title", "call": "browser_type|selector=input#title|text=qlora finetuning|submit=false"}
+{"utterance": "schreib guten tag in input[name=q]", "call": "browser_type|selector=input[name=q]|text=guten tag|submit=false"}
+{"utterance": "tippe bitte zusammenfassen in textarea#body und druck enter", "call": "browser_type|selector=textarea#body|text=bitte zusammenfassen|submit=false"}
+{"utterance": "tippe testnachricht in input#username", "call": "browser_type|selector=input#username|text=testnachricht|submit=false"}
+{"utterance": "gib liquid ai lfm bei textarea#body ein und sende ab", "call": "browser_type|selector=textarea#body|text=liquid ai lfm|submit=true"}
+{"utterance": "schreib lfm2 audio in input#url", "call": "browser_type|selector=input#url|text=lfm2 audio|submit=false"}
+{"utterance": "gib testnachricht bei input[name=q] ein und sende ab", "call": "browser_type|selector=input[name=q]|text=testnachricht|submit=true"}
+{"utterance": "schreib liquid ai lfm in input#email", "call": "browser_type|selector=input#email|text=liquid ai lfm|submit=false"}
+{"utterance": "tippe guten tag in input[name=q] und druck enter", "call": "browser_type|selector=input[name=q]|text=guten tag|submit=false"}
+{"utterance": "schreib liquid foundation models in input#email", "call": "browser_type|selector=input#email|text=liquid foundation models|submit=false"}
+{"utterance": "tippe lfm2 audio agent in textarea#comment", "call": "browser_type|selector=textarea#comment|text=lfm2 audio agent|submit=false"}
+{"utterance": "schreib liquid ai lfm in input#tag", "call": "browser_type|selector=input#tag|text=liquid ai lfm|submit=false"}
+{"utterance": "tippe testnachricht in input[name=q] und druck enter", "call": "browser_type|selector=input[name=q]|text=testnachricht|submit=false"}
+{"utterance": "gib lfm2 audio bei input#username ein", "call": "browser_type|selector=input#username|text=lfm2 audio|submit=false"}
+{"utterance": "tippe muscal agent in input#email", "call": "browser_type|selector=input#email|text=muscal agent|submit=false"}
+{"utterance": "tippe qlora finetuning in input[name=q]", "call": "browser_type|selector=input[name=q]|text=qlora finetuning|submit=false"}
+{"utterance": "tippe lfm2 audio in textarea#body und druck enter", "call": "browser_type|selector=textarea#body|text=lfm2 audio|submit=false"}
+{"utterance": "setz qlora finetuning in input[name=q]", "call": "browser_type|selector=input[name=q]|text=qlora finetuning|submit=false"}
+{"utterance": "schreib liquid foundation models in textarea#body", "call": "browser_type|selector=textarea#body|text=liquid foundation models|submit=false"}
+{"utterance": "setz bitte zusammenfassen in input#tag", "call": "browser_type|selector=input#tag|text=bitte zusammenfassen|submit=false"}
+{"utterance": "tippe muscal agent in input#tag und druck enter", "call": "browser_type|selector=input#tag|text=muscal agent|submit=false"}
+{"utterance": "tippe muscal colab provider in input#url und druck enter", "call": "browser_type|selector=input#url|text=muscal colab provider|submit=false"}
+{"utterance": "gib lfm2 audio bei textarea#comment ein", "call": "browser_type|selector=textarea#comment|text=lfm2 audio|submit=false"}
+{"utterance": "setz bitte zusammenfassen in input[name=q]", "call": "browser_type|selector=input[name=q]|text=bitte zusammenfassen|submit=false"}
+{"utterance": "tippe muscal colab provider in input#email", "call": "browser_type|selector=input#email|text=muscal colab provider|submit=false"}
+{"utterance": "tippe qlora finetuning in textarea#comment und druck enter", "call": "browser_type|selector=textarea#comment|text=qlora finetuning|submit=false"}
+{"utterance": "setz muscal colab provider in #search", "call": "browser_type|selector=#search|text=muscal colab provider|submit=false"}
+{"utterance": "tippe liquid foundation models in input#password", "call": "browser_type|selector=input#password|text=liquid foundation models|submit=false"}
+{"utterance": "gib muscal agent bei input[type=search] ein", "call": "browser_type|selector=input[type=search]|text=muscal agent|submit=false"}
+{"utterance": "schreib liquid foundation models in textarea#comment", "call": "browser_type|selector=textarea#comment|text=liquid foundation models|submit=false"}
+{"utterance": "schreib lfm2 audio agent in input[name=q]", "call": "browser_type|selector=input[name=q]|text=lfm2 audio agent|submit=false"}
+{"utterance": "tippe guten tag in input#password", "call": "browser_type|selector=input#password|text=guten tag|submit=false"}
+{"utterance": "gib bitte zusammenfassen bei input[name=q] ein", "call": "browser_type|selector=input[name=q]|text=bitte zusammenfassen|submit=false"}
+{"utterance": "schreib liquid foundation models in input[name=q]", "call": "browser_type|selector=input[name=q]|text=liquid foundation models|submit=false"}
+{"utterance": "setz qlora finetuning in input#url", "call": "browser_type|selector=input#url|text=qlora finetuning|submit=false"}
+{"utterance": "setz lfm2 audio agent in input#url", "call": "browser_type|selector=input#url|text=lfm2 audio agent|submit=false"}
+{"utterance": "gib guten tag bei input[type=search] ein und sende ab", "call": "browser_type|selector=input[type=search]|text=guten tag|submit=true"}
+{"utterance": "gib lfm2 audio agent bei input[type=search] ein und sende ab", "call": "browser_type|selector=input[type=search]|text=lfm2 audio agent|submit=true"}
+{"utterance": "gib testnachricht bei input#username ein", "call": "browser_type|selector=input#username|text=testnachricht|submit=false"}
+{"utterance": "gib lfm2 audio bei input#title ein und sende ab", "call": "browser_type|selector=input#title|text=lfm2 audio|submit=true"}
+{"utterance": "gib lfm2 audio bei #search ein", "call": "browser_type|selector=#search|text=lfm2 audio|submit=false"}
+{"utterance": "schreib bitte zusammenfassen in input#tag", "call": "browser_type|selector=input#tag|text=bitte zusammenfassen|submit=false"}
+{"utterance": "gib muscal colab provider bei #search ein und sende ab", "call": "browser_type|selector=#search|text=muscal colab provider|submit=true"}
+{"utterance": "schreib testnachricht in input#url", "call": "browser_type|selector=input#url|text=testnachricht|submit=false"}
+{"utterance": "tippe bitte zusammenfassen in #search und druck enter", "call": "browser_type|selector=#search|text=bitte zusammenfassen|submit=false"}
+{"utterance": "schreib bitte zusammenfassen in input[type=search]", "call": "browser_type|selector=input[type=search]|text=bitte zusammenfassen|submit=false"}
+{"utterance": "tippe muscal colab provider in textarea#body", "call": "browser_type|selector=textarea#body|text=muscal colab provider|submit=false"}
+{"utterance": "tippe guten tag in textarea#comment", "call": "browser_type|selector=textarea#comment|text=guten tag|submit=false"}
+{"utterance": "tippe liquid ai lfm in input[type=search]", "call": "browser_type|selector=input[type=search]|text=liquid ai lfm|submit=false"}
+{"utterance": "gib lfm2 audio bei input[name=q] ein", "call": "browser_type|selector=input[name=q]|text=lfm2 audio|submit=false"}
+{"utterance": "setz lfm2 audio in input[name=q]", "call": "browser_type|selector=input[name=q]|text=lfm2 audio|submit=false"}
+{"utterance": "gib muscal agent bei input#password ein", "call": "browser_type|selector=input#password|text=muscal agent|submit=false"}
+{"utterance": "tippe muscal colab provider in input[name=search]", "call": "browser_type|selector=input[name=search]|text=muscal colab provider|submit=false"}
+{"utterance": "setz qlora adapter in #search", "call": "browser_type|selector=#search|text=qlora adapter|submit=false"}
+{"utterance": "setz muscal colab provider in input#title", "call": "browser_type|selector=input#title|text=muscal colab provider|submit=false"}
+{"utterance": "gib muscal agent bei input#url ein und sende ab", "call": "browser_type|selector=input#url|text=muscal agent|submit=true"}
+{"utterance": "klick auf punkt 960 640", "call": "desktop_click|x=960|y=640"}
+{"utterance": "klick bei 1024 640", "call": "desktop_click|x=1024|y=640"}
+{"utterance": "klick die position 1280 320", "call": "desktop_click|x=1280|y=320"}
+{"utterance": "klick auf 120 90", "call": "desktop_click|x=120|y=90"}
+{"utterance": "klick auf punkt 760 800", "call": "desktop_click|x=760|y=800"}
+{"utterance": "klick bei 1024 220", "call": "desktop_click|x=1024|y=220"}
+{"utterance": "klick die position 640 860", "call": "desktop_click|x=640|y=860"}
+{"utterance": "klick bei 1280 640", "call": "desktop_click|x=1280|y=640"}
+{"utterance": "klick bei 1280 720", "call": "desktop_click|x=1280|y=720"}
+{"utterance": "klick die position 760 90", "call": "desktop_click|x=760|y=90"}
+{"utterance": "klick die position 120 140", "call": "desktop_click|x=120|y=140"}
+{"utterance": "klick auf 760 640", "call": "desktop_click|x=760|y=640"}
+{"utterance": "klick die position 960 860", "call": "desktop_click|x=960|y=860"}
+{"utterance": "klick auf punkt 880 640", "call": "desktop_click|x=880|y=640"}
+{"utterance": "klick bei 480 320", "call": "desktop_click|x=480|y=320"}
+{"utterance": "klick auf 160 320", "call": "desktop_click|x=160|y=320"}
+{"utterance": "klick auf 760 560", "call": "desktop_click|x=760|y=560"}
+{"utterance": "klick die position 1024 800", "call": "desktop_click|x=1024|y=800"}
+{"utterance": "klick die position 880 800", "call": "desktop_click|x=880|y=800"}
+{"utterance": "klick auf punkt 880 800", "call": "desktop_click|x=880|y=800"}
+{"utterance": "klick die position 1120 860", "call": "desktop_click|x=1120|y=860"}
+{"utterance": "klick die position 340 860", "call": "desktop_click|x=340|y=860"}
+{"utterance": "klick die position 120 220", "call": "desktop_click|x=120|y=220"}
+{"utterance": "klick die position 640 520", "call": "desktop_click|x=640|y=520"}
+{"utterance": "klick auf 1024 640", "call": "desktop_click|x=1024|y=640"}
+{"utterance": "klick auf punkt 120 140", "call": "desktop_click|x=120|y=140"}
+{"utterance": "klick die position 120 90", "call": "desktop_click|x=120|y=90"}
+{"utterance": "klick bei 480 860", "call": "desktop_click|x=480|y=860"}
+{"utterance": "klick bei 760 800", "call": "desktop_click|x=760|y=800"}
+{"utterance": "klick die position 1360 320", "call": "desktop_click|x=1360|y=320"}
+{"utterance": "klick bei 1024 560", "call": "desktop_click|x=1024|y=560"}
+{"utterance": "klick auf punkt 880 410", "call": "desktop_click|x=880|y=410"}
+{"utterance": "klick auf punkt 640 520", "call": "desktop_click|x=640|y=520"}
+{"utterance": "klick auf punkt 340 860", "call": "desktop_click|x=340|y=860"}
+{"utterance": "klick bei 960 140", "call": "desktop_click|x=960|y=140"}
+{"utterance": "klick auf 1360 640", "call": "desktop_click|x=1360|y=640"}
+{"utterance": "klick auf punkt 340 720", "call": "desktop_click|x=340|y=720"}
+{"utterance": "klick bei 1120 720", "call": "desktop_click|x=1120|y=720"}
+{"utterance": "klick die position 1024 220", "call": "desktop_click|x=1024|y=220"}
+{"utterance": "klick auf 1360 90", "call": "desktop_click|x=1360|y=90"}
+{"utterance": "klick auf 1024 900", "call": "desktop_click|x=1024|y=900"}
+{"utterance": "klick auf 640 900", "call": "desktop_click|x=640|y=900"}
+{"utterance": "klick auf punkt 1360 720", "call": "desktop_click|x=1360|y=720"}
+{"utterance": "klick auf punkt 760 640", "call": "desktop_click|x=760|y=640"}
+{"utterance": "klick auf punkt 160 90", "call": "desktop_click|x=160|y=90"}
+{"utterance": "klick auf 880 640", "call": "desktop_click|x=880|y=640"}
+{"utterance": "klick bei 160 560", "call": "desktop_click|x=160|y=560"}
+{"utterance": "klick die position 340 800", "call": "desktop_click|x=340|y=800"}
+{"utterance": "klick bei 1120 520", "call": "desktop_click|x=1120|y=520"}
+{"utterance": "klick auf 1120 800", "call": "desktop_click|x=1120|y=800"}
+{"utterance": "klick die position 760 800", "call": "desktop_click|x=760|y=800"}
+{"utterance": "klick auf 1360 140", "call": "desktop_click|x=1360|y=140"}
+{"utterance": "klick die position 1024 560", "call": "desktop_click|x=1024|y=560"}
+{"utterance": "klick auf 1024 520", "call": "desktop_click|x=1024|y=520"}
+{"utterance": "klick auf punkt 1120 520", "call": "desktop_click|x=1120|y=520"}
+{"utterance": "klick die position 340 90", "call": "desktop_click|x=340|y=90"}
+{"utterance": "klick auf 760 520", "call": "desktop_click|x=760|y=520"}
+{"utterance": "klick auf 120 640", "call": "desktop_click|x=120|y=640"}
+{"utterance": "klick auf 640 410", "call": "desktop_click|x=640|y=410"}
+{"utterance": "klick auf 1120 410", "call": "desktop_click|x=1120|y=410"}
+{"utterance": "tastenkuerzel ctrl+v", "call": "desktop_hotkey|keys=ctrl+v"}
+{"utterance": "drueck alt+tab", "call": "desktop_hotkey|keys=alt+tab"}
+{"utterance": "benutz das kuerzel ctrl+w", "call": "desktop_hotkey|keys=ctrl+w"}
+{"utterance": "drueck ctrl+a", "call": "desktop_hotkey|keys=ctrl+a"}
+{"utterance": "mach ctrl+a", "call": "desktop_hotkey|keys=ctrl+a"}
+{"utterance": "drueck cmd+space", "call": "desktop_hotkey|keys=cmd+space"}
+{"utterance": "tastenkuerzel super+l", "call": "desktop_hotkey|keys=super+l"}
+{"utterance": "tastenkuerzel ctrl+z", "call": "desktop_hotkey|keys=ctrl+z"}
+{"utterance": "drueck die tasten ctrl+w", "call": "desktop_hotkey|keys=ctrl+w"}
+{"utterance": "drueck die tasten ctrl+c", "call": "desktop_hotkey|keys=ctrl+c"}
+{"utterance": "benutz das kuerzel ctrl+f", "call": "desktop_hotkey|keys=ctrl+f"}
+{"utterance": "benutz das kuerzel ctrl+z", "call": "desktop_hotkey|keys=ctrl+z"}
+{"utterance": "tastenkuerzel ctrl+f", "call": "desktop_hotkey|keys=ctrl+f"}
+{"utterance": "benutz das kuerzel ctrl+shift+t", "call": "desktop_hotkey|keys=ctrl+shift+t"}
+{"utterance": "drueck die tasten ctrl+a", "call": "desktop_hotkey|keys=ctrl+a"}
+{"utterance": "drueck ctrl+v", "call": "desktop_hotkey|keys=ctrl+v"}
+{"utterance": "mach ctrl+s", "call": "desktop_hotkey|keys=ctrl+s"}
+{"utterance": "drueck ctrl+w", "call": "desktop_hotkey|keys=ctrl+w"}
+{"utterance": "drueck ctrl+n", "call": "desktop_hotkey|keys=ctrl+n"}
+{"utterance": "tastenkuerzel ctrl+a", "call": "desktop_hotkey|keys=ctrl+a"}
+{"utterance": "mach cmd+space", "call": "desktop_hotkey|keys=cmd+space"}
+{"utterance": "benutz das kuerzel cmd+space", "call": "desktop_hotkey|keys=cmd+space"}
+{"utterance": "benutz das kuerzel ctrl+n", "call": "desktop_hotkey|keys=ctrl+n"}
+{"utterance": "mach ctrl+f", "call": "desktop_hotkey|keys=ctrl+f"}
+{"utterance": "benutz das kuerzel super+l", "call": "desktop_hotkey|keys=super+l"}
+{"utterance": "drueck super+l", "call": "desktop_hotkey|keys=super+l"}
+{"utterance": "benutz das kuerzel ctrl+a", "call": "desktop_hotkey|keys=ctrl+a"}
+{"utterance": "drueck ctrl+c", "call": "desktop_hotkey|keys=ctrl+c"}
+{"utterance": "drueck ctrl+shift+t", "call": "desktop_hotkey|keys=ctrl+shift+t"}
+{"utterance": "tastenkuerzel ctrl+c", "call": "desktop_hotkey|keys=ctrl+c"}
+{"utterance": "benutz das kuerzel ctrl+c", "call": "desktop_hotkey|keys=ctrl+c"}
+{"utterance": "benutz das kuerzel ctrl+v", "call": "desktop_hotkey|keys=ctrl+v"}
+{"utterance": "benutz das kuerzel ctrl+s", "call": "desktop_hotkey|keys=ctrl+s"}
+{"utterance": "mach ctrl+n", "call": "desktop_hotkey|keys=ctrl+n"}
+{"utterance": "tastenkuerzel alt+tab", "call": "desktop_hotkey|keys=alt+tab"}
+{"utterance": "drueck die tasten ctrl+n", "call": "desktop_hotkey|keys=ctrl+n"}
+{"utterance": "drueck die tasten ctrl+shift+t", "call": "desktop_hotkey|keys=ctrl+shift+t"}
+{"utterance": "drueck die tasten alt+tab", "call": "desktop_hotkey|keys=alt+tab"}
+{"utterance": "mach alt+tab", "call": "desktop_hotkey|keys=alt+tab"}
+{"utterance": "tastenkuerzel ctrl+n", "call": "desktop_hotkey|keys=ctrl+n"}
+{"utterance": "drueck ctrl+z", "call": "desktop_hotkey|keys=ctrl+z"}
+{"utterance": "drueck die tasten ctrl+s", "call": "desktop_hotkey|keys=ctrl+s"}
+{"utterance": "mach ctrl+z", "call": "desktop_hotkey|keys=ctrl+z"}
+{"utterance": "drueck die tasten ctrl+v", "call": "desktop_hotkey|keys=ctrl+v"}
+{"utterance": "drueck die tasten ctrl+z", "call": "desktop_hotkey|keys=ctrl+z"}
+{"utterance": "drueck ctrl+s", "call": "desktop_hotkey|keys=ctrl+s"}
+{"utterance": "drueck ctrl+f", "call": "desktop_hotkey|keys=ctrl+f"}
+{"utterance": "benutz das kuerzel alt+tab", "call": "desktop_hotkey|keys=alt+tab"}
+{"utterance": "drueck die tasten ctrl+f", "call": "desktop_hotkey|keys=ctrl+f"}
+{"utterance": "tastenkuerzel cmd+space", "call": "desktop_hotkey|keys=cmd+space"}
+{"utterance": "mach super+l", "call": "desktop_hotkey|keys=super+l"}
+{"utterance": "tastenkuerzel ctrl+w", "call": "desktop_hotkey|keys=ctrl+w"}
+{"utterance": "mach ctrl+c", "call": "desktop_hotkey|keys=ctrl+c"}
+{"utterance": "mach ctrl+v", "call": "desktop_hotkey|keys=ctrl+v"}
+{"utterance": "tastenkuerzel ctrl+s", "call": "desktop_hotkey|keys=ctrl+s"}
+{"utterance": "drueck die tasten cmd+space", "call": "desktop_hotkey|keys=cmd+space"}
+{"utterance": "mach ctrl+shift+t", "call": "desktop_hotkey|keys=ctrl+shift+t"}
+{"utterance": "drueck die tasten super+l", "call": "desktop_hotkey|keys=super+l"}
+{"utterance": "tastenkuerzel ctrl+shift+t", "call": "desktop_hotkey|keys=ctrl+shift+t"}
+{"utterance": "mach ctrl+w", "call": "desktop_hotkey|keys=ctrl+w"}
+{"utterance": "mach thunderbird auf", "call": "desktop_launch|app=thunderbird"}
+{"utterance": "start texteditor", "call": "desktop_launch|app=texteditor"}
+{"utterance": "starte vscode", "call": "desktop_launch|app=vscode"}
+{"utterance": "oeffne thunderbird", "call": "desktop_launch|app=thunderbird"}
+{"utterance": "oeffne mir mal thunderbird", "call": "desktop_launch|app=thunderbird"}
+{"utterance": "start dateimanager", "call": "desktop_launch|app=dateimanager"}
+{"utterance": "oeffne rechner", "call": "desktop_launch|app=rechner"}
+{"utterance": "oeffne mir mal firefox", "call": "desktop_launch|app=firefox"}
+{"utterance": "oeffne mir mal texteditor", "call": "desktop_launch|app=texteditor"}
+{"utterance": "mach rechner auf", "call": "desktop_launch|app=rechner"}
+{"utterance": "start kalender", "call": "desktop_launch|app=kalender"}
+{"utterance": "oeffne mir mal musikplayer", "call": "desktop_launch|app=musikplayer"}
+{"utterance": "mach dateimanager auf", "call": "desktop_launch|app=dateimanager"}
+{"utterance": "fahr chromium hoch", "call": "desktop_launch|app=chromium"}
+{"utterance": "mach kalender auf", "call": "desktop_launch|app=kalender"}
+{"utterance": "oeffne mir mal kalender", "call": "desktop_launch|app=kalender"}
+{"utterance": "oeffne systemeinstellungen", "call": "desktop_launch|app=systemeinstellungen"}
+{"utterance": "fahr kalender hoch", "call": "desktop_launch|app=kalender"}
+{"utterance": "starte musikplayer", "call": "desktop_launch|app=musikplayer"}
+{"utterance": "starte rechner", "call": "desktop_launch|app=rechner"}
+{"utterance": "mach firefox auf", "call": "desktop_launch|app=firefox"}
+{"utterance": "oeffne mir mal vscode", "call": "desktop_launch|app=vscode"}
+{"utterance": "fahr systemeinstellungen hoch", "call": "desktop_launch|app=systemeinstellungen"}
+{"utterance": "oeffne mir mal chromium", "call": "desktop_launch|app=chromium"}
+{"utterance": "fahr rechner hoch", "call": "desktop_launch|app=rechner"}
+{"utterance": "fahr firefox hoch", "call": "desktop_launch|app=firefox"}
+{"utterance": "starte editor", "call": "desktop_launch|app=editor"}
+{"utterance": "oeffne mir mal systemeinstellungen", "call": "desktop_launch|app=systemeinstellungen"}
+{"utterance": "oeffne mir mal terminal", "call": "desktop_launch|app=terminal"}
+{"utterance": "oeffne editor", "call": "desktop_launch|app=editor"}
+{"utterance": "start systemeinstellungen", "call": "desktop_launch|app=systemeinstellungen"}
+{"utterance": "start editor", "call": "desktop_launch|app=editor"}
+{"utterance": "oeffne chromium", "call": "desktop_launch|app=chromium"}
+{"utterance": "starte texteditor", "call": "desktop_launch|app=texteditor"}
+{"utterance": "fahr vscode hoch", "call": "desktop_launch|app=vscode"}
+{"utterance": "mach editor auf", "call": "desktop_launch|app=editor"}
+{"utterance": "mach terminal auf", "call": "desktop_launch|app=terminal"}
+{"utterance": "start vscode", "call": "desktop_launch|app=vscode"}
+{"utterance": "fahr dateimanager hoch", "call": "desktop_launch|app=dateimanager"}
+{"utterance": "oeffne mir mal dateimanager", "call": "desktop_launch|app=dateimanager"}
+{"utterance": "starte thunderbird", "call": "desktop_launch|app=thunderbird"}
+{"utterance": "fahr terminal hoch", "call": "desktop_launch|app=terminal"}
+{"utterance": "oeffne firefox", "call": "desktop_launch|app=firefox"}
+{"utterance": "oeffne kalender", "call": "desktop_launch|app=kalender"}
+{"utterance": "starte dateimanager", "call": "desktop_launch|app=dateimanager"}
+{"utterance": "oeffne mir mal rechner", "call": "desktop_launch|app=rechner"}
+{"utterance": "oeffne mir mal editor", "call": "desktop_launch|app=editor"}
+{"utterance": "start musikplayer", "call": "desktop_launch|app=musikplayer"}
+{"utterance": "oeffne musikplayer", "call": "desktop_launch|app=musikplayer"}
+{"utterance": "starte systemeinstellungen", "call": "desktop_launch|app=systemeinstellungen"}
+{"utterance": "oeffne vscode", "call": "desktop_launch|app=vscode"}
+{"utterance": "fahr editor hoch", "call": "desktop_launch|app=editor"}
+{"utterance": "starte firefox", "call": "desktop_launch|app=firefox"}
+{"utterance": "starte chromium", "call": "desktop_launch|app=chromium"}
+{"utterance": "mach chromium auf", "call": "desktop_launch|app=chromium"}
+{"utterance": "mach texteditor auf", "call": "desktop_launch|app=texteditor"}
+{"utterance": "fahr thunderbird hoch", "call": "desktop_launch|app=thunderbird"}
+{"utterance": "oeffne texteditor", "call": "desktop_launch|app=texteditor"}
+{"utterance": "fahr texteditor hoch", "call": "desktop_launch|app=texteditor"}
+{"utterance": "mach vscode auf", "call": "desktop_launch|app=vscode"}
+{"utterance": "screenshot jetzt", "call": "desktop_screenshot"}
+{"utterance": "mach ein bildschirmfoto", "call": "desktop_screenshot"}
+{"utterance": "nimm den bildschirm auf", "call": "desktop_screenshot"}
+{"utterance": "mach einen screenshot", "call": "desktop_screenshot"}
+{"utterance": "bild vom bildschirm machen", "call": "desktop_screenshot"}
+{"utterance": "screenshot", "call": "desktop_screenshot"}
+{"utterance": "screen festhalten", "call": "desktop_screenshot"}
+{"utterance": "mach mal einen screenshot", "call": "desktop_screenshot"}
+{"utterance": "nimm ein bildschirmfoto auf", "call": "desktop_screenshot"}
+{"utterance": "knips ein bild vom bildschirm", "call": "desktop_screenshot"}
+{"utterance": "screenshot machen bitte", "call": "desktop_screenshot"}
+{"utterance": "bildschirmfoto", "call": "desktop_screenshot"}
+{"utterance": "mach ein bild vom bildschirm", "call": "desktop_screenshot"}
+{"utterance": "ich brauche einen screenshot", "call": "desktop_screenshot"}
+{"utterance": "screenshot erstellen", "call": "desktop_screenshot"}
+{"utterance": "bitte einen screenshot", "call": "desktop_screenshot"}
+{"utterance": "capture den bildschirm", "call": "desktop_screenshot"}
+{"utterance": "nimm den screen auf", "call": "desktop_screenshot"}
+{"utterance": "capture den screen", "call": "desktop_screenshot"}
+{"utterance": "bitte bildschirm aufnehmen", "call": "desktop_screenshot"}
+{"utterance": "knips den screen", "call": "desktop_screenshot"}
+{"utterance": "mach mal ein bild vom screen", "call": "desktop_screenshot"}
+{"utterance": "screen aufnehmen", "call": "desktop_screenshot"}
+{"utterance": "speichere den bildschirm", "call": "desktop_screenshot"}
+{"utterance": "speicher ein bildschirmfoto", "call": "desktop_screenshot"}
+{"utterance": "tippe protokoll schreiben", "call": "desktop_type|text=protokoll schreiben"}
+{"utterance": "schreib notiz an mich selbst", "call": "desktop_type|text=notiz an mich selbst"}
+{"utterance": "tipp zeilenende ein", "call": "desktop_type|text=zeilenende"}
+{"utterance": "schreib mal protokoll schreiben", "call": "desktop_type|text=protokoll schreiben"}
+{"utterance": "schreib mal zurueck zum hauptmenue", "call": "desktop_type|text=zurueck zum hauptmenue"}
+{"utterance": "tipp muscal agent starten ein", "call": "desktop_type|text=muscal agent starten"}
+{"utterance": "gib projekt muscal ein", "call": "desktop_type|text=projekt muscal"}
+{"utterance": "schreib mal hallo welt", "call": "desktop_type|text=hallo welt"}
+{"utterance": "schreib mal bis spaeter", "call": "desktop_type|text=bis spaeter"}
+{"utterance": "gib zurueck zum hauptmenue ein", "call": "desktop_type|text=zurueck zum hauptmenue"}
+{"utterance": "tippe projekt muscal", "call": "desktop_type|text=projekt muscal"}
+{"utterance": "tipp guten morgen ein", "call": "desktop_type|text=guten morgen"}
+{"utterance": "tipp projekt muscal ein", "call": "desktop_type|text=projekt muscal"}
+{"utterance": "schreib zeilenende", "call": "desktop_type|text=zeilenende"}
+{"utterance": "schreib mal danke schoen", "call": "desktop_type|text=danke schoen"}
+{"utterance": "tipp hallo welt ein", "call": "desktop_type|text=hallo welt"}
+{"utterance": "tipp notiz an mich selbst ein", "call": "desktop_type|text=notiz an mich selbst"}
+{"utterance": "tipp sudo systemctl status ein", "call": "desktop_type|text=sudo systemctl status"}
+{"utterance": "tippe muscal agent starten", "call": "desktop_type|text=muscal agent starten"}
+{"utterance": "gib sudo systemctl status ein", "call": "desktop_type|text=sudo systemctl status"}
+{"utterance": "gib speichern unter ein", "call": "desktop_type|text=speichern unter"}
+{"utterance": "tippe guten morgen", "call": "desktop_type|text=guten morgen"}
+{"utterance": "tippe speichern unter", "call": "desktop_type|text=speichern unter"}
+{"utterance": "tippe danke schoen", "call": "desktop_type|text=danke schoen"}
+{"utterance": "schreib zurueck zum hauptmenue", "call": "desktop_type|text=zurueck zum hauptmenue"}
+{"utterance": "schreib mal projekt muscal", "call": "desktop_type|text=projekt muscal"}
+{"utterance": "tipp lfm2 testen ein", "call": "desktop_type|text=lfm2 testen"}
+{"utterance": "schreib sudo systemctl status", "call": "desktop_type|text=sudo systemctl status"}
+{"utterance": "tippe notiz an mich selbst", "call": "desktop_type|text=notiz an mich selbst"}
+{"utterance": "schreib bis spaeter", "call": "desktop_type|text=bis spaeter"}
+{"utterance": "tippe bitte weiter", "call": "desktop_type|text=bitte weiter"}
+{"utterance": "schreib hallo welt", "call": "desktop_type|text=hallo welt"}
+{"utterance": "tippe sudo systemctl status", "call": "desktop_type|text=sudo systemctl status"}
+{"utterance": "tipp protokoll schreiben ein", "call": "desktop_type|text=protokoll schreiben"}
+{"utterance": "schreib muscal agent starten", "call": "desktop_type|text=muscal agent starten"}
+{"utterance": "tippe lfm2 testen", "call": "desktop_type|text=lfm2 testen"}
+{"utterance": "gib zeilenende ein", "call": "desktop_type|text=zeilenende"}
+{"utterance": "gib protokoll schreiben ein", "call": "desktop_type|text=protokoll schreiben"}
+{"utterance": "schreib mal bitte weiter", "call": "desktop_type|text=bitte weiter"}
+{"utterance": "tipp bis spaeter ein", "call": "desktop_type|text=bis spaeter"}
+{"utterance": "schreib mal sudo systemctl status", "call": "desktop_type|text=sudo systemctl status"}
+{"utterance": "tippe zeilenende", "call": "desktop_type|text=zeilenende"}
+{"utterance": "schreib mal lfm2 testen", "call": "desktop_type|text=lfm2 testen"}
+{"utterance": "schreib danke schoen", "call": "desktop_type|text=danke schoen"}
+{"utterance": "gib muscal agent starten ein", "call": "desktop_type|text=muscal agent starten"}
+{"utterance": "schreib guten morgen", "call": "desktop_type|text=guten morgen"}
+{"utterance": "schreib mal speichern unter", "call": "desktop_type|text=speichern unter"}
+{"utterance": "gib notiz an mich selbst ein", "call": "desktop_type|text=notiz an mich selbst"}
+{"utterance": "schreib lfm2 testen", "call": "desktop_type|text=lfm2 testen"}
+{"utterance": "gib guten morgen ein", "call": "desktop_type|text=guten morgen"}
+{"utterance": "gib bitte weiter ein", "call": "desktop_type|text=bitte weiter"}
+{"utterance": "schreib mal guten morgen", "call": "desktop_type|text=guten morgen"}
+{"utterance": "schreib speichern unter", "call": "desktop_type|text=speichern unter"}
+{"utterance": "schreib mal muscal agent starten", "call": "desktop_type|text=muscal agent starten"}
+{"utterance": "tipp bitte weiter ein", "call": "desktop_type|text=bitte weiter"}
+{"utterance": "gib hallo welt ein", "call": "desktop_type|text=hallo welt"}
+{"utterance": "gib lfm2 testen ein", "call": "desktop_type|text=lfm2 testen"}
+{"utterance": "schreib mal zeilenende", "call": "desktop_type|text=zeilenende"}
+{"utterance": "tippe bis spaeter", "call": "desktop_type|text=bis spaeter"}
+{"utterance": "schreib projekt muscal", "call": "desktop_type|text=projekt muscal"}
+{"utterance": "was steht auf https://www.heise.de", "call": "web_read|url=https://www.heise.de"}
+{"utterance": "oeffne und lies https://docs.liquid.ai/lfm/fine-tuning/trl", "call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"utterance": "fass https://huggingface.co/LiquidAI zusammen", "call": "web_read|url=https://huggingface.co/LiquidAI"}
+{"utterance": "was steht auf https://www.tagesschau.de", "call": "web_read|url=https://www.tagesschau.de"}
+{"utterance": "lies die seite https://news.ycombinator.com", "call": "web_read|url=https://news.ycombinator.com"}
+{"utterance": "oeffne und lies https://www.heise.de", "call": "web_read|url=https://www.heise.de"}
+{"utterance": "sag mir was auf https://arxiv.org/list/cs.LG/recent steht", "call": "web_read|url=https://arxiv.org/list/cs.LG/recent"}
+{"utterance": "lies die seite https://www.tagesschau.de", "call": "web_read|url=https://www.tagesschau.de"}
+{"utterance": "sag mir was auf https://en.wikipedia.org/wiki/Cologne steht", "call": "web_read|url=https://en.wikipedia.org/wiki/Cologne"}
+{"utterance": "hol den text von https://www.tagesschau.de", "call": "web_read|url=https://www.tagesschau.de"}
+{"utterance": "oeffne und lies https://pypi.org/project/liquid-audio", "call": "web_read|url=https://pypi.org/project/liquid-audio"}
+{"utterance": "lies die seite https://www.heise.de", "call": "web_read|url=https://www.heise.de"}
+{"utterance": "was steht auf https://pypi.org/project/liquid-audio", "call": "web_read|url=https://pypi.org/project/liquid-audio"}
+{"utterance": "oeffne und lies https://en.wikipedia.org/wiki/Cologne", "call": "web_read|url=https://en.wikipedia.org/wiki/Cologne"}
+{"utterance": "hol den text von https://example.com", "call": "web_read|url=https://example.com"}
+{"utterance": "sag mir was auf https://example.com steht", "call": "web_read|url=https://example.com"}
+{"utterance": "hol den text von https://www.heise.de", "call": "web_read|url=https://www.heise.de"}
+{"utterance": "lies die seite https://stackoverflow.com/questions/tagged/python", "call": "web_read|url=https://stackoverflow.com/questions/tagged/python"}
+{"utterance": "was steht auf https://docs.liquid.ai/lfm/fine-tuning/trl", "call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"utterance": "hol den text von https://en.wikipedia.org/wiki/Cologne", "call": "web_read|url=https://en.wikipedia.org/wiki/Cologne"}
+{"utterance": "hol den text von https://docs.liquid.ai", "call": "web_read|url=https://docs.liquid.ai"}
+{"utterance": "sag mir was auf https://docs.liquid.ai/lfm/fine-tuning/trl steht", "call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"utterance": "fass https://example.com zusammen", "call": "web_read|url=https://example.com"}
+{"utterance": "fass https://arxiv.org/list/cs.LG/recent zusammen", "call": "web_read|url=https://arxiv.org/list/cs.LG/recent"}
+{"utterance": "oeffne und lies https://example.com", "call": "web_read|url=https://example.com"}
+{"utterance": "hol den text von https://docs.liquid.ai/lfm/fine-tuning/trl", "call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"utterance": "fass https://docs.liquid.ai zusammen", "call": "web_read|url=https://docs.liquid.ai"}
+{"utterance": "fass https://www.tagesschau.de zusammen", "call": "web_read|url=https://www.tagesschau.de"}
+{"utterance": "fass https://pypi.org/project/liquid-audio zusammen", "call": "web_read|url=https://pypi.org/project/liquid-audio"}
+{"utterance": "hol den text von https://news.ycombinator.com", "call": "web_read|url=https://news.ycombinator.com"}
+{"utterance": "hol den text von https://stackoverflow.com/questions/tagged/python", "call": "web_read|url=https://stackoverflow.com/questions/tagged/python"}
+{"utterance": "oeffne und lies https://www.tagesschau.de", "call": "web_read|url=https://www.tagesschau.de"}
+{"utterance": "fass https://news.ycombinator.com zusammen", "call": "web_read|url=https://news.ycombinator.com"}
+{"utterance": "lies die seite https://github.com/ggml-org/llama.cpp", "call": "web_read|url=https://github.com/ggml-org/llama.cpp"}
+{"utterance": "sag mir was auf https://news.ycombinator.com steht", "call": "web_read|url=https://news.ycombinator.com"}
+{"utterance": "sag mir was auf https://www.tagesschau.de steht", "call": "web_read|url=https://www.tagesschau.de"}
+{"utterance": "lies die seite https://docs.liquid.ai/lfm/fine-tuning/trl", "call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"utterance": "lies die seite https://arxiv.org/list/cs.LG/recent", "call": "web_read|url=https://arxiv.org/list/cs.LG/recent"}
+{"utterance": "was steht auf https://example.com", "call": "web_read|url=https://example.com"}
+{"utterance": "hol den text von https://github.com/ggml-org/llama.cpp", "call": "web_read|url=https://github.com/ggml-org/llama.cpp"}
+{"utterance": "lies die seite https://example.com", "call": "web_read|url=https://example.com"}
+{"utterance": "fass https://github.com/ggml-org/llama.cpp zusammen", "call": "web_read|url=https://github.com/ggml-org/llama.cpp"}
+{"utterance": "oeffne und lies https://huggingface.co/LiquidAI", "call": "web_read|url=https://huggingface.co/LiquidAI"}
+{"utterance": "fass https://docs.liquid.ai/lfm/fine-tuning/trl zusammen", "call": "web_read|url=https://docs.liquid.ai/lfm/fine-tuning/trl"}
+{"utterance": "sag mir was auf https://github.com/ggml-org/llama.cpp steht", "call": "web_read|url=https://github.com/ggml-org/llama.cpp"}
+{"utterance": "lies die seite https://en.wikipedia.org/wiki/Cologne", "call": "web_read|url=https://en.wikipedia.org/wiki/Cologne"}
+{"utterance": "was steht auf https://docs.liquid.ai", "call": "web_read|url=https://docs.liquid.ai"}
+{"utterance": "was steht auf https://news.ycombinator.com", "call": "web_read|url=https://news.ycombinator.com"}
+{"utterance": "lies die seite https://pypi.org/project/liquid-audio", "call": "web_read|url=https://pypi.org/project/liquid-audio"}
+{"utterance": "sag mir was auf https://pypi.org/project/liquid-audio steht", "call": "web_read|url=https://pypi.org/project/liquid-audio"}
+{"utterance": "sag mir was auf https://docs.liquid.ai steht", "call": "web_read|url=https://docs.liquid.ai"}
+{"utterance": "sag mir was auf https://stackoverflow.com/questions/tagged/python steht", "call": "web_read|url=https://stackoverflow.com/questions/tagged/python"}
+{"utterance": "was steht auf https://huggingface.co/LiquidAI", "call": "web_read|url=https://huggingface.co/LiquidAI"}
+{"utterance": "hol den text von https://arxiv.org/list/cs.LG/recent", "call": "web_read|url=https://arxiv.org/list/cs.LG/recent"}
+{"utterance": "oeffne und lies https://docs.liquid.ai", "call": "web_read|url=https://docs.liquid.ai"}
+{"utterance": "hol den text von https://pypi.org/project/liquid-audio", "call": "web_read|url=https://pypi.org/project/liquid-audio"}
+{"utterance": "oeffne und lies https://github.com/ggml-org/llama.cpp", "call": "web_read|url=https://github.com/ggml-org/llama.cpp"}
+{"utterance": "oeffne und lies https://stackoverflow.com/questions/tagged/python", "call": "web_read|url=https://stackoverflow.com/questions/tagged/python"}
+{"utterance": "fass https://stackoverflow.com/questions/tagged/python zusammen", "call": "web_read|url=https://stackoverflow.com/questions/tagged/python"}
+{"utterance": "fass https://en.wikipedia.org/wiki/Cologne zusammen", "call": "web_read|url=https://en.wikipedia.org/wiki/Cologne"}
+{"utterance": "such im netz nach colab a100 verfuegbarkeit", "call": "web_search|query=colab a100 verfuegbarkeit"}
+{"utterance": "such nach quantization aware training", "call": "web_search|query=quantization aware training"}
+{"utterance": "google playwright accessibility tree", "call": "web_search|query=playwright accessibility tree"}
+{"utterance": "finde informationen zu quantization aware training", "call": "web_search|query=quantization aware training"}
+{"utterance": "finde informationen zu siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "google qlora vs lora unterschied", "call": "web_search|query=qlora vs lora unterschied"}
+{"utterance": "was findest du zu searxng selbst hosten", "call": "web_search|query=searxng selbst hosten"}
+{"utterance": "such nach gguf quantisierung q4 k m", "call": "web_search|query=gguf quantisierung q4 k m"}
+{"utterance": "such im netz nach siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "schau mal was es zu searxng selbst hosten gibt", "call": "web_search|query=searxng selbst hosten"}
+{"utterance": "google gguf quantisierung q4 k m", "call": "web_search|query=gguf quantisierung q4 k m"}
+{"utterance": "finde informationen zu qlora vs lora unterschied", "call": "web_search|query=qlora vs lora unterschied"}
+{"utterance": "finde informationen zu wetter koeln", "call": "web_search|query=wetter koeln"}
+{"utterance": "google moe modelle vram bedarf", "call": "web_search|query=moe modelle vram bedarf"}
+{"utterance": "such im netz nach liquid foundation models", "call": "web_search|query=liquid foundation models"}
+{"utterance": "such nach wetter koeln", "call": "web_search|query=wetter koeln"}
+{"utterance": "such nach siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "recherchiere liquid foundation models", "call": "web_search|query=liquid foundation models"}
+{"utterance": "google quantization aware training", "call": "web_search|query=quantization aware training"}
+{"utterance": "was findest du zu wetter koeln", "call": "web_search|query=wetter koeln"}
+{"utterance": "recherchiere moe modelle vram bedarf", "call": "web_search|query=moe modelle vram bedarf"}
+{"utterance": "schau mal was es zu siglip2 vision encoder gibt", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "finde informationen zu moe modelle vram bedarf", "call": "web_search|query=moe modelle vram bedarf"}
+{"utterance": "recherchiere quantization aware training", "call": "web_search|query=quantization aware training"}
+{"utterance": "schau mal was es zu liquid foundation models gibt", "call": "web_search|query=liquid foundation models"}
+{"utterance": "schau mal was es zu liquid ai lfm gibt", "call": "web_search|query=liquid ai lfm"}
+{"utterance": "recherchiere playwright accessibility tree", "call": "web_search|query=playwright accessibility tree"}
+{"utterance": "schau mal was es zu wetter koeln gibt", "call": "web_search|query=wetter koeln"}
+{"utterance": "such nach liquid ai lfm", "call": "web_search|query=liquid ai lfm"}
+{"utterance": "recherchiere searxng selbst hosten", "call": "web_search|query=searxng selbst hosten"}
+{"utterance": "google siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "schau mal was es zu colab a100 verfuegbarkeit gibt", "call": "web_search|query=colab a100 verfuegbarkeit"}
+{"utterance": "schau mal was es zu playwright accessibility tree gibt", "call": "web_search|query=playwright accessibility tree"}
+{"utterance": "google liquid ai lfm", "call": "web_search|query=liquid ai lfm"}
+{"utterance": "was findest du zu siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "schau mal was es zu llama cpp audio support gibt", "call": "web_search|query=llama cpp audio support"}
+{"utterance": "was findest du zu llama cpp audio support", "call": "web_search|query=llama cpp audio support"}
+{"utterance": "google wetter koeln", "call": "web_search|query=wetter koeln"}
+{"utterance": "such nach llama cpp audio support", "call": "web_search|query=llama cpp audio support"}
+{"utterance": "such nach colab a100 verfuegbarkeit", "call": "web_search|query=colab a100 verfuegbarkeit"}
+{"utterance": "finde informationen zu playwright accessibility tree", "call": "web_search|query=playwright accessibility tree"}
+{"utterance": "was findest du zu qlora vs lora unterschied", "call": "web_search|query=qlora vs lora unterschied"}
+{"utterance": "finde informationen zu liquid foundation models", "call": "web_search|query=liquid foundation models"}
+{"utterance": "such im netz nach searxng selbst hosten", "call": "web_search|query=searxng selbst hosten"}
+{"utterance": "such nach playwright accessibility tree", "call": "web_search|query=playwright accessibility tree"}
+{"utterance": "such im netz nach liquid ai lfm", "call": "web_search|query=liquid ai lfm"}
+{"utterance": "recherchiere siglip2 vision encoder", "call": "web_search|query=siglip2 vision encoder"}
+{"utterance": "finde informationen zu colab a100 verfuegbarkeit", "call": "web_search|query=colab a100 verfuegbarkeit"}
+{"utterance": "schau mal was es zu gguf quantisierung q4 k m gibt", "call": "web_search|query=gguf quantisierung q4 k m"}
+{"utterance": "schau mal was es zu qlora vs lora unterschied gibt", "call": "web_search|query=qlora vs lora unterschied"}
+{"utterance": "such nach searxng selbst hosten", "call": "web_search|query=searxng selbst hosten"}
+{"utterance": "google searxng selbst hosten", "call": "web_search|query=searxng selbst hosten"}
+{"utterance": "such im netz nach wetter koeln", "call": "web_search|query=wetter koeln"}
+{"utterance": "such im netz nach quantization aware training", "call": "web_search|query=quantization aware training"}
+{"utterance": "such im netz nach llama cpp audio support", "call": "web_search|query=llama cpp audio support"}
+{"utterance": "such im netz nach playwright accessibility tree", "call": "web_search|query=playwright accessibility tree"}
+{"utterance": "recherchiere liquid ai lfm", "call": "web_search|query=liquid ai lfm"}
+{"utterance": "such nach liquid foundation models", "call": "web_search|query=liquid foundation models"}
+{"utterance": "recherchiere wetter koeln", "call": "web_search|query=wetter koeln"}
+{"utterance": "was findest du zu colab a100 verfuegbarkeit", "call": "web_search|query=colab a100 verfuegbarkeit"}
+{"utterance": "finde informationen zu llama cpp audio support", "call": "web_search|query=llama.cpp audio support"}
+{"utterance": "lies die seite https://docs.liquid.ai", "call": "web_read|url=https://docs.liquid.ai"}
+{"utterance": "fass den inhalt von https://huggingface.co/LiquidAI zusammen", "call": "web_read|url=https://huggingface.co/LiquidAI"}
+{"utterance": "geh zu https://github.com", "call": "browser_open|url=https://github.com"}
+{"utterance": "drueck den login button", "call": "browser_click|selector=#login"}
+{"utterance": "gib liquid ai in das suchfeld ein", "call": "browser_type|selector=input[name=q]|text=liquid ai|submit=true"}
+{"utterance": "was steht gerade auf der seite", "call": "browser_snapshot"}
+{"utterance": "oeffne den terminal", "call": "desktop_launch|app=terminal"}
+{"utterance": "drueck strg c", "call": "desktop_hotkey|keys=ctrl+c"}
+{"utterance": "mach alt tab", "call": "desktop_hotkey|keys=alt+tab"}

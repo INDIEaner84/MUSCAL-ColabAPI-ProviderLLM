@@ -1,0 +1,125 @@
+{
+  "web_search": [
+    "search for {query}",
+    "search the web for {query}",
+    "look up {query}",
+    "google {query}",
+    "find information about {query}",
+    "research {query}",
+    "what can you find on {query}"
+  ],
+  "web_read": [
+    "read the page {url}",
+    "what does {url} say",
+    "open and read {url}",
+    "summarise {url}",
+    "get the text from {url}",
+    "tell me what is on {url}"
+  ],
+  "browser_open": [
+    "open {url} in the browser",
+    "go to {url}",
+    "open {url}",
+    "load {url} in the browser",
+    "start the browser at {url}",
+    "browse to {url}"
+  ],
+  "browser_click": [
+    "click {selector}",
+    "click on {selector}",
+    "press {selector}",
+    "hit the button {selector}",
+    "click the element {selector}"
+  ],
+  "browser_type": [
+    "type {text} into {selector}",
+    "enter {text} in {selector}",
+    "write {text} into {selector}",
+    "put {text} in {selector}",
+    "type {text} into {selector} and press enter",
+    "enter {text} in {selector} and submit"
+  ],
+  "browser_snapshot": [
+    "what is on the page",
+    "read the page to me",
+    "what does it say",
+    "show me the page text",
+    "summarise the current page",
+    "what is currently on screen",
+    "read out what is there",
+    "give me the page content",
+    "what does the page show",
+    "i want to know what the page says",
+    "page text please",
+    "summarise what you see",
+    "what is the page content",
+    "quick what does the page say",
+    "tell me the page content",
+    "what do you see on the page",
+    "read out the page content",
+    "give me the text of the current page",
+    "show me what the page says",
+    "what is the content of the page",
+    "describe the current page",
+    "what is on the page now",
+    "i need the page text",
+    "page content please",
+    "get me the text of the page",
+    "what can you read on the page"
+  ],
+  "desktop_launch": [
+    "open {app}",
+    "launch {app}",
+    "start {app}",
+    "fire up {app}",
+    "run {app}",
+    "open up {app} for me"
+  ],
+  "desktop_type": [
+    "type {text}",
+    "write {text}",
+    "enter {text}",
+    "type out {text}",
+    "please type {text}"
+  ],
+  "desktop_hotkey": [
+    "press {keys}",
+    "hit {keys}",
+    "use the shortcut {keys}",
+    "do {keys}",
+    "press the keys {keys}"
+  ],
+  "desktop_click": [
+    "click at {x} {y}",
+    "click on {x} {y}",
+    "click the point {x} {y}",
+    "click position {x} {y}"
+  ],
+  "desktop_screenshot": [
+    "take a screenshot",
+    "screenshot",
+    "capture the screen",
+    "make a screenshot",
+    "grab the screen",
+    "take a picture of the screen",
+    "screen shot",
+    "snap the screen",
+    "make a screen capture",
+    "save the screen",
+    "grab a screenshot",
+    "capture my display",
+    "make a screen shot",
+    "screenshot now",
+    "a screenshot please",
+    "record the screen",
+    "take a picture of the display",
+    "freeze the screen",
+    "capture the display",
+    "take a picture of the monitor",
+    "save a screen shot",
+    "snap a picture of the screen",
+    "create a screenshot",
+    "i need a screenshot",
+    "please capture the screen"
+  ]
+}

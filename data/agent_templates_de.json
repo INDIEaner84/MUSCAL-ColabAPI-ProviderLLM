@@ -1,0 +1,125 @@
+{
+  "web_search": [
+    "such nach {query}",
+    "such im netz nach {query}",
+    "recherchiere {query}",
+    "google {query}",
+    "finde informationen zu {query}",
+    "was findest du zu {query}",
+    "schau mal was es zu {query} gibt"
+  ],
+  "web_read": [
+    "lies die seite {url}",
+    "was steht auf {url}",
+    "oeffne und lies {url}",
+    "fass {url} zusammen",
+    "hol den text von {url}",
+    "sag mir was auf {url} steht"
+  ],
+  "browser_open": [
+    "oeffne {url} im browser",
+    "geh zu {url}",
+    "oeffne {url}",
+    "lade {url} im browser",
+    "start den browser mit {url}",
+    "brows zu {url}"
+  ],
+  "browser_click": [
+    "klick auf {selector}",
+    "klick {selector}",
+    "drueck {selector}",
+    "drueck den button {selector}",
+    "klick das element {selector}"
+  ],
+  "browser_type": [
+    "tippe {text} in {selector}",
+    "gib {text} bei {selector} ein",
+    "schreib {text} in {selector}",
+    "setz {text} in {selector}",
+    "tippe {text} in {selector} und druck enter",
+    "gib {text} bei {selector} ein und sende ab"
+  ],
+  "browser_snapshot": [
+    "was steht auf der seite",
+    "lies mir die seite vor",
+    "was sagt die seite",
+    "zeig mir den text der seite",
+    "fass die aktuelle seite zusammen",
+    "was ist gerade auf dem bildschirm",
+    "lies vor was da steht",
+    "gib mir den seiteninhalt",
+    "was zeigt die seite",
+    "ich will wissen was auf der seite steht",
+    "text der seite bitte",
+    "fass zusammen was du siehst",
+    "wie lautet der seiteninhalt",
+    "kurz was steht auf der seite",
+    "sag mir den inhalt der seite",
+    "was siehst du auf der seite",
+    "lies den seiteninhalt vor",
+    "gib den text der aktuellen seite aus",
+    "zeig mir was auf der seite steht",
+    "wie ist der inhalt der seite",
+    "beschreib die aktuelle seite",
+    "was steht jetzt auf der seite",
+    "ich brauche den text der seite",
+    "seiteninhalt bitte",
+    "hole mir den text der seite",
+    "was kannst du auf der seite lesen"
+  ],
+  "desktop_launch": [
+    "oeffne {app}",
+    "starte {app}",
+    "mach {app} auf",
+    "start {app}",
+    "fahr {app} hoch",
+    "oeffne mir mal {app}"
+  ],
+  "desktop_type": [
+    "schreib {text}",
+    "tippe {text}",
+    "gib {text} ein",
+    "schreib mal {text}",
+    "tipp {text} ein"
+  ],
+  "desktop_hotkey": [
+    "drueck {keys}",
+    "mach {keys}",
+    "tastenkuerzel {keys}",
+    "drueck die tasten {keys}",
+    "benutz das kuerzel {keys}"
+  ],
+  "desktop_click": [
+    "klick auf {x} {y}",
+    "klick bei {x} {y}",
+    "klick die position {x} {y}",
+    "klick auf punkt {x} {y}"
+  ],
+  "desktop_screenshot": [
+    "mach einen screenshot",
+    "screenshot",
+    "nimm den bildschirm auf",
+    "mach mal einen screenshot",
+    "capture den screen",
+    "mach ein bild vom bildschirm",
+    "bildschirmfoto",
+    "knips den screen",
+    "screenshot machen bitte",
+    "speichere den bildschirm",
+    "nimm ein bildschirmfoto auf",
+    "screen aufnehmen",
+    "mach ein bildschirmfoto",
+    "screenshot jetzt",
+    "bitte einen screenshot",
+    "nimm den screen auf",
+    "bild vom bildschirm machen",
+    "screen festhalten",
+    "capture den bildschirm",
+    "mach mal ein bild vom screen",
+    "speicher ein bildschirmfoto",
+    "knips ein bild vom bildschirm",
+    "screenshot erstellen",
+    "ich brauche einen screenshot",
+    "bitte bildschirm aufnehmen"
+  ]
+}

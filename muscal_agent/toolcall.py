@@ -8,6 +8,10 @@ Two wire formats are supported, controled by ``configs/audio_agent_ft.yaml``:
     Compact, no special tokens, few tokens per call. This is the shape Liquid's
     own voice-assistant recipe uses (``HassStartTimer|minutes=5|name=oven``).
 
+    Constraint: a value must not contain ``|`` (it separates arguments). ``=``
+    is allowed -- parsing splits on the first ``=`` only, so URLs with query
+    strings and CSS attribute selectors survive.
+
 ``pythonic``
     ``<|tool_call_start|>[web_search(query="liquid ai lfm", max_results=5)]<|tool_call_end|>``
 
@@ -65,9 +69,11 @@ def _scalar(value: object) -> str:
     if isinstance(value, (int, float)):
         return str(value)
     text = str(value)
-    # The pipe format breaks on separators; keep training targets clean.
-    if any(ch in text for ch in "|="):
-        raise ToolCallError(f"argument value may not contain '|' or '=': {text!r}")
+    # "|" separates arguments and cannot be escaped -- a value containing it
+    # would be ambiguous. "=" is fine: parsing splits on the FIRST one only,
+    # so URLs (...?a=1) and CSS selectors (input[name=q]) survive round-trips.
+    if "|" in text or "\n" in text:
+        raise ToolCallError(f"argument value may not contain '|' or newlines: {text!r}")
     return text
 
 

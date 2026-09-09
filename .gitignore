@@ -12,6 +12,12 @@ data/*
 !data/README.md
 !data/example_train.jsonl
 !data/agent_utterances.jsonl
+!data/agent_utterances_full_de.jsonl
+!data/agent_utterances_full_en.jsonl
+!data/agent_templates_de.json
+!data/agent_templates_en.json
+!data/agent_slots_de.json
+!data/agent_slots_en.json
 !data/agent_eval.jsonl
 
 # Colab / Jupyter
